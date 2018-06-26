@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\zhanghao.html";i:1529985124;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\zhanghao.html";i:1529997782;}*/ ?>
 <!DOCTYPE html>
 <html class=" ">
     <head>
@@ -10,7 +10,7 @@
         -->
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta charset="utf-8" />
-        <title>Ultra Admin : Form Elements</title>
+        <title>账号设置</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta content="" name="description" />
         <meta content="" name="author" />
@@ -354,8 +354,8 @@
                     <ul class="info-menu right-links list-inline list-unstyled">
                         <li class="profile">
                             <a href="#" data-toggle="dropdown" class="toggle">
-                                <img src="/thinkphp/public/static/data/profile/profile.png" alt="user-image" class="img-circle img-inline">
-                                <span>Jason Bourne <i class="fa fa-angle-down"></i></span>
+                                <img src="/thinkphp/public/admin_uploads/<?php echo $admin['id']; ?>/<?php echo $admin['logo']; ?>" alt="user-image" class="img-circle img-inline">
+                                <span><?php if($user): ?><?php echo $user->username; endif; ?> <i class="fa fa-angle-down"></i></span>
                             </a>
                             <ul class="dropdown-menu profile animated fadeIn">
                                 <li>
@@ -411,20 +411,20 @@
 
                         <div class="profile-image col-md-4 col-sm-4 col-xs-4">
                             <a href="ui-profile.html">
-                                <img src="/thinkphp/public/static/data/profile/profile.png" class="img-responsive img-circle">
+                                <img src="/thinkphp/public/admin_uploads/<?php echo $admin['id']; ?>/<?php echo $admin['logo']; ?>" class="img-responsive img-circle">
                             </a>
                         </div>
 
                         <div class="profile-details col-md-8 col-sm-8 col-xs-8">
 
                             <h3>
-                                <a href="ui-profile.html">Jason Bourne</a>
+                                <a href="ui-profile.html"><?php if($user): ?><?php echo $user->username; endif; ?></a>
 
                                 <!-- Available statuses: online, idle, busy, away and offline -->
                                 <span class="profile-status online"></span>
                             </h3>
 
-                            <p class="profile-title">Web Developer</p>
+                            <p class="profile-title">Administrator</p>
 
                         </div>
 
@@ -439,7 +439,7 @@
                         <li class=""> 
                             <a href="index.html">
                                 <i class="fa fa-dashboard"></i>
-                                <span class="title">Dashboard</span>
+                                <span class="title">首页</span>
                             </a>
                         </li>
                         <li class=""> 
@@ -779,79 +779,72 @@
                                 </div>
                             </header>
                             <div class="content-body">
+                            <form class="form-horizontal" method="post" name="form1" action="<?php echo url('adminhotai/update'); ?>">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-
-                                        <div class="input-group primary">
-                                            <span class="input-group-addon">                
-                                                <span class="arrow"> Username </span>
-                                                <i class="fa fa-user"></i>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="Primary">
+                                        <div class="form-group">
+                                            <input type="hidden" name="id"placeholder="id" value="<?php echo $admin['id']; ?>">
                                         </div>
 
-                                        <br>
+                                        <div class="am-form-group">
+                                            <label for="user-weibo" class="am-u-sm-12 am-form-label  am-text-left">LOGO <span class="tpl-form-line-small-title">Images</span></label>
 
-                                        <div class="input-group primary">
-                                            <span class="input-group-addon">                
-                                                <span class="arrow"> Realname </span>
-                                                <i class="fa fa-user"></i>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="Primary">
+                                            <div id="uploader-demo" class="am-u-sm-12 am-margin-top-xs">
+                                                <div class="am-form-group am-form-file">
+                                                    <div id="fileList" class="tpl-form-file-img uploader-list">
+                                                        <div id="old" class="file-item thumbnail">
+                                                            <img src="/thinkphp/public/admin_uploads/<?php echo $admin['id']; ?>/<?php echo $admin['logo']; ?>" class="tpl-table-line-img" width="200px">
+                                                            <div style="text-align: center;" class="info"><?php echo $admin['logo']; ?></div>
+                                                            <input type="text" style="display:none" name="logo" value="<?php echo $admin['logo']; ?>">
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <button id="filePicker" type="button" class="am-btn am-btn-danger am-btn-sm ">更换logo</button>
+                                                </div>
+
+                                            </div>
                                         </div>
 
-                                        <br>
-
+                                        <div>Username: </div>
                                         <div class="input-group primary">
                                             <span class="input-group-addon">                
-                                                <span class="arrow"> Tel </span>
-                                                <i class="fa fa-user"></i>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="Primary">
-                                        </div>
-
-                                        <br>
-
-                                        <div class="input-group primary">
-                                            <span class="input-group-addon">                
-                                                <span class="arrow"> Email </span>
-                                                <i class="fa fa-user"></i>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="Primary">
-                                        </div>
-
-                                        <br>
-
-                                        <div class="input-group primary">
-                                            <span class="input-group-addon">                
-                                                <span class="arrow"> Address</span>
-                                                <i class="fa fa-user"></i>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="Primary">
-                                        </div>
-
-                                        <br>
-
-                                        <div class="input-group primary">
-                                        <p>Password: </p> 
-                                            <span class="input-group-addon">     
-
                                                 <span class="arrow"></span>
                                                 <i class="fa fa-user"></i>
                                             </span>
-                                            <input type="text" class="form-control" placeholder="Primary">
+                                            <input type="text" class="form-control" name="username" value="<?php echo $admin['username']; ?>">
                                         </div>
 
                                         <br>
+                                        <div>Realname: </div>
+                                        <div class="input-group primary">
+                                            <span class="input-group-addon">                
+                                                <span class="arrow"></span>
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </span>
+                                            <input type="text" class="form-control" name="realname" value="<?php echo $admin['realname']; ?>">
+                                        </div>
 
+                                        <br>
+                                        
+                                        <div>Password: </div>
+                                        <div class="input-group primary">
+                                            <span class="input-group-addon">     
+                                                <span class="arrow"></span>
+                                                <i class="fa fa-unlock-alt"></i>
+                                            </span>
+                                            <input type="password" class="form-control" name="password" value="<?php echo $admin['password']; ?>">
+                                        </div>
+
+                                        <br>
+                                    
+                                        <button type="submit" class="btn btn-default" style="margin-top:20px;background:rgb(35,186,179);color:#fff;">更新</button>
+                                      </div>
                                     </div>
                                 </div>
-
+                            </form>
                             </div>
-                        </section></div>
-
-                    
-
+                        </section>
+                    </div>
                 </section>
             </section>
             <!-- END CONTENT -->
@@ -1074,6 +1067,7 @@
         <!-- Sidebar Graph - START --> 
         <script src="/thinkphp/public/static/assets/plugins/sparkline-chart/jquery.sparkline.min.js" type="text/javascript"></script>
         <script src="/thinkphp/public/static/assets/js/chart-sparkline.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/thinkphp/public/static/webuploader/webuploader.js"></script>
         <!-- Sidebar Graph - END --> 
 
 
@@ -1110,6 +1104,61 @@
         </div>
         <!-- modal end -->
     </body>
+
+    <script type="text/javascript">
+           //var $list=$("#fileList");   //这几个初始化全局的百度文档上没说明，好蛋疼
+           var thumbnailWidth = 100;   //缩略图高度和宽度 （单位是像素），当宽高度是0~1的时候，是按照百分比计算，具体可以看api文档  
+           var thumbnailHeight = 100;  
+           var uploader = WebUploader.create({
+            // 选完文件后，是否自动上传。
+           auto: true,
+            // swf文件路径
+           swf: '/thinkphp/public/static/webuploader/uploader.swf', //加载swf文件，路径一定要对
+            // 文件接收服务端。
+            server: '<?php echo url("admin/adminhotai/upload"); ?>',
+            // 选择文件的按钮。可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            pick: '#filePicker',
+            // 只允许选择图片文件。
+            accept: {
+                title: 'Images',
+                extensions: 'gif,jpg,jpeg,bmp,png',
+                mimeTypes: 'image/'
+            }
+        });
+      //上传完成事件监听
+        
+        uploader.on( 'fileQueued', function(file) {
+            // var d = new Date();
+            // var curr_date = d.getDate();
+            // var curr_month = d.getMonth() + 1; 
+            // var curr_year = d.getFullYear();
+            // String(curr_month).length < 2 ? (curr_month = "0" + curr_month): curr_month;
+            // String(curr_date).length < 2 ? (curr_date = "0" + curr_date): curr_date;
+            // var yyyyMMdd = curr_year + "" + curr_month +""+ curr_date;
+            var $li = $(
+                    '<div id="old" class="file-item thumbnail">' +
+                        '<img>' +
+                        '<div style="text-align: center;" class="info">' + file.name + '</div>' +
+                    '</div>'+
+                    '<input type="text" style="display:none" name="logo" value="'+ file.name +'">'
+                    ),
+                $img = $li.find('img');
+            // $list为容器jQuery实例
+                    $('#old').remove();
+                   $("#fileList").append( $li );
+            // 创建缩略图
+            // 如果为非图片文件，可以不用调用此方法。
+            // thumbnailWidth x thumbnailHeight 为 100 x 100
+            uploader.makeThumb( file, function( error, src ) {
+                if ( error ) {
+                    $img.replaceWith('<span>不能预览</span>');
+                    return;
+                }
+                $img.attr( 'src', src );
+            }, thumbnailWidth, thumbnailHeight );
+        });
+    </script>
 </html>
 
 

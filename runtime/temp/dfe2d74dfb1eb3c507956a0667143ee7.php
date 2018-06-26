@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\index.html";i:1529983077;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\index.html";i:1529998297;}*/ ?>
 
 <!DOCTYPE html>
 <html class=" ">
@@ -363,8 +363,8 @@
                     <ul class="info-menu right-links list-inline list-unstyled">
                         <li class="profile">
                             <a href="#" data-toggle="dropdown" class="toggle">
-                                <img src="/thinkphp/public/static/data/profile/profile.png" alt="user-image" class="img-circle img-inline">
-                                <span><i class="fa fa-angle-down"></i></span>
+                                <img src="/thinkphp/public/admin_uploads/<?php echo $admin['id']; ?>/<?php echo $admin['logo']; ?>" alt="user-image" class="img-circle img-inline">
+                                <span><?php if($user): ?><?php echo $user->username; endif; ?> <i class="fa fa-angle-down"></i></span>
                             </a>
                             <ul class="dropdown-menu profile animated fadeIn">
                                 <li>
@@ -416,24 +416,24 @@
                 <div class="page-sidebar-wrapper" id="main-menu-wrapper"> 
 
                     <!-- USER INFO - START -->
-                    <div class="profile-info row">
+                    <div class="profile-info row" style="margin:30px 0;">
 
                         <div class="profile-image col-md-4 col-sm-4 col-xs-4">
                             <a href="ui-profile.html">
-                                <img src="/thinkphp/public/static/data/profile/profile.png" class="img-responsive img-circle">
+                                <img src="/thinkphp/public/admin_uploads/<?php echo $admin['id']; ?>/<?php echo $admin['logo']; ?>" class="img-responsive img-circle">
                             </a>
                         </div>
 
                         <div class="profile-details col-md-8 col-sm-8 col-xs-8">
 
                             <h3>
-                                <a href="ui-profile.html">Jason Bourne</a>
+                                <a href="ui-profile.html"><?php if($user): ?><?php echo $user->username; endif; ?></a>
 
                                 <!-- Available statuses: online, idle, busy, away and offline -->
                                 <span class="profile-status online"></span>
                             </h3>
 
-                            <p class="profile-title">Web Developer</p>
+                            <p class="profile-title">Administrator</p>
 
                         </div>
 
@@ -448,13 +448,13 @@
                         <li class="open"> 
                             <a href="index.html">
                                 <i class="fa fa-dashboard"></i>
-                                <span class="title">Dashboard</span>
+                                <span class="title">首页</span>
                             </a>
                         </li>
                         <li class=""> 
-                            <a href="widgets.html">
+                            <a href="user.html">
                                 <i class="fa fa-th"></i>
-                                <span class="title">Widgets</span><span class="label label-orange nosubmenu">HOT</span>
+                                <span class="title">用户列表</span><span class="label label-orange nosubmenu">HOT</span>
                             </a>
                         </li>
                         <li class=""> 
@@ -736,32 +736,7 @@
 
 
 
-                <div class="project-info">
-
-                    <div class="block1">
-                        <div class="data">
-                            <span class='title'>New&nbsp;Orders</span>
-                            <span class='total'>2,345</span>
-                        </div>
-                        <div class="graph">
-                            <span class="sidebar_orders">...</span>
-                        </div>
-                    </div>
-
-                    <div class="block2">
-                        <div class="data">
-                            <span class='title'>Visitors</span>
-                            <span class='total'>345</span>
-                        </div>
-                        <div class="graph">
-                            <span class="sidebar_visitors">...</span>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
+                
             </div>
             <!--  SIDEBAR - END -->
             <!-- START CONTENT -->
