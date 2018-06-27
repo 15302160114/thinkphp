@@ -113,7 +113,7 @@ class AdminhotaiController extends Base
 
         $xuhao=model('Order')->save($date,['id'=>intval($input['id'])]);
         if($xuhao){
-            $this->success('更新成功',url('adminhotai/order'));
+            $this->success('更新成功',url('adminhotai/all_order'));
         }else{
             $this->error('更新失败');
         }
