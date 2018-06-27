@@ -20,3 +20,33 @@ function status($status){
 	}
 	return $str;
 }
+use think\Db;
+function getUsername($id){
+    return Db::name('category')->where('id',$id)->find()['categoryname'];
+}
+function getAuthorname($id){
+    return Db::name('author')->where('id',$id)->find()['username'];
+}
+function getDisname($id){
+    return Db::name('distributor')->where('id',$id)->find()['realname'];
+}
+function getStatusname($id){
+	if($id==1){
+		$a='<option value="1">未配送</option>
+		<option value="0">订单取消</option>
+		<option value="2">已配送</option>';
+    	return $a;
+	}
+	if($id==2){
+		$a='<option value="2">已配送</option>
+		<option value="0">订单取消</option>
+		<option value="1">未配送</option>';
+		return $a;
+	}
+	if($id==0){
+		$a='<option value="0">订单取消</option>
+		<option value="2">已配送</option>
+		<option value="1">未配送</option>';
+		return $a;
+	}
+}

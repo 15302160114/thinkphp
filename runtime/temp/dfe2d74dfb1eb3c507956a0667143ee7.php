@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\index.html";i:1529998297;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\index.html";i:1530061458;}*/ ?>
 
 <!DOCTYPE html>
 <html class=" ">
@@ -11,7 +11,7 @@
         -->
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta charset="utf-8" />
-        <title>Ultra Admin : Dashboard</title>
+        <title>Admin : index</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta content="" name="description" />
         <meta content="" name="author" />
@@ -460,58 +460,17 @@
                         <li class=""> 
                             <a href="javascript:;">
                                 <i class="fa fa-suitcase"></i>
-                                <span class="title">UI Elements</span>
+                                <span class="title">订单</span>
                                 <span class="arrow "></span>
                             </a>
                             <ul class="sub-menu" >
                                 <li>
-                                    <a class="" href="ui-typography.html">Typography</a>
+                                    <a class="" href="all_order.html">所有订单</a>
                                 </li>
                                 <li>
-                                    <a class="" href="ui-accordion.html">Tabs & Accordions</a>
+                                    <a class="" href="order.html">订单详情</a>
                                 </li>
-                                <li>
-                                    <a class="" href="ui-progress.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-icons.html">Icons</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-buttons.html">Buttons</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-modals.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-notifications.html">Alert & Notifications</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-tooltips.html">Tooltips & Popovers</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-sortable.html">Sortable Group</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-navbars.html">Navbars & Dropdowns</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-extra.html">Other Elements</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-carousel.html">Carousel Slider</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-tree.html">Tree</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-panels.html">Draggable Panels</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-grids.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-tiles.html">Tile Widgets</a>
-                                </li>
+                                
                             </ul>
                         </li>
                         <li class=""> 

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\zhanghao.html";i:1529997782;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\zhanghao.html";i:1530061850;}*/ ?>
 <!DOCTYPE html>
 <html class=" ">
     <head>
@@ -10,7 +10,7 @@
         -->
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta charset="utf-8" />
-        <title>账号设置</title>
+        <title>Admin : 账号设置</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta content="" name="description" />
         <meta content="" name="author" />
@@ -359,7 +359,7 @@
                             </a>
                             <ul class="dropdown-menu profile animated fadeIn">
                                 <li>
-                                    <a href="#settings">
+                                    <a href="zhanghao.html">
                                         <i class="fa fa-wrench"></i>
                                         Settings
                                     </a>
@@ -443,77 +443,36 @@
                             </a>
                         </li>
                         <li class=""> 
-                            <a href="widgets.html">
+                            <a href="user.html">
                                 <i class="fa fa-th"></i>
-                                <span class="title">Widgets</span><span class="label label-orange nosubmenu">HOT</span>
+                                <span class="title">用户列表</span><span class="label label-orange nosubmenu">HOT</span>
                             </a>
                         </li>
                         <li class=""> 
                             <a href="javascript:;">
                                 <i class="fa fa-suitcase"></i>
-                                <span class="title">UI Elements</span>
+                                <span class="title">订单</span>
                                 <span class="arrow "></span>
                             </a>
                             <ul class="sub-menu" >
                                 <li>
-                                    <a class="" href="ui-typography.html">Typography</a>
+                                    <a class="" href="all_order.html">所有订单</a>
                                 </li>
                                 <li>
-                                    <a class="" href="ui-accordion.html">Tabs & Accordions</a>
+                                    <a class="" href="order.html">订单详情</a>
                                 </li>
-                                <li>
-                                    <a class="" href="ui-progress.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-icons.html">Icons</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-buttons.html">Buttons</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-modals.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-notifications.html">Alert & Notifications</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-tooltips.html">Tooltips & Popovers</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-sortable.html">Sortable Group</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-navbars.html">Navbars & Dropdowns</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-extra.html">Other Elements</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-carousel.html">Carousel Slider</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-tree.html">Tree</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-panels.html">Draggable Panels</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-grids.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-tiles.html">Tile Widgets</a>
-                                </li>
+                                
                             </ul>
                         </li>
-                        <li class="open"> 
+                        <li class=""> 
                             <a href="javascript:;">
                                 <i class="fa fa-sliders"></i>
                                 <span class="title">Forms</span>
                                 <span class="arrow open"></span>
                             </a>
-                            <ul class="sub-menu" style='display:block;'>
+                            <ul class="sub-menu">
                                 <li>
-                                    <a class="active" href="form-elements.html">Form Elements</a>
+                                    <a class="" href="form-elements.html">Form Elements</a>
                                 </li>
                                 <li>
                                     <a class="" href="form-components.html">Form Components</a>
@@ -724,34 +683,6 @@
 
                 </div>
                 <!-- MAIN MENU - END -->
-
-
-
-                <div class="project-info">
-
-                    <div class="block1">
-                        <div class="data">
-                            <span class='title'>New&nbsp;Orders</span>
-                            <span class='total'>2,345</span>
-                        </div>
-                        <div class="graph">
-                            <span class="sidebar_orders">...</span>
-                        </div>
-                    </div>
-
-                    <div class="block2">
-                        <div class="data">
-                            <span class='title'>Visitors</span>
-                            <span class='total'>345</span>
-                        </div>
-                        <div class="graph">
-                            <span class="sidebar_visitors">...</span>
-                        </div>
-                    </div>
-
-                </div>
-
-
 
             </div>
             <!--  SIDEBAR - END -->
