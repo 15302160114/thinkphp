@@ -150,6 +150,12 @@ class AdminhotaiController extends Base
     }
     public function consumerUpdate()
     {
+        $a=explode(',', session('my_user','','my'));
+        $id=substr($a[0],6);
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+
         echo "<meta charset='UTF-8'>";
         if(!request()->isPost()){
             $this->error("非法输入");
@@ -161,19 +167,28 @@ class AdminhotaiController extends Base
             $this->error($validate->getError());
         }
 
-        $date=[
+        $admin=Db::table('consumer')
+                    ->where('id',$id)
+                    ->select();
+        $pa=$admin[0];  
+        if($pa['password']==$input['password']){
+            $date=[
+                'username'=>$input['username'],
+                'realname'=>$input['realname'],
+                'logo'=>$input['logo']
+            ];
+        }else{
+            $date=[
                 'username'=>$input['username'],
                 'realname'=>$input['realname'],
                 'logo'=>$input['logo'],
-                'code'=>$input['code'],
-                'tel'=>$input['tel'],
-                'email'=>$input['email'],
-                'note'=>$input['note']
+                'password'=>md5($input['password'])
             ];
+        }
 
-        $xuhao=model('Consumer')->save($date,['id'=>intval($input['id'])]);
+        $xuhao=model('Admin')->save($date,['id'=>intval($input['id'])]);
         if($xuhao){
-            $this->success('更新成功',url('adminhotai/user'));
+            $this->success('更新成功',url('adminhotai/zhanghao'));
         }else{
             $this->error('更新失败');
         }
