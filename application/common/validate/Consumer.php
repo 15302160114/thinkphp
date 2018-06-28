@@ -1,7 +1,7 @@
 <?php
 namespace app\common\validate;
 use think\Validate;
-class Author extends Validate{
+class Consumer extends Validate{
 	protected $rule=[
 		// 'name'=>'require|max:6',
 		// 'sex'=>'number|between:0,1',

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"C:\xampp\htdocs\thinkphp\public/../application/index\view\index\index.html";i:1530059721;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"C:\xampp\htdocs\thinkphp\public/../application/index\view\index\index.html";i:1530154006;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -86,14 +86,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <a href="<?php echo url('@user/login/register'); ?>">REGISTER</a>
                 </div>
             <div class="cart box_1">
-                <a href="checkout.html">
-                    <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="/thinkphp/public/static/images/bag.png" alt=""></h3>
-                </a>    
-                <p><a href="javascript:;" class="simpleCart_empty">(empty card)</a></p>
-                <div class="clearfix"> </div>
+                
             </div>
             <div class="create_btn">
-                <a href="checkout.html">CHECKOUT</a>
+                <a href="<?php echo url('@distributor/login/index'); ?>">配送员<br>LOGIN</a>
             </div>
             <div class="clearfix"> </div>
         </div>

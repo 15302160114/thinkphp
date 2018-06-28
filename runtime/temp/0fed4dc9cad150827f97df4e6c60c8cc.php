@@ -1,8 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\index.html";i:1529980851;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\index.html";i:1530152817;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Home</title>
+<title>Home : user</title>
 <link href="/thinkphp/public/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
 <script type='text/javascript' src="/thinkphp/public/static/js/jquery-1.11.1.min.js"></script>

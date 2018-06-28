@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\login\index.html";i:1530151555;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"C:\xampp\htdocs\thinkphp\public/../application/distributor\view\login\index.html";i:1530154132;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +26,7 @@
       <h2>Credit login form</h2>
       <form class="form-horizontal" method="post" name="form1" action="<?php echo url('login/check'); ?>">
         <div class="form-sub-w3">
-          <input type="text" name="username" placeholder="Customer number or username " required="" />
+          <input type="text" name="realname" placeholder="Customer number or username " required="" />
         <div class="icon-w3">
           <i class="fa fa-user" aria-hidden="true"></i>
         </div>
@@ -41,6 +41,7 @@
         <input type="text" placeholder="请输入验证码" class="form-control" name="captcha">
         </div>
           <img src="<?php echo captcha_src(); ?>" alt="captcha" onclick="javascript:this.src='<?php echo captcha_src(); ?>?tm='+Math.random();" style="cursor: pointer"/>
+        <p class="p-bottom-w3ls">Are you new to eBanking?<a class="w3_play_icon1" href="#small-dialog1">  Register here</a></p>
         
         <div class="submit-w3l">
           <input type="submit" onclick="myFunction()" value="Login">
@@ -55,7 +56,7 @@
                     <h3>Register Form</h3>
                       <form class="form-horizontal" method="post" name="form1" action="<?php echo url('login/save'); ?>" onsubmit="return Form_Submit()">
                         <div class="form-sub-w3ls">
-                          <input placeholder="User Name" name="username" type="text" required="">
+                          <input placeholder="User Name" name="realname" type="text" required="">
                           <div class="icon-agile">
                             <i class="fa fa-user" aria-hidden="true"></i>
                           </div>
@@ -70,12 +71,6 @@
                           <input placeholder="Your number" class="phone" name="tel" type="text" required="">
                           <div class="icon-agile">
                             <i class="fa fa-phone" aria-hidden="true"></i>
-                          </div>
-                        </div>
-                        <div class="form-sub-w3ls">
-                          <input placeholder="Your Address" class="mail" name="address" type="text" required="">
-                          <div class="icon-agile">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
                           </div>
                         </div>
                         <div class="form-sub-w3ls">

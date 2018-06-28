@@ -21,7 +21,7 @@ class Distributor extends Model{
 					->select();
 	}
 
-	public function getDistributorByuserName($realname){
+	public function getDisByuserName($realname){
 		$data=['realname'=>$realname];
 		return $this->where($data)->find();
 	}

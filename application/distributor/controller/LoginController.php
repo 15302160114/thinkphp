@@ -1,5 +1,5 @@
 <?php
-namespace app\user\controller;
+namespace app\distributor\controller;
 use think\Controller;
 use think\captcha;
 
@@ -9,9 +9,6 @@ class LoginController extends Controller
     {
       	return $this->fetch();
     }
-    public function register(){
-        return $this->fetch();
-    }
     public function save(){
         echo "<meta charset='UTF-8'>";
         if(!request()->isPost()){
@@ -20,8 +17,8 @@ class LoginController extends Controller
         
         $input=input('post.');
 
-        $username=$input['username'];
-        $user=model('Consumer')->getConsumerByuserName($username);
+        $realname=$input['realname'];
+        $user=model('Distributor')->getDisByuserName($realname);
         if($user){
             $this->error('用户名不可用');
         }
@@ -29,7 +26,7 @@ class LoginController extends Controller
             $this->error('验证码错误');
         }
 
-        $validate=validate('Consumer');
+        $validate=validate('Distributor');
         if(!$validate->scene('add')->check($input)){
             $this->error($validate->getError());
         }
@@ -37,14 +34,13 @@ class LoginController extends Controller
         $date=[
                 'email'=>$input['email'],
                 'tel'=>$input['tel'],
-                'note'=>$input['address'],
-                'username'=>$input['username'],
+                'realname'=>$input['realname'],
                 'password'=>md5($input['password'])
             ];
 
-        $xuhao=model('Consumer')->add($date);
+        $xuhao=model('Distributor')->add($date);
         if($xuhao){
-            $this->success('增加成功，新增序号为'.$xuhao,url('user/index'));
+            $this->success('增加成功，新增序号为'.$xuhao,url('distributor/index'));
         }else{
             $this->error('增加失败');
         }
@@ -54,8 +50,8 @@ class LoginController extends Controller
     		$this->error('有错');
     	}
     	$data=input('post.');
-    	$username=$data['username'];
-    	$author=model('Consumer')->getConsumerByuserName($username);
+    	$realname=$data['realname'];
+    	$author=model('Distributor')->getDisByuserName($realname);
     	if(!$author){
     		$this->error('有错');
     	}
@@ -65,11 +61,11 @@ class LoginController extends Controller
     	if($author->password!=md5($data['password'])){
     		$this->error('密码有错');
     	}
-    	session('me_user',$author,'me');
-    	$this->success('ok','user/index');
+    	session('dis_user',$author,'dis');
+    	$this->success('ok','distributor/index');
     }
     public function logout(){
-    	session(null,'me');
+    	session(null,'dis');
     	$this->redirect('login/index');
     }
 }

@@ -1,8 +1,8 @@
 <?php
 namespace app\common\model;
 use think\Model;
-class Author extends Model{
-	public function getAuthor(){
+class Consumer extends Model{
+	public function getConsumer(){
 		$data=[];
 		$order=['id'=>'desc'];
 		return $this->where($data)
@@ -15,13 +15,13 @@ class Author extends Model{
 		return $this->id;
 	}
 
-	public function getAuthors(){
+	public function getConsumers(){
 		$order=['id'=>'desc'];
 		return $this->order($order)
 					->select();
 	}
 
-	public function getAuthorByuserName($username){
+	public function getConsumerByuserName($username){
 		$data=['username'=>$username];
 		return $this->where($data)->find();
 	}

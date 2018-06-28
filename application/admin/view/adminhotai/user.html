@@ -448,6 +448,12 @@
                             </a>
                         </li>
                         <li class=""> 
+                            <a href="distributor.html">
+                                <i class="fa fa-th"></i>
+                                <span class="title">配送员列表</span><span class="label label-orange nosubmenu">HOT</span>
+                            </a>
+                        </li>
+                        <li class=""> 
                             <a href="javascript:;">
                                 <i class="fa fa-suitcase"></i>
                                 <span class="title">订单</span>
@@ -712,7 +718,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                {volist name="author" id="vo" key="num"}
+                                                {volist name="consumer" id="vo" key="num"}
                                                 <tr>
                                                     <th scope="row">{$num}</th>
                                                     <td>{$vo.username}</td>
@@ -726,7 +732,7 @@
                                                             <a href="{:url('adminhotai/edit',['id'=>$vo.id])}">
                                                                 <i class="am-icon-pencil"></i> 编辑
                                                             </a>
-                                                            <a href="{:url('adminhotai/authordelete',['id'=>$vo.id])}" class="tpl-table-black-operation-del">
+                                                            <a href="{:url('adminhotai/consumerdelete',['id'=>$vo.id])}" class="tpl-table-black-operation-del">
                                                                 <i class="am-icon-trash"></i> 删除
                                                             </a>
                                                         </div>

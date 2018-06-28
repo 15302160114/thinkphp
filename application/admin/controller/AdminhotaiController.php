@@ -27,8 +27,21 @@ class AdminhotaiController extends Base
         $admin=model('Admin')->get($id);
         
         $this->assign('admin',$admin);
-        $author=model('Author')->getAuthor();
-        return $this->fetch('',['author'=>$author]);
+        $consumer=model('Consumer')->getConsumer();
+        return $this->fetch('',['consumer'=>$consumer]);
+    }
+    public function distributor()
+    {
+        $a=explode(',', session('my_user','','my'));
+        $id=substr($a[0],6);
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $admin=model('Admin')->get($id);
+        
+        $this->assign('admin',$admin);
+        $distributor=model('Distributor')->getDistributors();
+        return $this->fetch('',['distributor'=>$distributor]);
     }
     public function zhanghao()
     {

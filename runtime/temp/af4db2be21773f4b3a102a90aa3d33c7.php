@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\user.html";i:1530061473;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\user.html";i:1530152097;}*/ ?>
 
 <!DOCTYPE html>
 <html class=" ">
@@ -713,7 +713,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php if(is_array($author) || $author instanceof \think\Collection || $author instanceof \think\Paginator): $num = 0; $__LIST__ = $author;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($num % 2 );++$num;?>
+                                                <?php if(is_array($consumer) || $consumer instanceof \think\Collection || $consumer instanceof \think\Paginator): $num = 0; $__LIST__ = $consumer;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($num % 2 );++$num;?>
                                                 <tr>
                                                     <th scope="row"><?php echo $num; ?></th>
                                                     <td><?php echo $vo['username']; ?></td>

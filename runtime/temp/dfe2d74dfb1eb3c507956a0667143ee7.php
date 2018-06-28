@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\index.html";i:1530061458;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\index.html";i:1530151555;}*/ ?>
 
 <!DOCTYPE html>
 <html class=" ">
