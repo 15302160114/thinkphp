@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\distributor.html";i:1530156021;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\distributor.html";i:1530156061;}*/ ?>
 
 <!DOCTYPE html>
 <html class=" ">
@@ -726,10 +726,10 @@
                                                     <td><?php echo $vo['create_time']; ?></td>
                                                     <td>
                                                         <div class="tpl-table-black-operation">
-                                                            <a href="<?php echo url('adminhotai/edit',['id'=>$vo['id']]); ?>">
+                                                            <a href="<?php echo url('adminhotai/dis_edit',['id'=>$vo['id']]); ?>">
                                                                 <i class="am-icon-pencil"></i> 编辑
                                                             </a>
-                                                            <a href="<?php echo url('adminhotai/authordelete',['id'=>$vo['id']]); ?>" class="tpl-table-black-operation-del">
+                                                            <a href="<?php echo url('adminhotai/dis_delete',['id'=>$vo['id']]); ?>" class="tpl-table-black-operation-del">
                                                                 <i class="am-icon-trash"></i> 删除
                                                             </a>
                                                         </div>

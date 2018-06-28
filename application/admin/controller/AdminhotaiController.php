@@ -89,6 +89,50 @@ class AdminhotaiController extends Base
         $this->assign('distributor',$distributor);
         return $this->fetch('');
     }
+    public function consumeredit()
+    {
+        $id=input('param.id');
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $consumer=model('Consumer')->get($id);
+        $this->assign('consumer',$consumer);
+        return $this->fetch('');
+    }
+    public function dis_edit()
+    {
+        $id=input('param.id');
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $distributor=model('Distributor')->get($id);
+        $this->assign('distributor',$distributor);
+        return $this->fetch('');
+    }
+    public function consumerdelete()
+    {
+        $id=input('param.id');
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $consumer=model('Consumer')->get($id);
+        if(!is_null($consumer->delete())){
+            $this->success('删除成功','adminhotai/user');
+        }
+        $this->error('删除失败');
+    }
+    public function dis_delete()
+    {
+        $id=input('param.id');
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $distributor=model('Distributor')->get($id);
+        if(!is_null($distributor->delete())){
+            $this->success('删除成功','adminhotai/distributor');
+        }
+        $this->error('删除失败');
+    }
     public function update_o()
     {
         $id=input('param.id');
@@ -103,6 +147,40 @@ class AdminhotaiController extends Base
         }else{
             $this->error('更新失败');
         }
+    }
+    public function consumerUpdate()
+    {
+        echo "<meta charset='UTF-8'>";
+        if(!request()->isPost()){
+            $this->error("非法输入");
+        }
+        $input=input('post.');
+
+        $validate=validate('Consumer');
+        if(!$validate->scene('edit')->check($input)){
+            $this->error($validate->getError());
+        }
+
+        $date=[
+                'username'=>$input['username'],
+                'realname'=>$input['realname'],
+                'logo'=>$input['logo'],
+                'code'=>$input['code'],
+                'tel'=>$input['tel'],
+                'email'=>$input['email'],
+                'note'=>$input['note']
+            ];
+
+        $xuhao=model('Consumer')->save($date,['id'=>intval($input['id'])]);
+        if($xuhao){
+            $this->success('更新成功',url('adminhotai/user'));
+        }else{
+            $this->error('更新失败');
+        }
+    }
+    public function dis_update()
+    {
+
     }
     public function orderUpdate()
     {

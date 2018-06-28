@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\user.html";i:1530152097;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\user.html";i:1530156252;}*/ ?>
 
 <!DOCTYPE html>
 <html class=" ">
@@ -449,6 +449,12 @@
                             </a>
                         </li>
                         <li class=""> 
+                            <a href="distributor.html">
+                                <i class="fa fa-th"></i>
+                                <span class="title">配送员列表</span><span class="label label-orange nosubmenu">HOT</span>
+                            </a>
+                        </li>
+                        <li class=""> 
                             <a href="javascript:;">
                                 <i class="fa fa-suitcase"></i>
                                 <span class="title">订单</span>
@@ -727,7 +733,7 @@
                                                             <a href="<?php echo url('adminhotai/edit',['id'=>$vo['id']]); ?>">
                                                                 <i class="am-icon-pencil"></i> 编辑
                                                             </a>
-                                                            <a href="<?php echo url('adminhotai/authordelete',['id'=>$vo['id']]); ?>" class="tpl-table-black-operation-del">
+                                                            <a href="<?php echo url('adminhotai/consumerdelete',['id'=>$vo['id']]); ?>" class="tpl-table-black-operation-del">
                                                                 <i class="am-icon-trash"></i> 删除
                                                             </a>
                                                         </div>
