@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\settings.html";i:1530243950;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\settings.html";i:1530244481;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -179,22 +179,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                   <div class="contact-form">
                         <h2>Contact Us</h2>
-                        <form method="post" action="contact-post.html">
+                        <form class="form-horizontal" method="post" name="form1" action="<?php echo url('user/update'); ?>">
                             <div>
                                 <span><label>Name</label></span>
-                                <span><input name="userName" type="text" class="textbox"></span>
+                                <span><input name="username" type="text" class="textbox" value="<?php echo $consumer['username']; ?>"></span>
                             </div>
                             <div>
                                 <span><label>E-mail</label></span>
-                                <span><input name="userEmail" type="text" class="textbox"></span>
+                                <span><input name="email" type="text" class="textbox" value="<?php echo $consumer['email']; ?>"></span>
                             </div>
                             <div>
                                 <span><label>Mobile</label></span>
-                                <span><input name="userPhone" type="text" class="textbox"></span>
+                                <span><input name="tel" type="text" class="textbox"  value="<?php echo $consumer['tel']; ?>"></span>
                             </div>
                             <div>
-                                <span><label>Subject</label></span>
-                                <span><textarea name="userMsg"> </textarea></span>
+                                <span><label>Address</label></span>
+                                <span><input name="address" type="text" class="textbox"  value="<?php echo $consumer['address']; ?>"></span>
+                            </div>
+                            <div>
+                                <span><label>Password</label></span>
+                                <span><input name="password" type="password" class="textbox"  value="<?php echo $consumer['password']; ?>"></span>
                             </div>
                            <div>
                                 <span><input type="submit" class="" value="Submit us"></span>
