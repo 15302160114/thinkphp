@@ -89,8 +89,54 @@ class AdminhotaiController extends Base
         $this->assign('distributor',$distributor);
         return $this->fetch('');
     }
+    public function fenlei()
+    {
+        $a=explode(',', session('my_user','','my'));
+        $id=substr($a[0],6);
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $admin=model('Admin')->get($id);
+        $this->assign('admin',$admin);
+
+        $categorys=model('Category')->getCategorys();
+        $this->assign('categorys',$categorys);
+        return $this->fetch('');
+    }
+    public function save()
+    {
+        echo "<meta charset='UTF-8'>";
+        if(!request()->isPost()){
+            $this->error("非法输入");
+        }
+        $input=input('post.');
+
+        $validate=validate('Category');
+        if(!$validate->scene('add')->check($input)){
+            $this->error($validate->getError());
+        }
+        
+        $date=[
+                'categoryname'=>$input['categoryname']
+            ];
+
+        $xuhao=model('Category')->add($date);
+        if($xuhao){
+            $this->success('增加成功',url('adminhotai/fenlei'));
+        }else{
+            $this->error('增加失败');
+        }
+    }
     public function consumeredit()
     {
+        $a=explode(',', session('my_user','','my'));
+        $id=substr($a[0],6);
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $admin=model('Admin')->get($id);
+        $this->assign('admin',$admin);
+
         $id=input('param.id');
         if($id==0||is_null($id)){
             $this->error('参数有误');
@@ -101,6 +147,14 @@ class AdminhotaiController extends Base
     }
     public function dis_edit()
     {
+        $a=explode(',', session('my_user','','my'));
+        $id=substr($a[0],6);
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $admin=model('Admin')->get($id);
+        $this->assign('admin',$admin);
+
         $id=input('param.id');
         if($id==0||is_null($id)){
             $this->error('参数有误');
@@ -133,6 +187,116 @@ class AdminhotaiController extends Base
         }
         $this->error('删除失败');
     }
+    public function ca_delete()
+    {
+        $id=input('param.id');
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $category=model('Category')->get($id);
+        if(!is_null($category->delete())){
+            $this->success('删除成功','adminhotai/fenlei');
+        }
+        $this->error('删除失败');
+    }
+    public function consumerupdate()
+    {
+        $a=explode(',', session('my_user','','my'));
+        $aid=substr($a[0],6);
+        if($aid==0||is_null($aid)){
+            $this->error('参数有误');
+        }
+        $admin=model('Admin')->get($aid);
+        $this->assign('admin',$admin);
+
+        echo "<meta charset='UTF-8'>";
+        if(!request()->isPost()){
+            $this->error("非法输入");
+        }
+        $input=input('post.');
+
+        $validate=validate('Consumer');
+        if(!$validate->scene('edit')->check($input)){
+            $this->error($validate->getError());
+        }
+
+        $consumer=Db::table('consumer')
+                    ->where('id',$input['id'])
+                    ->select();
+        $pa=$consumer[0];
+        if($pa['password']==$input['password']){
+            $date=[
+                'username'=>$input['username'],
+                'realname'=>$input['realname'],
+                'tel'=>$input['tel'],
+                'email'=>$input['email']
+            ];
+        }else{
+            $date=[
+                'username'=>$input['username'],
+                'realname'=>$input['realname'],
+                'tel'=>$input['tel'],
+                'email'=>$input['email'],
+                'password'=>md5($input['password'])
+            ];
+        }
+
+        $xuhao=model('Consumer')->save($date,['id'=>intval($input['id'])]);
+        if($xuhao){
+            $this->success('更新成功',url('adminhotai/user'));
+        }else{
+            $this->error('更新失败');
+        }
+    }
+    public function dis_update()
+    {
+        $a=explode(',', session('my_user','','my'));
+        $aid=substr($a[0],6);
+        if($aid==0||is_null($aid)){
+            $this->error('参数有误');
+        }
+        $admin=model('Admin')->get($aid);
+        $this->assign('admin',$admin);
+
+        echo "<meta charset='UTF-8'>";
+        if(!request()->isPost()){
+            $this->error("非法输入");
+        }
+        $input=input('post.');
+
+        $validate=validate('Distributor');
+        if(!$validate->scene('edit')->check($input)){
+            $this->error($validate->getError());
+        }
+
+        $distributor=Db::table('distributor')
+                    ->where('id',$input['id'])
+                    ->select();
+        $pa=$distributor[0];
+        if($pa['password']==$input['password']){
+            $date=[
+                'realname'=>$input['realname'],
+                'tel'=>$input['tel'],
+                'note'=>$input['note'],
+                'email'=>$input['email']
+            ];
+        }else{
+            $date=[
+                'realname'=>$input['realname'],
+                'tel'=>$input['tel'],
+                'email'=>$input['email'],
+                'note'=>$input['note'],
+                'password'=>md5($input['password'])
+            ];
+        }
+
+        $xuhao=model('Distributor')->save($date,['id'=>intval($input['id'])]);
+        if($xuhao){
+            $this->success('更新成功',url('adminhotai/distributor'));
+        }else{
+            $this->error('更新失败');
+        }
+    }
     public function update_o()
     {
         $id=input('param.id');
@@ -147,55 +311,6 @@ class AdminhotaiController extends Base
         }else{
             $this->error('更新失败');
         }
-    }
-    public function consumerUpdate()
-    {
-        $a=explode(',', session('my_user','','my'));
-        $id=substr($a[0],6);
-        if($id==0||is_null($id)){
-            $this->error('参数有误');
-        }
-
-        echo "<meta charset='UTF-8'>";
-        if(!request()->isPost()){
-            $this->error("非法输入");
-        }
-        $input=input('post.');
-
-        $validate=validate('Consumer');
-        if(!$validate->scene('edit')->check($input)){
-            $this->error($validate->getError());
-        }
-
-        $admin=Db::table('consumer')
-                    ->where('id',$id)
-                    ->select();
-        $pa=$admin[0];  
-        if($pa['password']==$input['password']){
-            $date=[
-                'username'=>$input['username'],
-                'realname'=>$input['realname'],
-                'logo'=>$input['logo']
-            ];
-        }else{
-            $date=[
-                'username'=>$input['username'],
-                'realname'=>$input['realname'],
-                'logo'=>$input['logo'],
-                'password'=>md5($input['password'])
-            ];
-        }
-
-        $xuhao=model('Admin')->save($date,['id'=>intval($input['id'])]);
-        if($xuhao){
-            $this->success('更新成功',url('adminhotai/zhanghao'));
-        }else{
-            $this->error('更新失败');
-        }
-    }
-    public function dis_update()
-    {
-
     }
     public function orderUpdate()
     {

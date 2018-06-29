@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\zhanghao.html";i:1530151555;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:82:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\zhanghao.html";i:1530155900;}*/ ?>
 <!DOCTYPE html>
 <html class=" ">
     <head>
@@ -446,6 +446,12 @@
                             <a href="user.html">
                                 <i class="fa fa-th"></i>
                                 <span class="title">用户列表</span><span class="label label-orange nosubmenu">HOT</span>
+                            </a>
+                        </li>
+                        <li class=""> 
+                            <a href="distributor.html">
+                                <i class="fa fa-th"></i>
+                                <span class="title">配送员列表</span><span class="label label-orange nosubmenu">HOT</span>
                             </a>
                         </li>
                         <li class=""> 

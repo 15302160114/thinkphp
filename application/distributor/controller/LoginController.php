@@ -40,7 +40,7 @@ class LoginController extends Controller
 
         $xuhao=model('Distributor')->add($date);
         if($xuhao){
-            $this->success('增加成功，新增序号为'.$xuhao,url('distributor/index'));
+            $this->success('增加成功，新增序号为'.$xuhao,url('login/index'));
         }else{
             $this->error('增加失败');
         }

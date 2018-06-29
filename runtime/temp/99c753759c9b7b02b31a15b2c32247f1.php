@@ -1,4 +1,4 @@
-
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:86:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\consumeredit.html";i:1530234357;}*/ ?>
 <!DOCTYPE html>
 <html class=" ">
     <head>
@@ -10,46 +10,44 @@
         -->
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta charset="utf-8" />
-        <title>Ultra Admin : Data Tables</title>
+        <title>Admin : user设置</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta content="" name="description" />
         <meta content="" name="author" />
 
-        <link rel="shortcut icon" href="__STATIC__/assets/images/favicon.png" type="image/x-icon" />    <!-- Favicon -->
-        <link rel="apple-touch-icon-precomposed" href="__STATIC__/assets/images/apple-touch-icon-57-precomposed.png">	<!-- For iPhone -->
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="__STATIC__/assets/images/apple-touch-icon-114-precomposed.png">    <!-- For iPhone 4 Retina display -->
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="__STATIC__/assets/images/apple-touch-icon-72-precomposed.png">    <!-- For iPad -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="__STATIC__/assets/images/apple-touch-icon-144-precomposed.png">    <!-- For iPad Retina display -->
+        <link rel="shortcut icon" href="/thinkphp/public/static/assets/images/favicon.png" type="image/x-icon" />    <!-- Favicon -->
+        <link rel="apple-touch-icon-precomposed" href="/thinkphp/public/static/assets/images/apple-touch-icon-57-precomposed.png">  <!-- For iPhone -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/thinkphp/public/static/assets/images/apple-touch-icon-114-precomposed.png">    <!-- For iPhone 4 Retina display -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/thinkphp/public/static/assets/images/apple-touch-icon-72-precomposed.png">    <!-- For iPad -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/thinkphp/public/static/assets/images/apple-touch-icon-144-precomposed.png">    <!-- For iPad Retina display -->
 
 
 
 
         <!-- CORE CSS FRAMEWORK - START -->
-        <link href="__STATIC__/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="__STATIC__/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="__STATIC__/assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
-        <link href="__STATIC__/assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
-        <link href="__STATIC__/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
-        <link href="__STATIC__/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="/thinkphp/public/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css"/>
         <!-- CORE CSS FRAMEWORK - END -->
 
         <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
-        <link href="__STATIC__/assets/plugins/datatables/css/jquery.dataTables.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="__STATIC__/assets/plugins/datatables/extensions/TableTools/css/dataTables.tableTools.min.css" rel="stylesheet" type="text/css" media="screen"/
-        ><link href="__STATIC__/assets/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="__STATIC__/assets/plugins/datatables/extensions/Responsive/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet" type="text/css" media="screen"/>        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
+        <link href="/thinkphp/public/static/assets/plugins/icheck/skins/all.css" rel="stylesheet" type="text/css" media="screen"/>        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
 
 
         <!-- CORE CSS TEMPLATE - START -->
-        <link href="__STATIC__/assets/css/style.css" rel="stylesheet" type="text/css"/>
-        <link href="__STATIC__/assets/css/responsive.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/css/responsive.css" rel="stylesheet" type="text/css"/>
         <!-- CORE CSS TEMPLATE - END -->
 
     </head>
     <!-- END HEAD -->
 
     <!-- BEGIN BODY -->
-    <body class=" "><!-- START TOPBAR -->
+    <body class=" ">
+        <!-- START TOPBAR -->
         <div class='page-topbar '>
             <div class='logo-area'>
 
@@ -75,7 +73,7 @@
                                         <li class="unread status-available">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-1.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-1.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -92,7 +90,7 @@
                                         <li class=" status-away">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-2.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-2.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -109,7 +107,7 @@
                                         <li class=" status-busy">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-3.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-3.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -126,7 +124,7 @@
                                         <li class=" status-offline">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-4.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-4.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -143,7 +141,7 @@
                                         <li class=" status-offline">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-5.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-5.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -160,7 +158,7 @@
                                         <li class=" status-available">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-1.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-1.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -177,7 +175,7 @@
                                         <li class=" status-busy">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-2.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-2.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -194,7 +192,7 @@
                                         <li class=" status-away">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-3.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-3.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -351,13 +349,13 @@
                             </div>
                         </li>
                     </ul>
-                </div>		
+                </div>      
                 <div class='pull-right'>
                     <ul class="info-menu right-links list-inline list-unstyled">
                         <li class="profile">
                             <a href="#" data-toggle="dropdown" class="toggle">
-                                <img src="/thinkphp/public/admin_uploads/{$admin.id}/{$admin.logo}" alt="user-image" class="img-circle img-inline">
-                                <span>{if condition="$user"}{$user->username}{/if} <i class="fa fa-angle-down"></i></span>
+                                <img src="/thinkphp/public/admin_uploads/<?php echo $admin['id']; ?>/<?php echo $admin['logo']; ?>" alt="user-image" class="img-circle img-inline">
+                                <span><?php if($user): ?><?php echo $user->username; endif; ?> <i class="fa fa-angle-down"></i></span>
                             </a>
                             <ul class="dropdown-menu profile animated fadeIn">
                                 <li>
@@ -379,7 +377,7 @@
                                     </a>
                                 </li>
                                 <li class="last">
-                                    <a href="{:url('adminhotai/logout')}">
+                                    <a href="ui-login.html">
                                         <i class="fa fa-lock"></i>
                                         Logout
                                     </a>
@@ -392,8 +390,8 @@
                                 <span class="badge badge-warning">9</span>
                             </a>
                         </li>
-                    </ul>			
-                </div>		
+                    </ul>           
+                </div>      
             </div>
 
         </div>
@@ -409,18 +407,18 @@
                 <div class="page-sidebar-wrapper" id="main-menu-wrapper"> 
 
                     <!-- USER INFO - START -->
-                    <div class="profile-info row" style="margin:30px 0;">
+                    <div class="profile-info row">
 
                         <div class="profile-image col-md-4 col-sm-4 col-xs-4">
                             <a href="ui-profile.html">
-                                <img src="/thinkphp/public/admin_uploads/{$admin.id}/{$admin.logo}" class="img-responsive img-circle">
+                                <img src="/thinkphp/public/admin_uploads/<?php echo $admin['id']; ?>/<?php echo $admin['logo']; ?>" class="img-responsive img-circle">
                             </a>
                         </div>
 
                         <div class="profile-details col-md-8 col-sm-8 col-xs-8">
 
                             <h3>
-                                <a href="ui-profile.html">{if condition="$user"}{$user->username}{/if}</a>
+                                <a href="ui-profile.html"><?php if($user): ?><?php echo $user->username; endif; ?></a>
 
                                 <!-- Available statuses: online, idle, busy, away and offline -->
                                 <span class="profile-status online"></span>
@@ -435,7 +433,7 @@
 
 
 
-                    <ul class='wraplist'>	
+                    <ul class='wraplist'>   
 
 
                         <li class=""> 
@@ -456,7 +454,7 @@
                                 <span class="title">配送员列表</span><span class="label label-orange nosubmenu">HOT</span>
                             </a>
                         </li>
-                        <li class="open"> 
+                        <li class=""> 
                             <a href="javascript:;">
                                 <i class="fa fa-suitcase"></i>
                                 <span class="title">订单</span>
@@ -464,7 +462,7 @@
                             </a>
                             <ul class="sub-menu" >
                                 <li>
-                                    <a class="active" href="all_order.html">所有订单</a>
+                                    <a class="" href="all_order.html">所有订单</a>
                                 </li>
                                 <li>
                                     <a class="" href="order.html">订单详情</a>
@@ -473,44 +471,224 @@
                             </ul>
                         </li>
                         <li class=""> 
-                            <a href="fenlei.html">
+                            <a href="javascript:;">
                                 <i class="fa fa-sliders"></i>
-                                <span class="title">商品分类</span>
+                                <span class="title">Forms</span>
+                                <span class="arrow open"></span>
                             </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a class="" href="form-elements.html">Form Elements</a>
+                                </li>
+                                <li>
+                                    <a class="" href="form-components.html">Form Components</a>
+                                </li>
+                                <li>
+                                    <a class="" href="form-wizard.html">Form Wizard</a>
+                                </li>
+                                <li>
+                                    <a class="" href="form-validation.html">Form Validations</a>
+                                </li>
+                                <li>
+                                    <a class="" href="form-fileupload.html">File Upload & Dropzone</a>
+                                </li>
+                                <li>
+                                    <a class="" href="form-editors.html">Editors</a>
+                                </li>
+                                <li>
+                                    <a class="" href="form-masks.html">Input Masks</a>
+                                </li>
+                            </ul>
                         </li>
-                        
+                        <li class=""> 
+                            <a href="javascript:;">
+                                <i class="fa fa-gift"></i>
+                                <span class="title">Extra</span>
+                                <span class="arrow "></span><span class="label label-orange">NEW</span>
+                            </a>
+                            <ul class="sub-menu" >
+                                <li>
+                                    <a class="" href="ui-calendar.html">Calendar</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-pricing.html">Pricing tables</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-profile.html">Profile</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-register.html">Registration</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-timeline.html">Timeline</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-invoice.html">Invoice</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-members.html">Members</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-gallery.html">Gallery</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-search.html">Search</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-blogs.html">Blogs</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-imagecrop.html">Image cropper</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-tocify.html">Tocify</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-faq.html">FAQ</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-404.html">404</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-500.html">500</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-lockscreen.html">Lock Screen</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=""> 
+                            <a href="javascript:;">
+                                <i class="fa fa-envelope"></i>
+                                <span class="title">Mailbox</span>
+                                <span class="arrow "></span><span class="label label-orange">4</span>
+                            </a>
+                            <ul class="sub-menu" >
+                                <li>
+                                    <a class="" href="mail-inbox.html">Inbox</a>
+                                </li>
+                                <li>
+                                    <a class="" href="mail-compose.html">Compose</a>
+                                </li>
+                                <li>
+                                    <a class="" href="mail-view.html">View</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=""> 
+                            <a href="javascript:;">
+                                <i class="fa fa-bar-chart"></i>
+                                <span class="title">Charts</span>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu" >
+                                <li>
+                                    <a class="" href="charts-morris.html">Morris Charts</a>
+                                </li>
+                                <li>
+                                    <a class="" href="charts-chartjs.html">Chart JS</a>
+                                </li>
+                                <li>
+                                    <a class="" href="charts-flot.html">Flot Charts</a>
+                                </li>
+                                <li>
+                                    <a class="" href="charts-sparkline.html">Sparkline Charts</a>
+                                </li>
+                                <li>
+                                    <a class="" href="charts-easypiechart.html">PIE charts & Knobs</a>
+                                </li>
+                                <li>
+                                    <a class="" href="charts-rickshaw.html">Rickshaw Charts</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=""> 
+                            <a href="javascript:;">
+                                <i class="fa fa-table"></i>
+                                <span class="title">Tables</span>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu" >
+                                <li>
+                                    <a class="" href="tables-basic.html">Basic tables</a>
+                                </li>
+                                <li>
+                                    <a class="" href="tables-data.html">Data Tables</a>
+                                </li>
+                                <li>
+                                    <a class="" href="tables-responsive.html">Responsive Tables</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=""> 
+                            <a href="javascript:;">
+                                <i class="fa fa-columns"></i>
+                                <span class="title">Layouts</span>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu" >
+                                <li>
+                                    <a class="" href="layout-default.html">Default Layout</a>
+                                </li>
+                                <li>
+                                    <a class="" href="layout-collapsed.html">Collapsed Menu</a>
+                                </li>
+                                <li>
+                                    <a class="" href="layout-chat.html">Chat Open</a>
+                                </li>
+                                <li>
+                                    <a class="" href="layout-boxed.html">Boxed Layout</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=""> 
+                            <a href="javascript:;">
+                                <i class="fa fa-map-marker"></i>
+                                <span class="title">Maps</span>
+                                <span class="arrow "></span>
+                            </a>
+                            <ul class="sub-menu" >
+                                <li>
+                                    <a class="" href="ui-vectormaps.html">Vector Maps</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-googlemaps.html">Google Maps</a>
+                                </li>
+                                <li>
+                                    <a class="" href="ui-googlemapfull.html">Advanced Google Maps</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class=""> <a href="javascript:;"> <i class="fa fa-folder-open"></i> <span class="title">Menu Levels</span> <span class="arrow "></span> </a>
+                            <ul class="sub-menu">
+                                <li > <a href="javascript:;"> <span class="title">Level 1.1</span> </a> </li>
+                                <li > <a href="javascript:;"> <span class="title">Level 1.2</span> <span class="arrow "></span> </a>
+                                    <ul class="sub-menu">
+                                        <li > <a href="javascript:;"> <span class="title">Level 2.1</span> </a></li>
+                                        <li > <a href="ujavascript:;"> <span class="title">Level 2.2</span> <span class="arrow "></span></a> 
+                                            <ul class="sub-menu">
+                                                <li > <a href="javascript:;"> <span class="title">Level 3.1</span> <span class="arrow "></span></a> 
+                                                    <ul class="sub-menu">
+                                                        <li > <a href="ujavascript:;"> <span class="title">Level 4.1</span> </a> </li>
+                                                        <li > <a href="ujavascript:;"> <span class="title">Level 4.2</span> </a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li > <a href="ujavascript:;"> <span class="title">Level 3.2</span> </a> </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
                     </ul>
 
                 </div>
                 <!-- MAIN MENU - END -->
-
-
-
-                <div class="project-info">
-
-                    <div class="block1">
-                        <div class="data">
-                            <span class='title'>New&nbsp;Orders</span>
-                            <span class='total'>2,345</span>
-                        </div>
-                        <div class="graph">
-                            <span class="sidebar_orders">...</span>
-                        </div>
-                    </div>
-
-                    <div class="block2">
-                        <div class="data">
-                            <span class='title'>Visitors</span>
-                            <span class='total'>345</span>
-                        </div>
-                        <div class="graph">
-                            <span class="sidebar_visitors">...</span>
-                        </div>
-                    </div>
-
-                </div>
-
-
 
             </div>
             <!--  SIDEBAR - END -->
@@ -520,81 +698,104 @@
 
                     <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                         <div class="page-title">
-
                             <div class="pull-left">
-                                <h1 class="title">用户订单</h1>                            </div>
-
-
+                                <h1 class="title">账号设置</h1>                            
+                            </div>
                         </div>
                     </div>
                     <div class="clearfix"></div>
 
-                    
-                                    
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                         <section class="box ">
                             <header class="panel_header">
-                                <h2 class="title pull-left">所有订单</h2>
+                                <h2 class="title pull-left">账号信息</h2>
                                 <div class="actions panel_actions pull-right">
                                     <i class="box_toggle fa fa-chevron-down"></i>
                                     <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
                                     <i class="box_close fa fa-times"></i>
                                 </div>
                             </header>
-                            <div class="content-body">    <div class="row">
+                            <div class="content-body">
+                            <form class="form-horizontal" method="post" name="form1" action="<?php echo url('adminhotai/consumerupdate'); ?>">
+                                <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="hidden" name="id"placeholder="id" value="<?php echo $consumer['id']; ?>">
+                                        </div>
 
+                                        <div>Username: </div>
+                                        <div class="input-group primary">
+                                            <span class="input-group-addon">                
+                                                <span class="arrow"></span>
+                                                <i class="fa fa-user"></i>
+                                            </span>
+                                            <input type="text" class="form-control" name="username" value="<?php echo $consumer['username']; ?>">
+                                        </div>
 
+                                        <br>
+                                        <div>Realname: </div>
+                                        <div class="input-group primary">
+                                            <span class="input-group-addon">                
+                                                <span class="arrow"></span>
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </span>
+                                            <input type="text" class="form-control" name="realname" value="<?php echo $consumer['realname']; ?>">
+                                        </div>
 
-                                        <!-- ********************************************** -->
+                                        <br>
 
+                                        <div>Tel: </div>
+                                        <div class="input-group primary">
+                                            <span class="input-group-addon">                
+                                                <span class="arrow"></span>
+                                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                            </span>
+                                            <input type="text" class="form-control" name="tel" value="<?php echo $consumer['tel']; ?>">
+                                        </div>
 
-                                        <table id="example" class="display table table-hover table-condensed" cellspacing="0" width="100%">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>商品名称</th>
-                                                    <th>logo</th>
-                                                    <th>商品分类</th>
-                                                    <th>下单用户</th>
-                                                    <th>数量</th>
-                                                    <th>价钱</th>
-                                                    <th>配送员</th>
-                                                    <th>STATUS</th>
-                                                    <th>操作</th>
-                                                </tr>
-                                            </thead>
+                                        <br>
 
-                                            <tbody>
-                                                {volist name="order" id="vo" key="num"}
-                                                <tr>
-                                                    <th>{$num}</th>
-                                                    <td>{$vo.spname}</td>
-                                                    <td>{$vo.logo}</td>
-                                                    <td>{:getAuthorname($vo.category_id)}</td>
-                                                    <td>{:getAuthorname($vo.author_id)}</td>
-                                                    <td>{$vo.count}</td>
-                                                    <td>{$vo.sum}</td>
-                                                    <td>{:getDisname($vo.distributor_id)}</td>
-                                                    <form method="post" action="{:url('adminhotai/update_o',['id'=>$vo.id])}">
-                                                    <td>
-                                                        <select data-am-selected="{searchBox: 1}" name="status">
-                                                            {:getStatusname($vo.status)}
-                                                        </select>
-                                                    </td>
-                                                    <td><button type="submit">更新</button> <button type="button"><a href="order.html?id={$vo.id}" style="color:#777;text-decoration: none;">详情</a></button></td>
-                                                    </form>
-                                                </tr>
-                                                {/volist}
-                                            </tbody>
-                                        </table>
-                                        <!-- ********************************************** -->
+                                        <div>Email: </div>
+                                        <div class="input-group primary">
+                                            <span class="input-group-addon">                
+                                                <span class="arrow"></span>
+                                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                            </span>
+                                            <input type="text" class="form-control" name="email" value="<?php echo $consumer['email']; ?>">
+                                        </div>
 
+                                        <br>
+
+                                        <div>Address: </div>
+                                        <div class="input-group primary">
+                                            <span class="input-group-addon">                
+                                                <span class="arrow"></span>
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            </span>
+                                            <input type="text" class="form-control" name="address" value="<?php echo $consumer['address']; ?>">
+                                        </div>
+
+                                        <br>
+                                        
+                                        <div>Password: </div>
+                                        <div class="input-group primary">
+                                            <span class="input-group-addon">     
+                                                <span class="arrow"></span>
+                                                <i class="fa fa-unlock-alt"></i>
+                                            </span>
+                                            <input type="password" class="form-control" name="password" value="<?php echo $consumer['password']; ?>">
+                                        </div>
+
+                                        <br>
+                                    
+                                        <button type="submit" class="btn btn-default" style="margin-top:20px;background:rgb(35,186,179);color:#fff;">更新</button>
+                                      </div>
                                     </div>
                                 </div>
+                            </form>
                             </div>
-                        </section></div>
-
+                        </section>
+                    </div>
                 </section>
             </section>
             <!-- END CONTENT -->
@@ -632,7 +833,7 @@
 
                         <li class="user-row" id='chat_user_1' data-user-id='1'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-1.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-1.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Clarine Vassar</a></h4>
@@ -644,7 +845,7 @@
                         </li>
                         <li class="user-row" id='chat_user_2' data-user-id='2'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-2.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-2.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Brooks Latshaw</a></h4>
@@ -656,7 +857,7 @@
                         </li>
                         <li class="user-row" id='chat_user_3' data-user-id='3'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-3.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-3.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Clementina Brodeur</a></h4>
@@ -675,7 +876,7 @@
 
                         <li class="user-row" id='chat_user_4' data-user-id='4'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-4.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-4.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Carri Busey</a></h4>
@@ -687,7 +888,7 @@
                         </li>
                         <li class="user-row" id='chat_user_5' data-user-id='5'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-5.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-5.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Melissa Dock</a></h4>
@@ -699,7 +900,7 @@
                         </li>
                         <li class="user-row" id='chat_user_6' data-user-id='6'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-1.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-1.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Verdell Rea</a></h4>
@@ -711,7 +912,7 @@
                         </li>
                         <li class="user-row" id='chat_user_7' data-user-id='7'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-2.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-2.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Linette Lheureux</a></h4>
@@ -723,7 +924,7 @@
                         </li>
                         <li class="user-row" id='chat_user_8' data-user-id='8'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-3.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-3.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Araceli Boatright</a></h4>
@@ -735,7 +936,7 @@
                         </li>
                         <li class="user-row" id='chat_user_9' data-user-id='9'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-4.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-4.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Clay Peskin</a></h4>
@@ -747,7 +948,7 @@
                         </li>
                         <li class="user-row" id='chat_user_10' data-user-id='10'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-5.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-5.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Loni Tindall</a></h4>
@@ -759,7 +960,7 @@
                         </li>
                         <li class="user-row" id='chat_user_11' data-user-id='11'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-1.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-1.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Tanisha Kimbro</a></h4>
@@ -771,7 +972,7 @@
                         </li>
                         <li class="user-row" id='chat_user_12' data-user-id='12'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-2.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-2.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Jovita Tisdale</a></h4>
@@ -797,29 +998,27 @@
 
 
         <!-- CORE JS FRAMEWORK - START --> 
-        <script src="__STATIC__/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script> 
-        <script src="__STATIC__/assets/js/jquery.easing.min.js" type="text/javascript"></script> 
-        <script src="__STATIC__/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script> 
-        <script src="__STATIC__/assets/plugins/pace/pace.min.js" type="text/javascript"></script>  
-        <script src="__STATIC__/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js" type="text/javascript"></script> 
-        <script src="__STATIC__/assets/plugins/viewport/viewportchecker.js" type="text/javascript"></script>  
+        <script src="/thinkphp/public/static/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script> 
+        <script src="/thinkphp/public/static/assets/js/jquery.easing.min.js" type="text/javascript"></script> 
+        <script src="/thinkphp/public/static/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script> 
+        <script src="/thinkphp/public/static/assets/plugins/pace/pace.min.js" type="text/javascript"></script>  
+        <script src="/thinkphp/public/static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js" type="text/javascript"></script> 
+        <script src="/thinkphp/public/static/assets/plugins/viewport/viewportchecker.js" type="text/javascript"></script>  
         <!-- CORE JS FRAMEWORK - END --> 
 
 
         <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
-        <script src="__STATIC__/assets/plugins/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
-        <script src="__STATIC__/assets/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-        <script src="__STATIC__/assets/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js" type="text/javascript"></script>
-        <script src="__STATIC__/assets/plugins/datatables/extensions/Responsive/bootstrap/3/dataTables.bootstrap.js" type="text/javascript"></script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
+        <script src="/thinkphp/public/static/assets/plugins/autosize/autosize.min.js" type="text/javascript"></script><script src="/thinkphp/public/static/assets/plugins/icheck/icheck.min.js" type="text/javascript"></script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
 
 
         <!-- CORE TEMPLATE JS - START --> 
-        <script src="__STATIC__/assets/js/scripts.js" type="text/javascript"></script> 
+        <script src="/thinkphp/public/static/assets/js/scripts.js" type="text/javascript"></script> 
         <!-- END CORE TEMPLATE JS - END --> 
 
         <!-- Sidebar Graph - START --> 
-        <script src="__STATIC__/assets/plugins/sparkline-chart/jquery.sparkline.min.js" type="text/javascript"></script>
-        <script src="__STATIC__/assets/js/chart-sparkline.js" type="text/javascript"></script>
+        <script src="/thinkphp/public/static/assets/plugins/sparkline-chart/jquery.sparkline.min.js" type="text/javascript"></script>
+        <script src="/thinkphp/public/static/assets/js/chart-sparkline.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/thinkphp/public/static/webuploader/webuploader.js"></script>
         <!-- Sidebar Graph - END --> 
 
 
@@ -856,7 +1055,7 @@
         </div>
         <!-- modal end -->
     </body>
-    
+
 </html>
 
 

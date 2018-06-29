@@ -37,7 +37,7 @@ class LoginController extends Controller
         $date=[
                 'email'=>$input['email'],
                 'tel'=>$input['tel'],
-                'note'=>$input['address'],
+                'address'=>$input['address'],
                 'username'=>$input['username'],
                 'password'=>md5($input['password'])
             ];

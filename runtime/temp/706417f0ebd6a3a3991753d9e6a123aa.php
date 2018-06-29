@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"C:\xampp\htdocs\thinkphp\public/../application/distributor\view\login\index.html";i:1530154132;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"C:\xampp\htdocs\thinkphp\public/../application/distributor\view\login\index.html";i:1530234939;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,6 +42,7 @@
         </div>
           <img src="<?php echo captcha_src(); ?>" alt="captcha" onclick="javascript:this.src='<?php echo captcha_src(); ?>?tm='+Math.random();" style="cursor: pointer"/>
         <p class="p-bottom-w3ls">Are you new to eBanking?<a class="w3_play_icon1" href="#small-dialog1">  Register here</a></p>
+        <p class="p-bottom-w3ls"><a href="<?php echo url('@index/index/index'); ?>"> < HOME</a></p>
         
         <div class="submit-w3l">
           <input type="submit" onclick="myFunction()" value="Login">

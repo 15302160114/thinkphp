@@ -6,28 +6,32 @@ class UserController extends Base
 {
     public function index()
     {
+    	$a=explode(',', session('me_user','','me'));
+        $id=substr($a[0],6);
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $consumer=model('Consumer')->get($id);
+        $this->assign('consumer',$consumer);
+
+        $categorys=model('Category')->getCategorys();
+        $this->assign('categorys',$categorys);
         return $this->fetch();
     }
-    public function zhanghao()
+    public function settings()
     {
-        $id=input('param.id');
-		// if($id==0||is_null($id)){
-		// 	$this->error('参数有误');
-		// }
-		$userhotai=model('Userhotai')->get($id);
-		
-		$this->assign('userhotai',$userhotai);
+        $a=explode(',', session('me_user','','me'));
+        $id=substr($a[0],6);
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $consumer=model('Consumer')->get($id);
+        $this->assign('consumer',$consumer);
+
+        $categorys=model('Category')->getCategorys();
+        $this->assign('categorys',$categorys);
 		return $this->fetch('');
     }
-    public function edit(){
-		$id=input('param.id');
-		if($id==0||is_null($id)){
-			$this->error('参数有误');
-		}
-		$userhotai=model('Userhotai')->get($id);
-		$this->assign('userhotai',$userhotai);
-		return $this->fetch('');
-	}
 	public function update(){
 		echo "<meta charset='UTF-8'>";
 		if(!request()->isPost()){
