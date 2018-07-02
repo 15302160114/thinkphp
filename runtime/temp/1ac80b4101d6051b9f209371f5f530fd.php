@@ -1,12 +1,13 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\xampp\htdocs\thinkphp\public/../application/user\view\user\index.html";i:1530537135;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
 <title>Home : user</title>
-<link href="__STATIC__/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="/thinkphp/public/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
-<script type='text/javascript' src="__STATIC__/js/jquery-1.11.1.min.js"></script>
+<script type='text/javascript' src="/thinkphp/public/static/js/jquery-1.11.1.min.js"></script>
 <!-- Custom Theme files -->
-<link href="__STATIC__/css/index.css" rel='stylesheet' type='text/css' />
+<link href="/thinkphp/public/static/css/index.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,11 +18,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
 <!-- start menu -->
-<link href="__STATIC__/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="__STATIC__/js/megamenu.js"></script>
+<link href="/thinkphp/public/static/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="/thinkphp/public/static/js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
-<script src="__STATIC__/js/menu_jquery.js"></script>
-<script src="__STATIC__/js/simpleCart.min.js"> </script>
+<script src="/thinkphp/public/static/js/menu_jquery.js"></script>
+<script src="/thinkphp/public/static/js/simpleCart.min.js"> </script>
 </head>
 <body>
 <!-- header_top -->
@@ -48,7 +49,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="header">
     <div class="head-t">
         <div class="logo">
-            <a href="index.html"><img src="__STATIC__/images/logo.png" class="img-responsive" alt=""/> </a>
+            <a href="index.html"><img src="/thinkphp/public/static/images/logo.png" class="img-responsive" alt=""/> </a>
         </div>
         <!-- start header_right -->
         <div class="header_right">
@@ -56,18 +57,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 
             <div class="cart box_1">
                 <a href="checkout.html">
-                    <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="__STATIC__/images/bag.png" alt=""></h3>
+                    <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="/thinkphp/public/static/images/bag.png" alt=""></h3>
                 </a>    
 
                 <div class="clearfix"> </div>
             </div>
             
             <div class="create_btn">
-                <a href="{:url('user/logout')}">sign out</a>
+                <a href="<?php echo url('user/logout'); ?>">sign out</a>
             </div>
 
             <div class="create" style="border:1px solid #000;text-align:right;display:inline-block;margin-left:30px;padding:8px 12px;">
-                <a href="#">欢迎你 , {if condition="$user"}{$user->username}{/if}</a>
+                <a href="#">欢迎你 , <?php if($user): ?><?php echo $user->username; endif; ?></a>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -91,9 +92,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>品牌</h4>
                                 <ul>
-                                    {volist name="categorys" id="vo"}
-                                        <li><a href="category.html?id={$vo.id}">{$vo.categoryname}</a></li>
-                                    {/volist}
+                                    <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
                         </div>
@@ -101,9 +102,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>品牌</h4>
                                 <ul>
-                                    {volist name="categorys" id="vo"}
-                                        <li><a href="category.html?id={$vo.id}">{$vo.categoryname}</a></li>
-                                    {/volist}
+                                    <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
                         </div>
@@ -111,9 +112,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>品牌</h4>
                                 <ul>
-                                    {volist name="categorys" id="vo"}
-                                        <li><a href="category.html?id={$vo.id}">{$vo.categoryname}</a></li>
-                                    {/volist}
+                                    <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
                         </div>
@@ -121,9 +122,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>品牌</h4>
                                 <ul>
-                                    {volist name="categorys" id="vo"}
-                                        <li><a href="category.html?id={$vo.id}">{$vo.categoryname}</a></li>
-                                    {/volist}
+                                    <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
                         </div>
@@ -131,9 +132,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>品牌</h4>
                                 <ul>
-                                    {volist name="categorys" id="vo"}
-                                        <li><a href="category.html?id={$vo.id}">{$vo.categoryname}</a></li>
-                                    {/volist}
+                                    <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
                         </div>
@@ -141,9 +142,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="h_nav">
                                 <h4>品牌</h4>
                                 <ul>
-                                    {volist name="categorys" id="vo"}
-                                        <li><a href="category.html?id={$vo.id}">{$vo.categoryname}</a></li>
-                                    {/volist}
+                                    <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
                         </div>
@@ -169,24 +170,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="arriv">
     <div class="container">
         <div class="arriv-top">
-            {volist name="commodity" id="vo"}
+            <?php if(is_array($commodity) || $commodity instanceof \think\Collection || $commodity instanceof \think\Paginator): $i = 0; $__LIST__ = $commodity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
             <div class="col-md-6 arriv-left">
-                <img src="/thinkphp/public/uploads/{$vo.logo}" class="img-responsive" width='100%' style="margin:20px 0" alt="">
+                <img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" class="img-responsive" width='100%' style="margin:20px 0" alt="">
                 <div class="arriv-info">
                     <h3>NEW ARRIVALS</h3>
-                    <p>{$vo.description}</p>
+                    <p><?php echo $vo['description']; ?></p>
                     <div class="crt-btn">
                         <a href="details.html">TAKE A LOOK</a>
                     </div>
                 </div>
             </div>
-            {/volist}
+            <?php endforeach; endif; else: echo "" ;endif; ?>
             
             <div class="clearfix"> </div>
         </div>
         <div class="arriv-bottm">
             <div class="col-md-8 arriv-left1">
-                <img src="__STATIC__/images/3.jpg" class="img-responsive" alt="">
+                <img src="/thinkphp/public/static/images/3.jpg" class="img-responsive" alt="">
                 <div class="arriv-info1">
                     <h3>SWEATER</h3>
                     <p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
@@ -196,7 +197,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
             <div class="col-md-4 arriv-right1">
-                <img src="__STATIC__/images/4.jpg" class="img-responsive" alt="">
+                <img src="/thinkphp/public/static/images/4.jpg" class="img-responsive" alt="">
                 <div class="arriv-info2">
                     <a href="details.html"><h3>Trekking Shoes<i class="ars"></i></h3></a>
                 </div>
@@ -205,13 +206,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="arriv-las">
             <div class="col-md-4 arriv-left2">
-                <img src="__STATIC__/images/5.jpg" class="img-responsive" alt="">
+                <img src="/thinkphp/public/static/images/5.jpg" class="img-responsive" alt="">
                 <div class="arriv-info2">
                     <a href="details.html"><h3>Casual Glasses<i class="ars"></i></h3></a>
                 </div>
             </div>
             <div class="col-md-4 arriv-middle">
-                <img src="__STATIC__/images/6.jpg" class="img-responsive" alt="">
+                <img src="/thinkphp/public/static/images/6.jpg" class="img-responsive" alt="">
                 <div class="arriv-info3">
                     <h3>FRESH LOOK T-SHIRT</h3>
                     <div class="crt-btn">
@@ -220,7 +221,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
             <div class="col-md-4 arriv-right2">
-                <img src="__STATIC__/images/7.jpg" class="img-responsive" alt="">
+                <img src="/thinkphp/public/static/images/7.jpg" class="img-responsive" alt="">
                 <div class="arriv-info2">
                     <a href="details.html"><h3>Elegant Watches<i class="ars"></i></h3></a>
                 </div>
@@ -235,7 +236,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="specia-top">
             <ul class="grid_2">
         <li>
-                <a href="details.html"><img src="__STATIC__/images/8.jpg" class="img-responsive" alt=""></a>
+                <a href="details.html"><img src="/thinkphp/public/static/images/8.jpg" class="img-responsive" alt=""></a>
                 <div class="special-info grid_1 simpleCart_shelfItem">
                     <h5>Lorem ipsum dolor</h5>
                     <div class="item_add"><span class="item_price"><h6>ONLY $40.00</h6></span></div>
@@ -243,7 +244,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
         </li>
         <li>
-                <a href="details.html"><img src="__STATIC__/images/9.jpg" class="img-responsive" alt=""></a>
+                <a href="details.html"><img src="/thinkphp/public/static/images/9.jpg" class="img-responsive" alt=""></a>
                 <div class="special-info grid_1 simpleCart_shelfItem">
                     <h5>Consectetur adipis</h5>
                     <div class="item_add"><span class="item_price"><h6>ONLY $60.00</h6></span></div>
@@ -251,7 +252,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </li>
         <li>
-                <a href="details.html"><img src="__STATIC__/images/10.jpg" class="img-responsive" alt=""></a>
+                <a href="details.html"><img src="/thinkphp/public/static/images/10.jpg" class="img-responsive" alt=""></a>
                 <div class="special-info grid_1 simpleCart_shelfItem">
                     <h5>Commodo consequat</h5>
                     <div class="item_add"><span class="item_price"><h6>ONLY $14.00</h6></span></div>
@@ -259,7 +260,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </li>
         <li>
-                <a href="details.html"><img src="__STATIC__/images/11.jpg" class="img-responsive" alt=""></a>
+                <a href="details.html"><img src="/thinkphp/public/static/images/11.jpg" class="img-responsive" alt=""></a>
                 <div class="special-info grid_1 simpleCart_shelfItem">
                     <h5>Voluptate velit</h5>
                     <div class="item_add"><span class="item_price"><h6>ONLY $37.00</h6></span></div>

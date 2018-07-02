@@ -165,7 +165,7 @@ class UserController extends Base
 
         $xuhao=model('Order')->add($date);
         if($xuhao){
-            $this->success('增加成功',url('user/order'));
+            $this->success('增加成功',url('user/shopping'));
         }else{
             $this->error('增加失败');
         }
