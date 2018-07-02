@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\category.html";i:1530494040;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\category.html";i:1530503660;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -291,9 +291,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!-- grids_of_4 -->
 		<div class="grids_of_4">
-		  <div class="grid1_of_4">
+			<?php if(is_array($commodity) || $commodity instanceof \think\Collection || $commodity instanceof \think\Paginator): $i = 0; $__LIST__ = $commodity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+		  	<div class="grid1_of_4">
 				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w1.jpg" class="img-responsive" alt=""/>
+			   	   	 <img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" class="img-responsive" alt=""/>
 				   	  </a>
 				    <h4><a href="details.html"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
@@ -304,45 +305,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					 </div>
 			   	</div>
 			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w2.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $76.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w3.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $58.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w4.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $112.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
+			<?php endforeach; endif; else: echo "" ;endif; ?>
+			
+			
 			<div class="clearfix"></div>
 		</div>
 		

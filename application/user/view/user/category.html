@@ -290,9 +290,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!-- grids_of_4 -->
 		<div class="grids_of_4">
-		  <div class="grid1_of_4">
+			{volist name="commodity" id="vo"}
+		  	<div class="grid1_of_4">
 				<div class="content_box"><a href="details.html">
-			   	   	 <img src="__STATIC__/images/w1.jpg" class="img-responsive" alt=""/>
+			   	   	 <img src="/thinkphp/public/uploads/{$vo.logo}" class="img-responsive" alt=""/>
 				   	  </a>
 				    <h4><a href="details.html"> Duis autem</a></h4>
 				     <p>It is a long established fact that</p>
@@ -303,45 +304,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					 </div>
 			   	</div>
 			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="__STATIC__/images/w2.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $76.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="__STATIC__/images/w3.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $58.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="__STATIC__/images/w4.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $112.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
+			{/volist}
+			
+			
 			<div class="clearfix"></div>
 		</div>
 		

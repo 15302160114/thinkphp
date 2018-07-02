@@ -39,18 +39,27 @@ class UserController extends Base
     public function category()
     {
     	$a=explode(',', session('me_user','','me'));
-        $id=substr($a[0],6);
+        $aid=substr($a[0],6);
+        if($aid==0||is_null($aid)){
+            $this->error('参数有误');
+        }
+        $consumer=model('Consumer')->get($aid);
+        $this->assign('consumer',$consumer);
+
+        $id=input('param.id');
         if($id==0||is_null($id)){
             $this->error('参数有误');
         }
-        $consumer=model('Consumer')->get($id);
-        $this->assign('consumer',$consumer);
+
+        $commodity=Db::table('commodity')
+                    ->where('category_id',$id)
+                    ->select();
+
+        $this->assign('commodity',$commodity);
 
         $categorys=model('Category')->getCategorys();
         $this->assign('categorys',$categorys);
 
-        $commodity=model('Commodity')->getCommoditys();
-        $this->assign('commodity',$commodity);
 		return $this->fetch('');
     }
 	public function update(){
