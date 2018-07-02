@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\distributor.html";i:1530494818;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\distributor.html";i:1530503788;}*/ ?>
 
 <!DOCTYPE html>
 <html class=" ">
@@ -498,7 +498,7 @@
                         <div class="page-title">
 
                             <div class="pull-left">
-                                <h1 class="title">用户列表</h1>                           
+                                <h1 class="title">配送员列表</h1>                           
                             </div>
 
 
@@ -509,7 +509,7 @@
                     <div class="col-lg-12">
                         <section class="box ">
                             <header class="panel_header">
-                                <h2 class="title pull-left">用户详情</h2>
+                                <h2 class="title pull-left">配送员详情</h2>
                                 <div class="actions panel_actions pull-right">
                                     <i class="box_toggle fa fa-chevron-down"></i>
                                     <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
