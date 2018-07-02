@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\shopping.html";i:1530517331;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\shopping.html";i:1530518081;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -198,42 +198,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 </div>
 			</div>
 		 <div class="col-md-9 cart-items">
-			 <h1>My Shopping Bag (1)</h1>
+			 <h1>My Shopping Bag</h1>
+
+			 <?php if(is_array($commoditys) || $commoditys instanceof \think\Collection || $commoditys instanceof \think\Paginator): $i = 0; $__LIST__ = $commoditys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
 				<script>$(document).ready(function(c) {
-					$('.close1').on('click', function(c){
-						$('.cart-header').fadeOut('slow', function(c){
-							$('.cart-header').remove();
+					$('.<?php echo $vo['id']; ?>').on('click', function(c){
+						$('.<?php echo $vo['count']; ?>_<?php echo $vo['sum']; ?>').fadeOut('slow', function(c){
+							$('.<?php echo $vo['count']; ?>_<?php echo $vo['sum']; ?>').remove();
 						});
 						});	  
 					});
 			   </script>
 			  
-			 <div class="cart-header">
-				 <div class="close1"> </div>
-				 <div class="cart-sec simpleCart_shelfItem">
-						<div class="cart-item cyc">
-							 <img src="/thinkphp/public/static/images/8.jpg" class="img-responsive" alt=""/>
-						</div>
-					   <div class="cart-item-info">
-						<h3><a href="#">Mountain Hopper(XS R034)</a><span>Model No: 3578</span></h3>
-						<ul class="qty">
-							<li><p>Size : 5</p></li>
-							<li><p>Qty : 1</p></li>
-						</ul>
-						
-							 <div class="delivery">
-							 <p>Service Charges : Rs.100.00</p>
-							 <span>Delivered in 2-3 bussiness days</span>
-							 <div class="clearfix"></div>
-				        </div>	
-					   </div>
-					   <div class="clearfix"></div>
-											
-				  </div>
-			 </div>
-			 <?php if(is_array($commoditys) || $commoditys instanceof \think\Collection || $commoditys instanceof \think\Paginator): $i = 0; $__LIST__ = $commoditys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-			 <div class="cart-header">
-				 <div class="close1"> </div>
+			 
+			 <div class="cart-header <?php echo $vo['count']; ?>_<?php echo $vo['sum']; ?>">
+				 <div class="close1 <?php echo $vo['id']; ?>"> </div>
 				 <div class="cart-sec simpleCart_shelfItem">
 						<div class="cart-item cyc">
 							 <img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" class="img-responsive" alt=""/>
