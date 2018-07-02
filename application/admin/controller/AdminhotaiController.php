@@ -161,7 +161,8 @@ class AdminhotaiController extends Base
                 'description'=>$input['description'],
                 'category_id'=>$input['category_id'],
                 'logo'=>$input['logo'],
-                'content'=>$input['content']
+                'content'=>$input['content'],
+                'count'=>$input['count']
             ];
 
         $xuhao=model('Commodity')->add($date);

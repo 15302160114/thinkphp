@@ -83,8 +83,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
         <!-- start header menu -->
         <ul class="megamenu skyblue">
-            <li class="active grid"><a class="color1" href="index.html">Home</a></li>
-            <li class="grid"><a class="color2" href="#">Classification</a>
+            <li class="grid"><a class="color1" href="index.html">Home</a></li>
+            <li class="active grid"><a class="color2" href="#">Classification</a>
                 <div class="megapanel">
                     <div class="row">
                         <div class="col1">
@@ -295,12 +295,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="content_box"><a href="details.html">
 			   	   	 <img src="/thinkphp/public/uploads/{$vo.logo}" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
+				    <h4><a href="details.html">{$vo.spname}</a></h4>
+				     <p>{$vo.description}</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $99.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
+					 <div class="item_add"><span class="item_price"><h6>ONLY {$vo.count}</h6></span></div>
+					<div class="item_add"><span class="item_price"><a href="{:url('user/add',['id'=>$vo.id])}">add to cart</a></span></div>
 					 </div>
 			   	</div>
 			</div>

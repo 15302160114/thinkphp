@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\commodity.html";i:1530500929;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\commodity.html";i:1530517599;}*/ ?>
 <!DOCTYPE html>
 <html class=" ">
     <head>
@@ -551,6 +551,11 @@
                                                       <?php endforeach; endif; else: echo "" ;endif; ?>
                                                     </select>
                                                 </div>
+                                            </div>
+
+                                            <div class="form-group" style="margin:20px 0;">
+                                                <label for="exampleInputName2">Count</label>
+                                                <input type="text" class="form-control" name="count" id="exampleInputName2" placeholder="商品价格">
                                             </div>
 
                                             <div class="form-group" style="margin:20px 0;">

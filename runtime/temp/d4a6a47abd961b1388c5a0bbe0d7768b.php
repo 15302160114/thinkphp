@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\category.html";i:1530503660;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\category.html";i:1530516067;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -84,8 +84,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
         <!-- start header menu -->
         <ul class="megamenu skyblue">
-            <li class="active grid"><a class="color1" href="index.html">Home</a></li>
-            <li class="grid"><a class="color2" href="#">Classification</a>
+            <li class="grid"><a class="color1" href="index.html">Home</a></li>
+            <li class="active grid"><a class="color2" href="#">Classification</a>
                 <div class="megapanel">
                     <div class="row">
                         <div class="col1">
@@ -296,12 +296,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="content_box"><a href="details.html">
 			   	   	 <img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
+				    <h4><a href="details.html"><?php echo $vo['spname']; ?></a></h4>
+				     <p><?php echo $vo['description']; ?></p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $99.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
+					 <div class="item_add"><span class="item_price"><h6>ONLY <?php echo $vo['count']; ?></h6></span></div>
+					<div class="item_add"><span class="item_price"><a href="<?php echo url('user/add',['id'=>$vo['id']]); ?>">add to cart</a></span></div>
 					 </div>
 			   	</div>
 			</div>

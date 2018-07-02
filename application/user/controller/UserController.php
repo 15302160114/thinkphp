@@ -62,6 +62,42 @@ class UserController extends Base
 
 		return $this->fetch('');
     }
+    public function shopping()
+    {
+        $a=explode(',', session('me_user','','me'));
+        $aid=substr($a[0],6);
+        if($aid==0||is_null($aid)){
+            $this->error('参数有误');
+        }
+        $consumer=model('Consumer')->get($aid);
+        $this->assign('consumer',$consumer);
+
+        $commoditys=Db::table('order')
+                    ->where('status','3')
+                    ->select();
+        $this->assign('commoditys',$commoditys);
+
+        $categorys=model('Category')->getCategorys();
+        $this->assign('categorys',$categorys);
+
+        return $this->fetch('');
+    }
+    public function order()
+    {
+        $a=explode(',', session('me_user','','me'));
+        $aid=substr($a[0],6);
+        if($aid==0||is_null($aid)){
+            $this->error('参数有误');
+        }
+        $consumer=model('Consumer')->get($aid);
+        $this->assign('consumer',$consumer);
+
+        
+        $categorys=model('Category')->getCategorys();
+        $this->assign('categorys',$categorys);
+
+        return $this->fetch('');
+    }
 	public function update(){
         echo "<meta charset='UTF-8'>";
         if(!request()->isPost()){
@@ -104,7 +140,38 @@ class UserController extends Base
             $this->error('更新失败');
         }
 	}
-    public function logout(){
+    public function add()
+    {
+        $id=input('param.id');
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+
+        $commodity=Db::table('commodity')
+                    ->where('id',$id)
+                    ->select();
+
+        $com=$commodity[0];
+        $date=[
+                'spname'=>$com['spname'],
+                'description'=>$com['description'],
+                'category_id'=>$com['category_id'],
+                'logo'=>$com['logo'],
+                'content'=>$com['content'],
+                'count'=>$com['count'],
+                'status'=>'3',
+                'sum'=>'1'
+            ];
+
+        $xuhao=model('Order')->add($date);
+        if($xuhao){
+            $this->success('增加成功',url('user/order'));
+        }else{
+            $this->error('增加失败');
+        }
+    }
+    public function logout()
+    {
         session(null,'me');
         $this->redirect('@index/index/index');
     }
