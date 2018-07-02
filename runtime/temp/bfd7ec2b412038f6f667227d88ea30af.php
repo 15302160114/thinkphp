@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\fenlei.html";i:1530239432;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\fenlei.html";i:1530494824;}*/ ?>
 <!DOCTYPE html>
 <html class=" ">
     <head>
@@ -470,13 +470,18 @@
                                 
                             </ul>
                         </li>
-                        <li class=""> 
+                        <li class="open"> 
                             <a href="fenlei.html">
                                 <i class="fa fa-sliders"></i>
                                 <span class="title">商品分类</span>
                             </a>
                         </li>
-                        
+                        <li class=""> 
+                            <a href="commodity.html">
+                                <i class="fa fa-sliders"></i>
+                                <span class="title">添加商品</span>
+                            </a>
+                        </li>
                     </ul>
 
                 </div>

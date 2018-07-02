@@ -1,5 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:78:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\user.html";i:1530494852;}*/ ?>
-
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\commodity.html";i:1530500929;}*/ ?>
 <!DOCTYPE html>
 <html class=" ">
     <head>
@@ -11,13 +10,13 @@
         -->
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta charset="utf-8" />
-        <title>Admin : user</title>
+        <title>Admin : user设置</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta content="" name="description" />
         <meta content="" name="author" />
 
         <link rel="shortcut icon" href="/thinkphp/public/static/assets/images/favicon.png" type="image/x-icon" />    <!-- Favicon -->
-        <link rel="apple-touch-icon-precomposed" href="/thinkphp/public/static/assets/images/apple-touch-icon-57-precomposed.png">	<!-- For iPhone -->
+        <link rel="apple-touch-icon-precomposed" href="/thinkphp/public/static/assets/images/apple-touch-icon-57-precomposed.png">  <!-- For iPhone -->
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/thinkphp/public/static/assets/images/apple-touch-icon-114-precomposed.png">    <!-- For iPhone 4 Retina display -->
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/thinkphp/public/static/assets/images/apple-touch-icon-72-precomposed.png">    <!-- For iPad -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/thinkphp/public/static/assets/images/apple-touch-icon-144-precomposed.png">    <!-- For iPad Retina display -->
@@ -35,7 +34,10 @@
         <!-- CORE CSS FRAMEWORK - END -->
 
         <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
-        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
+        <link href="/thinkphp/public/static/assets/plugins/datatables/css/jquery.dataTables.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="/thinkphp/public/static/assets/plugins/datatables/extensions/TableTools/css/dataTables.tableTools.min.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="/thinkphp/public/static/assets/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="/thinkphp/public/static/assets/plugins/datatables/extensions/Responsive/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet" type="text/css" media="screen"/>        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
 
 
         <!-- CORE CSS TEMPLATE - START -->
@@ -47,7 +49,8 @@
     <!-- END HEAD -->
 
     <!-- BEGIN BODY -->
-    <body class=" "><!-- START TOPBAR -->
+    <body class=" ">
+        <!-- START TOPBAR -->
         <div class='page-topbar '>
             <div class='logo-area'>
 
@@ -349,7 +352,7 @@
                             </div>
                         </li>
                     </ul>
-                </div>		
+                </div>      
                 <div class='pull-right'>
                     <ul class="info-menu right-links list-inline list-unstyled">
                         <li class="profile">
@@ -390,8 +393,8 @@
                                 <span class="badge badge-warning">9</span>
                             </a>
                         </li>
-                    </ul>			
-                </div>		
+                    </ul>           
+                </div>      
             </div>
 
         </div>
@@ -433,7 +436,7 @@
 
 
 
-                    <ul class='wraplist'>	
+                    <ul class='wraplist'>   
 
 
                         <li class=""> 
@@ -442,7 +445,7 @@
                                 <span class="title">首页</span>
                             </a>
                         </li>
-                        <li class="open"> 
+                        <li class=""> 
                             <a href="user.html">
                                 <i class="fa fa-th"></i>
                                 <span class="title">用户列表</span><span class="label label-orange nosubmenu">HOT</span>
@@ -450,7 +453,7 @@
                         </li>
                         <li class=""> 
                             <a href="distributor.html">
-                                <i class="fa fa-columns"></i>
+                                <i class="fa fa-th"></i>
                                 <span class="title">配送员列表</span><span class="label label-orange nosubmenu">HOT</span>
                             </a>
                         </li>
@@ -476,17 +479,17 @@
                                 <span class="title">商品分类</span>
                             </a>
                         </li>
-                        <li class=""> 
+                        <li class="open"> 
                             <a href="commodity.html">
                                 <i class="fa fa-sliders"></i>
                                 <span class="title">添加商品</span>
                             </a>
                         </li>
+                        
                     </ul>
 
                 </div>
                 <!-- MAIN MENU - END -->
-
 
             </div>
             <!--  SIDEBAR - END -->
@@ -498,7 +501,7 @@
                         <div class="page-title">
 
                             <div class="pull-left">
-                                <h1 class="title">用户列表</h1>                           
+                                <h1 class="title">商品</h1>                           
                             </div>
 
 
@@ -509,7 +512,7 @@
                     <div class="col-lg-12">
                         <section class="box ">
                             <header class="panel_header">
-                                <h2 class="title pull-left">用户详情</h2>
+                                <h2 class="title pull-left">商品添加</h2>
                                 <div class="actions panel_actions pull-right">
                                     <i class="box_toggle fa fa-chevron-down"></i>
                                     <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
@@ -519,35 +522,95 @@
                             <div class="content-body">    <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
 
-                                        <table class="table table-hover">
+                                        <form class="am-form tpl-form-border-form" method="post" action="<?php echo url('adminhotai/com_save'); ?>">
+
+                                            <div class="am-form-group">
+                                                <label for="user-weibo" class="am-u-sm-12 am-form-label  am-text-left">封面图 <span class="tpl-form-line-small-title">Images</span></label>
+
+                                                <div id="uploader-demo" class="am-u-sm-12 am-margin-top-xs">
+                                                    <div class="am-form-group am-form-file">
+                                                        <div id="fileList" name="logo" class="uploader-list"></div>
+
+                                                        <button id="filePicker" type="button" class="am-btn am-btn-danger am-btn-sm ">添加封面图片</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" style="margin:20px 0;">
+                                                <label for="exampleInputName2">Commodity Name</label>
+                                                <input type="text" class="form-control" name="spname" id="exampleInputName2" placeholder="商品名称">
+                                            </div>
+
+                                            <div class="am-form-group" style="margin:20px 0;">
+                                                <label for="exampleInputName2">Category</label>
+                                                <div class="am-u-sm-12  am-margin-top-xs">
+                                                    <select data-am-selected="{searchBox: 1}"  class="form-control" name="category_id">
+                                                      <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                                      <option value="<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></option>
+                                                      <?php endforeach; endif; else: echo "" ;endif; ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group" style="margin:20px 0;">
+                                                <label for="exampleInputEmail2">Description</label>
+                                                <input type="text" class="form-control" name="description" id="exampleInputEmail2" placeholder="商品简介">
+                                            </div>
+                                            <div class="form-group" style="margin:20px 0;">
+                                                <label for="exampleInputEmail2">Content</label>
+                                                <script id="container" name="content" type="text/plain" placeholder="商品详情">
+
+                                                </script>
+                                            </div>
+                                            <button type="submit" class="btn btn-default">提交</button>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <section class="box ">
+                            <header class="panel_header">
+                                <h2 class="title pull-left">商品列表</h2>
+                                <div class="actions panel_actions pull-right">
+                                    <i class="box_toggle fa fa-chevron-down"></i>
+                                    <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
+                                    <i class="box_close fa fa-times"></i>
+                                </div>
+                            </header>
+                            <div class="content-body">    <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <!-- ********************************************** -->
+
+                                        <table id="example" class="display table table-hover table-condensed" cellspacing="0" width="100%">
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Username</th>
-                                                    <th>Realname</th>
-                                                    <th>Tel</th>
-                                                    <th>Email</th>
-                                                    <th>Address</th>
+                                                    <th>Commodity Name</th>
+                                                    <th>Logo</th>
+                                                    <th>Category</th>
+                                                    <th>Description</th>
                                                     <th>Create Time</th>
                                                     <th>Operation</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php if(is_array($consumer) || $consumer instanceof \think\Collection || $consumer instanceof \think\Paginator): $num = 0; $__LIST__ = $consumer;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($num % 2 );++$num;?>
-                                                <tr>
+                                                <?php if(is_array($commodity) || $commodity instanceof \think\Collection || $commodity instanceof \think\Paginator): $num = 0; $__LIST__ = $commodity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($num % 2 );++$num;?>
+                                                <tr class="gradeX">
                                                     <th scope="row"><?php echo $num; ?></th>
-                                                    <td><?php echo $vo['username']; ?></td>
-                                                    <td><?php echo $vo['realname']; ?></td>
-                                                    <td><?php echo $vo['tel']; ?></td>
-                                                    <td><?php echo $vo['email']; ?></td>
-                                                    <td><?php echo $vo['address']; ?></td>
-                                                    <td><?php echo $vo['create_time']; ?></td>
-                                                    <td>
+                                                    <td class="am-text-middle"><?php echo $vo['spname']; ?></td>
+                                                    <td class="am-text-middle"><a href="<?php echo url('@index/index/single',['id'=>$vo['id']]); ?>" target="_blank"><img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" width='100px'></a></td>
+                                                    <td class="am-text-middle"><?php echo getUsername($vo['category_id']); ?></td>
+                                                    <td class="am-text-middle"><?php echo $vo['description']; ?></td>
+                                                    <td class="am-text-middle"><?php echo $vo['create_time']; ?></td>
+                                                    <td class="am-text-middle">
                                                         <div class="tpl-table-black-operation">
-                                                            <a href="<?php echo url('adminhotai/consumeredit',['id'=>$vo['id']]); ?>">
-                                                                <i class="am-icon-pencil"></i> 编辑
-                                                            </a>
-                                                            <a href="<?php echo url('adminhotai/consumerdelete',['id'=>$vo['id']]); ?>" class="tpl-table-black-operation-del">
+                                                            <a href="<?php echo url('adminhotai/com_delete',['id'=>$vo['id']]); ?>" class="tpl-table-black-operation-del">
                                                                 <i class="am-icon-trash"></i> 删除
                                                             </a>
                                                         </div>
@@ -556,12 +619,15 @@
                                                 <?php endforeach; endif; else: echo "" ;endif; ?>
                                             </tbody>
                                         </table>
+                                        <!-- ********************************************** -->
 
                                     </div>
                                 </div>
                             </div>
-                        </section>
-                    </div>
+                        </section></div>
+
+
+
                 </section>
             </section>
             <!-- END CONTENT -->
@@ -774,7 +840,10 @@
 
 
         <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
-        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
+        <script src="/thinkphp/public/static/assets/plugins/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+        <script src="/thinkphp/public/static/assets/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js" type="text/javascript"></script>
+        <script src="/thinkphp/public/static/assets/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js" type="text/javascript"></script>
+        <script src="/thinkphp/public/static/assets/plugins/datatables/extensions/Responsive/bootstrap/3/dataTables.bootstrap.js" type="text/javascript"></script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
 
 
         <!-- CORE TEMPLATE JS - START --> 
@@ -784,6 +853,7 @@
         <!-- Sidebar Graph - START --> 
         <script src="/thinkphp/public/static/assets/plugins/sparkline-chart/jquery.sparkline.min.js" type="text/javascript"></script>
         <script src="/thinkphp/public/static/assets/js/chart-sparkline.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/thinkphp/public/static/webuploader/webuploader.js"></script>
         <!-- Sidebar Graph - END --> 
 
 
@@ -819,7 +889,71 @@
             </div>
         </div>
         <!-- modal end -->
+        <script type="text/javascript" src="/thinkphp/public/static/webuploader/webuploader.js"></script>    <!-- 引用插件js -->
+
+        <script type="text/javascript" src="/thinkphp/public/static/ueditor/ueditor.config.js"></script>
+        <!-- 编辑器源码文件 -->
+        <script type="text/javascript" src="/thinkphp/public/static/ueditor/ueditor.all.js"></script>
+        <!-- 实例化编辑器 -->
+        <script type="text/javascript">
+            var editor = UE.getEditor('container');
+        </script>
+
     </body>
+<script type="text/javascript">
+           //var $list=$("#fileList");   //这几个初始化全局的百度文档上没说明，好蛋疼
+           var thumbnailWidth = 100;   //缩略图高度和宽度 （单位是像素），当宽高度是0~1的时候，是按照百分比计算，具体可以看api文档  
+           var thumbnailHeight = 100;  
+           var uploader = WebUploader.create({
+            // 选完文件后，是否自动上传。
+           auto: true,
+            // swf文件路径
+           swf: '/thinkphp/public/static/webuploader/uploader.swf', //加载swf文件，路径一定要对
+            // 文件接收服务端。
+            server: '<?php echo url("admin/adminhotai/com_upload"); ?>',
+            // 选择文件的按钮。可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            pick: '#filePicker',
+            // 只允许选择图片文件。
+            accept: {
+                title: 'Images',
+                extensions: 'gif,jpg,jpeg,bmp,png',
+                mimeTypes: 'image/'
+            }
+        });
+      //上传完成事件监听
+        
+        uploader.on( 'fileQueued', function(file) {
+            // var d = new Date();
+            // var curr_date = d.getDate();
+            // var curr_month = d.getMonth() + 1; 
+            // var curr_year = d.getFullYear();
+            // String(curr_month).length < 2 ? (curr_month = "0" + curr_month): curr_month;
+            // String(curr_date).length < 2 ? (curr_date = "0" + curr_date): curr_date;
+            // var yyyyMMdd = curr_year + "" + curr_month +""+ curr_date;
+            var $li = $(
+                    '<div id="old" class="file-item thumbnail">' +
+                        '<img>' +
+                        '<div class="info">' + file.name + '</div>' +
+                    '</div>'+
+                    '<input type="text" style="display:none" name="logo" value="'+ file.name +'">'
+                    ),
+                $img = $li.find('img');
+            // $list为容器jQuery实例
+                $('#old').remove();
+                $("#fileList").append( $li );
+            // 创建缩略图
+            // 如果为非图片文件，可以不用调用此方法。
+            // thumbnailWidth x thumbnailHeight 为 100 x 100
+            uploader.makeThumb( file, function( error, src ) {
+                if ( error ) {
+                    $img.replaceWith('<span>不能预览</span>');
+                    return;
+                }
+                $img.attr( 'src', src );
+            }, thumbnailWidth, thumbnailHeight );
+        });
+</script>
 </html>
 
 

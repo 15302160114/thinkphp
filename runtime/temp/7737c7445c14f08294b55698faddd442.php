@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\all_order.html";i:1530239441;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\all_order.html";i:1530494804;}*/ ?>
 
 <!DOCTYPE html>
 <html class=" ">
@@ -480,6 +480,12 @@
                             </a>
                         </li>
                         
+                        <li class=""> 
+                            <a href="commodity.html">
+                                <i class="fa fa-sliders"></i>
+                                <span class="title">添加商品</span>
+                            </a>
+                        </li>
                     </ul>
 
                 </div>

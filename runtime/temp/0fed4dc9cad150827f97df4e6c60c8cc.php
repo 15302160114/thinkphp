@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\index.html";i:1530243267;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\index.html";i:1530502133;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -170,16 +170,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="arriv">
     <div class="container">
         <div class="arriv-top">
+            <?php if(is_array($commodity) || $commodity instanceof \think\Collection || $commodity instanceof \think\Paginator): $i = 0; $__LIST__ = $commodity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
             <div class="col-md-6 arriv-left">
-                <img src="/thinkphp/public/static/images/1.jpg" class="img-responsive" alt="">
+                <img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" class="img-responsive" width='100%' alt="">
                 <div class="arriv-info">
                     <h3>NEW ARRIVALS</h3>
-                    <p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
+                    <p><?php echo $vo['description']; ?></p>
                     <div class="crt-btn">
                         <a href="details.html">TAKE A LOOK</a>
                     </div>
                 </div>
             </div>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
             <div class="col-md-6 arriv-right">
                 <img src="/thinkphp/public/static/images/2.jpg" class="img-responsive" alt="">
                 <div class="arriv-info">

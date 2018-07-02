@@ -2530,7 +2530,7 @@ p.cart a {
 	text-transform: capitalize;
 	font-weight: normal;
 }
-.contact-form input[type="text"], .contact-form input[type="password"]{
+.contact-form input[type="text"]{
 	font-family: 'Open Sans', sans-serif;
 	background: #FFFFFF;
 	border: 1px solid #E7E7E7;
@@ -2542,9 +2542,17 @@ p.cart a {
 	-webkit-appearance: none;
 	text-transform: capitalize;
 }
-.contact-form textarea{
-	resize:none;
-	height:120px;		
+.contact-form input[type="password"]{
+	font-family: 'Open Sans', sans-serif;
+	background: #FFFFFF;
+	border: 1px solid #E7E7E7;
+	color: rgba(85, 81, 81, 0.84);
+	padding: 8px;
+	display: block;
+	width: 96.3333%;
+	outline: none;
+	-webkit-appearance: none;
+	text-transform: capitalize;
 }
 .contact-form input[type="submit"]{
 	margin-top: 10px;

@@ -23939,3 +23939,387 @@
 [ sql ] [ SQL ] SELECT * FROM `consumer` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT * FROM `category` ORDER BY `id`  desc [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-06-29T11:58:38+08:00 ] 0.0.0.0 GET /thinkphp/public/user/user/settings.html
+[ info ] localhost/thinkphp/public/user/user/settings.html [运行时间：0.071004s][吞吐率：14.08req/s] [内存消耗：2,611.23kb] [文件加载：54]
+[ info ] [ LANG ] C:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'settings',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3377.1 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/user/user/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=o0th1h53idat4tgrfl3ulsfdgb',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UserController->settings[ C:\xampp\htdocs\thinkphp\application\user\controller\UserController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\xampp\htdocs\thinkphp\public/../application/user\view\user\settings.html [ array (
+  0 => 'user',
+  1 => 'consumer',
+  2 => 'categorys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `consumer` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `consumer` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `category` ORDER BY `id`  desc [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-06-29T11:58:38+08:00 ] 0.0.0.0 GET /thinkphp/public/user/user/settings.html
+[ info ] localhost/thinkphp/public/user/user/settings.html [运行时间：0.055003s][吞吐率：18.18req/s] [内存消耗：2,611.23kb] [文件加载：54]
+[ info ] [ LANG ] C:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'settings',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3377.1 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/user/user/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=o0th1h53idat4tgrfl3ulsfdgb',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UserController->settings[ C:\xampp\htdocs\thinkphp\application\user\controller\UserController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\xampp\htdocs\thinkphp\public/../application/user\view\user\settings.html [ array (
+  0 => 'user',
+  1 => 'consumer',
+  2 => 'categorys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `consumer` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `consumer` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `category` ORDER BY `id`  desc [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-06-29T11:58:38+08:00 ] 0.0.0.0 GET /thinkphp/public/user/user/settings.html
+[ info ] localhost/thinkphp/public/user/user/settings.html [运行时间：0.066003s][吞吐率：15.15req/s] [内存消耗：2,611.23kb] [文件加载：54]
+[ info ] [ LANG ] C:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'settings',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3377.1 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/user/user/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=o0th1h53idat4tgrfl3ulsfdgb',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UserController->settings[ C:\xampp\htdocs\thinkphp\application\user\controller\UserController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\xampp\htdocs\thinkphp\public/../application/user\view\user\settings.html [ array (
+  0 => 'user',
+  1 => 'consumer',
+  2 => 'categorys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `consumer` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `consumer` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `category` ORDER BY `id`  desc [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-06-29T11:58:39+08:00 ] 0.0.0.0 GET /thinkphp/public/user/user/settings.html
+[ info ] localhost/thinkphp/public/user/user/settings.html [运行时间：0.056004s][吞吐率：17.86req/s] [内存消耗：2,611.23kb] [文件加载：54]
+[ info ] [ LANG ] C:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'settings',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3377.1 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/user/user/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=o0th1h53idat4tgrfl3ulsfdgb',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UserController->settings[ C:\xampp\htdocs\thinkphp\application\user\controller\UserController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\xampp\htdocs\thinkphp\public/../application/user\view\user\settings.html [ array (
+  0 => 'user',
+  1 => 'consumer',
+  2 => 'categorys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `consumer` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `consumer` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `category` ORDER BY `id`  desc [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-06-29T11:58:39+08:00 ] 0.0.0.0 GET /thinkphp/public/user/user/settings.html
+[ info ] localhost/thinkphp/public/user/user/settings.html [运行时间：0.058003s][吞吐率：17.24req/s] [内存消耗：2,611.23kb] [文件加载：54]
+[ info ] [ LANG ] C:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'settings',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3377.1 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/user/user/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=o0th1h53idat4tgrfl3ulsfdgb',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UserController->settings[ C:\xampp\htdocs\thinkphp\application\user\controller\UserController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\xampp\htdocs\thinkphp\public/../application/user\view\user\settings.html [ array (
+  0 => 'user',
+  1 => 'consumer',
+  2 => 'categorys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `consumer` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `consumer` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `category` ORDER BY `id`  desc [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-06-29T11:58:39+08:00 ] 0.0.0.0 GET /thinkphp/public/user/user/settings.html
+[ info ] localhost/thinkphp/public/user/user/settings.html [运行时间：0.058003s][吞吐率：17.24req/s] [内存消耗：2,611.23kb] [文件加载：54]
+[ info ] [ LANG ] C:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'settings',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3377.1 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/user/user/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=o0th1h53idat4tgrfl3ulsfdgb',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UserController->settings[ C:\xampp\htdocs\thinkphp\application\user\controller\UserController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\xampp\htdocs\thinkphp\public/../application/user\view\user\settings.html [ array (
+  0 => 'user',
+  1 => 'consumer',
+  2 => 'categorys',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;dbname=tp5;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `consumer` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `consumer` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `category` ORDER BY `id`  desc [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-06-29T11:58:47+08:00 ] 0.0.0.0 GET /thinkphp/public/user/user/logout.html
+[ info ] localhost/thinkphp/public/user/user/logout.html [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：1,805.20kb] [文件加载：47]
+[ info ] [ LANG ] C:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3377.1 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/user/user/settings.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=o0th1h53idat4tgrfl3ulsfdgb',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UserController->logout[ C:\xampp\htdocs\thinkphp\application\user\controller\UserController.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-29T11:58:47+08:00 ] 0.0.0.0 GET /thinkphp/public/index/index/index.html
+[ info ] localhost/thinkphp/public/index/index/index.html [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,557.38kb] [文件加载：43]
+[ info ] [ LANG ] C:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3377.1 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/user/user/settings.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=o0th1h53idat4tgrfl3ulsfdgb',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\IndexController->index[ C:\xampp\htdocs\thinkphp\application\index\controller\IndexController.php ]
+[ info ] [ VIEW ] C:\xampp\htdocs\thinkphp\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-06-29T11:58:47+08:00 ] 0.0.0.0 GET /thinkphp/public/captcha.html
+[ info ] localhost/thinkphp/public/captcha.html [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：1,281.52kb] [文件加载：36]
+[ info ] [ LANG ] C:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3377.1 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=o0th1h53idat4tgrfl3ulsfdgb',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ C:\xampp\htdocs\thinkphp\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File

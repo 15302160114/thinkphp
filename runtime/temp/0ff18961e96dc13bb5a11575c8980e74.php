@@ -1,8 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\settings.html";i:1530244481;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\settings.html";i:1530493617;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Home : user</title>
+<title>Settings : user</title>
 <link href="/thinkphp/public/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
 <script type='text/javascript' src="/thinkphp/public/static/js/jquery-1.11.1.min.js"></script>
@@ -179,10 +179,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                   <div class="contact-form">
                         <h2>Contact Us</h2>
+                        <span><label>注册时间 ：<?php echo $consumer['create_time']; ?></label></span>
                         <form class="form-horizontal" method="post" name="form1" action="<?php echo url('user/update'); ?>">
+                            <input name="id" type="hidden" class="textbox" value="<?php echo $consumer['id']; ?>">
                             <div>
-                                <span><label>Name</label></span>
+                                <span><label>User Name</label></span>
                                 <span><input name="username" type="text" class="textbox" value="<?php echo $consumer['username']; ?>"></span>
+                            </div>
+                            <div>
+                                <span><label>Real Name</label></span>
+                                <span><input name="realname" type="text" class="textbox" value="<?php echo $consumer['realname']; ?>"></span>
                             </div>
                             <div>
                                 <span><label>E-mail</label></span>
@@ -194,11 +200,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div>
                                 <span><label>Address</label></span>
-                                <span><input name="address" type="text" class="textbox"  value="<?php echo $consumer['address']; ?>"></span>
+                                <span><input name="address" type="text" class="textbox" value="<?php echo $consumer['address']; ?>"></span>
                             </div>
                             <div>
                                 <span><label>Password</label></span>
-                                <span><input name="password" type="password" class="textbox"  value="<?php echo $consumer['password']; ?>"></span>
+                                <span><input name="password" type="password" class="textbox" value="<?php echo $consumer['password']; ?>"></span>
                             </div>
                            <div>
                                 <span><input type="submit" class="" value="Submit us"></span>

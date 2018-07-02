@@ -169,16 +169,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="arriv">
     <div class="container">
         <div class="arriv-top">
+            {volist name="commodity" id="vo"}
             <div class="col-md-6 arriv-left">
-                <img src="__STATIC__/images/1.jpg" class="img-responsive" alt="">
+                <img src="/thinkphp/public/uploads/{$vo.logo}" class="img-responsive" width='100%' alt="">
                 <div class="arriv-info">
                     <h3>NEW ARRIVALS</h3>
-                    <p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
+                    <p>{$vo.description}</p>
                     <div class="crt-btn">
                         <a href="details.html">TAKE A LOOK</a>
                     </div>
                 </div>
             </div>
+            {/volist}
             <div class="col-md-6 arriv-right">
                 <img src="__STATIC__/images/2.jpg" class="img-responsive" alt="">
                 <div class="arriv-info">

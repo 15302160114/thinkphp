@@ -103,6 +103,22 @@ class AdminhotaiController extends Base
         $this->assign('categorys',$categorys);
         return $this->fetch('');
     }
+    public function commodity()
+    {
+        $a=explode(',', session('my_user','','my'));
+        $id=substr($a[0],6);
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $admin=model('Admin')->get($id);
+        $this->assign('admin',$admin);
+
+        $categorys=model('Category')->getCategorys();
+        $this->assign('categorys',$categorys);
+        $commodity=model('Commodity')->getCommoditys();
+        $this->assign('commodity',$commodity);
+        return $this->fetch('');
+    }
     public function save()
     {
         echo "<meta charset='UTF-8'>";
@@ -123,6 +139,34 @@ class AdminhotaiController extends Base
         $xuhao=model('Category')->add($date);
         if($xuhao){
             $this->success('增加成功',url('adminhotai/fenlei'));
+        }else{
+            $this->error('增加失败');
+        }
+    }
+    public function com_save()
+    {
+        echo "<meta charset='UTF-8'>";
+        if(!request()->isPost()){
+            $this->error("非法输入");
+        }
+        $input=input('post.');
+
+        $validate=validate('Commodity');
+        if(!$validate->scene('add')->check($input)){
+            $this->error($validate->getError());
+        }
+        
+        $date=[
+                'spname'=>$input['spname'],
+                'description'=>$input['description'],
+                'category_id'=>$input['category_id'],
+                'logo'=>$input['logo'],
+                'content'=>$input['content']
+            ];
+
+        $xuhao=model('Commodity')->add($date);
+        if($xuhao){
+            $this->success('增加成功',url('adminhotai/commodity'));
         }else{
             $this->error('增加失败');
         }
@@ -196,6 +240,18 @@ class AdminhotaiController extends Base
         $category=model('Category')->get($id);
         if(!is_null($category->delete())){
             $this->success('删除成功','adminhotai/fenlei');
+        }
+        $this->error('删除失败');
+    }
+    public function com_delete()
+    {
+        $id=input('param.id');
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $commodity=model('Commodity')->get($id);
+        if(!is_null($commodity->delete())){
+            $this->success('删除成功','adminhotai/commodity');
         }
         $this->error('删除失败');
     }
@@ -382,6 +438,12 @@ class AdminhotaiController extends Base
         }else{
             $this->error('更新失败');
         }
+    }
+    function com_upload()
+    {
+        $file = $this->request->file('file');
+        //file是传文件的名称，这是webloader插件固定写入的。因为webloader插件会写入一个隐藏input，不信你们可以通过浏览器检查页面
+        $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads','');
     }
     function upload(){
         $a=explode(',', session('my_user','','my'));
