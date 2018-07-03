@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\all_order.html";i:1530494804;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\all_order.html";i:1530589930;}*/ ?>
 
 <!DOCTYPE html>
 <html class=" ">
@@ -11,7 +11,7 @@
         -->
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta charset="utf-8" />
-        <title>Ultra Admin : Data Tables</title>
+        <title>Admin : Order</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta content="" name="description" />
         <meta content="" name="author" />
@@ -564,8 +564,8 @@
                                                     <th>logo</th>
                                                     <th>商品分类</th>
                                                     <th>下单用户</th>
-                                                    <th>数量</th>
                                                     <th>价钱</th>
+                                                    <th>数量</th>
                                                     <th>配送员</th>
                                                     <th>STATUS</th>
                                                     <th>操作</th>
@@ -577,9 +577,9 @@
                                                 <tr>
                                                     <th><?php echo $num; ?></th>
                                                     <td><?php echo $vo['spname']; ?></td>
-                                                    <td><?php echo $vo['logo']; ?></td>
+                                                    <td><img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" width="100px"></td>
                                                     <td><?php echo getAuthorname($vo['category_id']); ?></td>
-                                                    <td><?php echo getAuthorname($vo['author_id']); ?></td>
+                                                    <td><?php echo getAuthorname($vo['consumer_id']); ?></td>
                                                     <td><?php echo $vo['count']; ?></td>
                                                     <td><?php echo $vo['sum']; ?></td>
                                                     <td><?php echo getDisname($vo['distributor_id']); ?></td>

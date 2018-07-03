@@ -25,7 +25,7 @@ function getUsername($id){
     return Db::name('category')->where('id',$id)->find()['categoryname'];
 }
 function getAuthorname($id){
-    return Db::name('author')->where('id',$id)->find()['username'];
+    return Db::name('consumer')->where('id',$id)->find()['username'];
 }
 function getDisname($id){
     return Db::name('distributor')->where('id',$id)->find()['realname'];

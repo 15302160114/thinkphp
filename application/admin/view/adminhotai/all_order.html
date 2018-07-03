@@ -563,8 +563,8 @@
                                                     <th>logo</th>
                                                     <th>商品分类</th>
                                                     <th>下单用户</th>
-                                                    <th>数量</th>
                                                     <th>价钱</th>
+                                                    <th>数量</th>
                                                     <th>配送员</th>
                                                     <th>STATUS</th>
                                                     <th>操作</th>
@@ -576,9 +576,9 @@
                                                 <tr>
                                                     <th>{$num}</th>
                                                     <td>{$vo.spname}</td>
-                                                    <td>{$vo.logo}</td>
+                                                    <td><img src="/thinkphp/public/uploads/{$vo.logo}" width="100px"></td>
                                                     <td>{:getAuthorname($vo.category_id)}</td>
-                                                    <td>{:getAuthorname($vo.author_id)}</td>
+                                                    <td>{:getAuthorname($vo.consumer_id)}</td>
                                                     <td>{$vo.count}</td>
                                                     <td>{$vo.sum}</td>
                                                     <td>{:getDisname($vo.distributor_id)}</td>
