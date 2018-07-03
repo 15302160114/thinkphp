@@ -19,18 +19,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- start menu -->
 <link href="__STATIC__/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="__STATIC__/js/megamenu.js"></script>
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <script src="__STATIC__/js/menu_jquery.js"></script>
 <script src="__STATIC__/js/simpleCart.min.js"> </script>
 </head>
 <script type="text/javascript">
-		$(function() {
-					
+
+		$(document).ready(function() {
+					$(".megamenu").megamenu();
 					adddel();
-						//全选
-					
-				})
+					totl();
+					to();
+				});
 				//合计
+			function totl() {
+				var sum = 0;
+				$(".totle").each(function() {
+					sum += parseFloat($(this).text());
+					$("#susum").text(sum);
+				});
+			}
+			// function to() {
+			// 	var myArray=new Array();
+
+			// 	$("#input").each(function() {
+			// 		var i=0;
+			// 		myArray[i]=parseFloat($(this).text());
+			// 		i++;
+			// 	});
+
+			// 	for(var i=0;i<myArray.length;i++){
+			// 	 document.write(myArray[i]);
+			// 	}
+			// }
 			
 			function adddel(){
 				//小计和加减
@@ -43,10 +63,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								$(this).prev().val(vall);
 								$multi = parseFloat(vall) * parseFloat($(this).parent().prev().text());
 								$(this).parent().next().text(Math.round($multi));
-								//totl();
-							})
+								totl();
+							});
 
-						})
+						});
 						//减
 					$(".reduc").each(function() {
 							$(this).click(function() {
@@ -59,10 +79,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								$(this).next().val(vall1);
 								$multi1 = parseFloat(vall1) * parseFloat($(this).parent().prev().text());
 								$(this).parent().next().text(Math.round($multi1));
-								//totl();
-							})
+								totl();
+							});
 
-						})
+						});
 			}
 
 </script>
@@ -212,26 +232,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
 	<div class="check">	 
 			 <div class="col-md-3 cart-total">
-			 <a class="continue" href="#">Continue to basket</a>
-			 <div class="price-details">
-				 <h3>Price Details</h3>
-				 <span>Total</span>
-				 <span class="total1">6200.00</span>
-				 <span>Discount</span>
-				 <span class="total1">---</span>
-				 <span>Delivery Charges</span>
-				 <span class="total1">150.00</span>
-				 <div class="clearfix"></div>				 
-			 </div>	
+			 <a class="continue" href="index.html">Continue to basket</a>
+
 			 <ul class="total_price">
 			   <li class="last_price"> <h4>TOTAL</h4></li>	
-			   <li class="last_price"><span>6350.00</span></li>
+			   <li class="last_price foot_tol"><span id="susum">0</span></li>
 			   <div class="clearfix"> </div>
 			 </ul>
 			
 			 
 			 <div class="clearfix"></div>
-			 <a class="order" href="#">Place Order</a>
+			 <form class="form-horizontal" method="post" name="form1" action="{:url('user/order_add')}">
+			 	<input type="hidden" id="jia" name="jia" value="">
+			 	<a class="order" href="{:url('user/order_add')}">Place Order</a>
+			 </form>
+			 
 			 <div class="total-item">
 				 <h3>OPTIONS</h3>
 				 <h4>COUPONS</h4>
@@ -242,7 +257,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 <div class="col-md-9 cart-items">
 			 <h1>My Shopping Bag</h1>
 
-			 {volist name="commoditys" id="vo"}
+			 {volist name="orders" id="vo"}
 				<script>$(document).ready(function(c) {
 					$('.{$vo.id}').on('click', function(c){
 						$('.{$vo.count}_{$vo.sum}').fadeOut('slow', function(c){
@@ -254,7 +269,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  
 			 
 			 <div class="cart-header {$vo.count}_{$vo.sum}">
-				 <div class="close1 {$vo.id}"> </div>
+				 <a href="{:url('user/delete',['id'=>$vo.id])}"><div class="close1 {$vo.id}"> </div></a>
 				 <div class="cart-sec simpleCart_shelfItem">
 						<div class="cart-item cyc">
 							 <img src="/thinkphp/public/uploads/{$vo.logo}" class="img-responsive" alt=""/>
@@ -266,10 +281,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="pices" style="display:none;"> {$vo.count} </div>
 								<div class="num">数量：
 									<span class="reduc">&nbsp;-&nbsp;</span>
-									<input type="text" value="1" style="width:50px;" />
+									<input type="text" id="input" value="1" style="width:50px;" />
 									<span class="add">&nbsp;+</span>
 								</div>
-								<div class="totle" style="color:red;float:right;">￥ {$vo.count}</div></li>
+								<div class="totle" style="display:none;">{$vo.count}</div></li>
 						</ul>
 						
 						

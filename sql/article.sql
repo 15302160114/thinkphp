@@ -90,7 +90,7 @@ create table `order`(
 `content` text COMMENT '商品详情',
 `note` int(11) not null default 0 COMMENT '用户备注',
 `count` int(11) not null default 0 COMMENT '商品价格',
-`sum` int(11) not null default 0 COMMENT '商品总价',
+`sum` int(11) not null default 0 COMMENT '商品数量',
 `status` tinyint(1)  not null default 1 COMMENT '状态 1未配送 2已配送 0订单取消',
 `create_time` int(11)  unsigned not null default 0,
 `update_time` int(11)  unsigned not null default 0,

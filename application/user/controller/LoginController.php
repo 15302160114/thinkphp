@@ -10,6 +10,8 @@ class LoginController extends Controller
       	return $this->fetch();
     }
     public function register(){
+        $categorys=model('Category')->getCategorys();
+        $this->assign('categorys',$categorys);
         return $this->fetch();
     }
     public function save(){

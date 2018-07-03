@@ -72,10 +72,10 @@ class UserController extends Base
         $consumer=model('Consumer')->get($aid);
         $this->assign('consumer',$consumer);
 
-        $commoditys=Db::table('order')
+        $orders=Db::table('order')
                     ->where('status','3')
                     ->select();
-        $this->assign('commoditys',$commoditys);
+        $this->assign('orders',$orders);
 
         $categorys=model('Category')->getCategorys();
         $this->assign('categorys',$categorys);
@@ -92,6 +92,11 @@ class UserController extends Base
         $consumer=model('Consumer')->get($aid);
         $this->assign('consumer',$consumer);
 
+        $orders=Db::table('order')
+                    ->where('status','1')
+                    ->whereOr('status','2')
+                    ->select();
+        $this->assign('orders',$orders);
         
         $categorys=model('Category')->getCategorys();
         $this->assign('categorys',$categorys);
@@ -169,6 +174,41 @@ class UserController extends Base
         }else{
             $this->error('增加失败');
         }
+    }
+    public function order_add()
+    {
+        // $input=input('post.');
+        // $total=$input['total'];
+        $xuhao;
+        $order=Db::table('order')
+                    ->where('status','3')
+                    ->select();
+        foreach ($order as $key=>$value) {
+            $or=$order[$key];
+            $date=[
+                    'status'=>'1'
+                ];
+
+            $xuhao=model('Order')->save($date,['id'=>intval($or['id'])]);
+        }
+        if($xuhao){
+            $this->success('更新成功',url('user/order'));
+        }else{
+            $this->error('更新失败');
+        }
+    }
+    public function delete()
+    {
+        $id=input('param.id');
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+
+        $order=model('Order')->get($id);
+        if(!is_null($order->delete())){
+            $this->success('删除成功','user/shopping');
+        }
+        $this->error('删除失败');
     }
     public function logout()
     {

@@ -1,8 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\category.html";i:1530578647;}*/ ?>
-<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"C:\xampp\htdocs\thinkphp\public/../application/index\view\index\category.html";i:1530588892;}*/ ?>
 <html>
 <head>
-<title>Category : user</title>
+<title>Category</title>
 <link href="/thinkphp/public/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
 <script type='text/javascript' src="/thinkphp/public/static/js/jquery-1.11.1.min.js"></script>
@@ -33,7 +32,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<ul>
 					<li><a href="#">help</a></li>|
 					<li><a href="contact.html">Contact</a></li>|
-					<li><a href="#">Delivery information</a></li>
+					<li><a href="<?php echo url('@admin/login/index'); ?>">Administrator Login</a></li>
 				</ul>
 			</div>
 			<div class="top_left">
@@ -54,23 +53,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- start header_right -->
         <div class="header_right">
             <div class="rgt-bottom">
-                
-            <div class="cart box_1">
-                <a href="checkout.html">
-                    <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="/thinkphp/public/static/images/bag.png" alt=""></h3>
-                </a>    
-
-                <div class="clearfix"> </div>
-            </div>
+                <div class="log">
+                    <div class="login" >
+                        <div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
+                            <div id="loginBox">                
+                                <form id="loginForm">
+                                        <fieldset id="body">
+                                            <fieldset>
+                                                  <label for="email">Email Address</label>
+                                                  <input type="text" name="email" id="email">
+                                            </fieldset>
+                                            <fieldset>
+                                                    <label for="password">Password</label>
+                                                    <input type="password" name="password" id="password">
+                                             </fieldset>
+                                            <input type="submit" id="login" value="Sign in">
+                                            <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+                                        </fieldset>
+                                    <span><a href="#">Forgot your password?</a></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reg">
+                    <a href="<?php echo url('@user/login/register'); ?>">REGISTER</a>
+                </div>
             
-            <div class="create_btn">
-                <a href="<?php echo url('user/logout'); ?>">sign out</a>
-            </div>
-
-            <div class="create" style="border:1px solid #000;text-align:right;display:inline-block;margin-left:30px;padding:8px 12px;">
-                <a href="#">欢迎你 , <?php if($user): ?><?php echo $user->username; endif; ?></a>
-            </div>
-            <div class="clearfix"></div>
+            <div class="clearfix"> </div>
         </div>
         <div class="search">
             <form>
@@ -84,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
         <!-- start header menu -->
         <ul class="megamenu skyblue">
-            <li class="grid"><a class="color1" href="index.html">Home</a></li>
+            <li class="grid"><a class="color1" href="<?php echo url('@index/index/index'); ?>">Home</a></li>
             <li class="active grid"><a class="color2" href="#">Classification</a>
                 <div class="megapanel">
                     <div class="row">
@@ -93,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('@index/index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -103,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('@index/index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -113,7 +123,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('@index/index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -123,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('@index/index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -133,7 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('@index/index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -143,7 +153,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('@index/index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -159,9 +169,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     </div>
                 </li>
-                <li class="grid"><a class="color3" href="shopping.html">Shopping Cart</a></li>
-                <li class="grid"><a class="color4" href="order.html">Your Order</a></li>
-                <li class="grid"><a class="color5" href="settings.html">Settings</a></li>
+                
             
          </ul> 
     </div>
