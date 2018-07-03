@@ -103,6 +103,23 @@ class UserController extends Base
 
         return $this->fetch('');
     }
+    public function details()
+    {
+        $a=explode(',', session('me_user','','me'));
+        $id=substr($a[0],6);
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $consumer=model('Consumer')->get($id);
+        $this->assign('consumer',$consumer);
+
+        $categorys=model('Category')->getCategorys();
+        $this->assign('categorys',$categorys);
+
+        $commodity=model('Commodity')->getCommoditys();
+        $this->assign('commodity',$commodity);
+        return $this->fetch();
+    }
 	public function update(){
         echo "<meta charset='UTF-8'>";
         if(!request()->isPost()){
@@ -179,6 +196,12 @@ class UserController extends Base
     {
         // $input=input('post.');
         // $total=$input['total'];
+        $a=explode(',', session('me_user','','me'));
+        $id=substr($a[0],6);
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        } 
+        
         $xuhao;
         $order=Db::table('order')
                     ->where('status','3')
@@ -186,7 +209,8 @@ class UserController extends Base
         foreach ($order as $key=>$value) {
             $or=$order[$key];
             $date=[
-                    'status'=>'1'
+                    'status'=>'1',
+                    'consumer_id'=>$id
                 ];
 
             $xuhao=model('Order')->save($date,['id'=>intval($or['id'])]);

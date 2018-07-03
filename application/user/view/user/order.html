@@ -118,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="rgt-bottom">
                 
             <div class="cart box_1">
-                <a href="checkout.html">
+                <a href="shopping.html">
                     <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="__STATIC__/images/bag.png" alt=""></h3>
                 </a>    
 
@@ -255,18 +255,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 <h1>My Shopping Order</h1>
 
 			 {volist name="orders" id="vo"}
-				<script>$(document).ready(function(c) {
-					$('.{$vo.id}').on('click', function(c){
-						$('.{$vo.count}_{$vo.sum}').fadeOut('slow', function(c){
-							$('.{$vo.count}_{$vo.sum}').remove();
-						});
-						});	  
-					});
-			   </script>
-			  
+				
 			 
 			 <div class="cart-header {$vo.count}_{$vo.sum}">
-				 <a href="{:url('user/delete',['id'=>$vo.id])}"><div class="close1 {$vo.id}"> </div></a>
 				 <div class="cart-sec simpleCart_shelfItem">
 						<div class="cart-item cyc">
 							 <img src="/thinkphp/public/uploads/{$vo.logo}" class="img-responsive" alt=""/>
@@ -277,13 +268,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li>
 								<div class="pices" style="display:none;"> {$vo.count} </div>
 								<div class="num">数量：{$vo.sum}</div>
-								<div class="totle" style="display:none;">{$vo.count}</div></li>
+								<div class="totle" style="display:none;">{$vo.count}</div>
+							</li>
 						</ul>
 						
-						
-							 <div class="delivery">
+						<span>状态：{:getStatus($vo.status)}</span><br>
+						<span>{:getDis($vo.distributor_id)}</span>
+						<div class="delivery" style="margin-top:20px;">
 							 <p>Service Charges : {$vo.count}</p>
 
+							
 							 <span>Delivered in {$vo.create_time|date='Y-m-d H:i:s',###}</span>
 							 <div class="clearfix"></div>
 				        </div>	

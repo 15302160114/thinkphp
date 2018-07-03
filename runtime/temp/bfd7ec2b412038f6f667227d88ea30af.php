@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\fenlei.html";i:1530494824;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\fenlei.html";i:1530604772;}*/ ?>
 <!DOCTYPE html>
 <html class=" ">
     <head>
@@ -10,7 +10,7 @@
         -->
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta charset="utf-8" />
-        <title>Admin : user设置</title>
+        <title>Admin : category</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta content="" name="description" />
         <meta content="" name="author" />
@@ -450,7 +450,7 @@
                         </li>
                         <li class=""> 
                             <a href="distributor.html">
-                                <i class="fa fa-th"></i>
+                                <i class="fa fa-columns"></i>
                                 <span class="title">配送员列表</span><span class="label label-orange nosubmenu">HOT</span>
                             </a>
                         </li>

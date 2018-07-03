@@ -13,8 +13,22 @@ class AdminhotaiController extends Base
             $this->error('参数有误');
         }
         $admin=model('Admin')->get($id);
-        
         $this->assign('admin',$admin);
+
+        $dis=model('Distributor')->getDistributors();
+        $this->assign('dis',$dis);
+
+        $order=Db::table('order')
+                    ->where('status','1')
+                    ->whereOr('status','2')
+                    ->select();
+        $this->assign('order',$order);
+
+        $commodity=model('Commodity')->getCommoditys();
+        $this->assign('commodity',$commodity);
+
+        $consumer=model('Consumer')->getConsumer();
+        $this->assign('consumer',$consumer);
         return $this->fetch();
     }
     public function user()
@@ -63,9 +77,15 @@ class AdminhotaiController extends Base
             $this->error('参数有误');
         }
         $admin=model('Admin')->get($id);
-        
         $this->assign('admin',$admin);
-        $order=model('Order')->getOrders();
+
+        $dis=model('Distributor')->getDistributors();
+        $this->assign('dis',$dis);
+
+        $order=Db::table('order')
+                    ->where('status','1')
+                    ->whereOr('status','2')
+                    ->select();
         $this->assign('order',$order);
         return $this->fetch('');
     }
@@ -361,7 +381,10 @@ class AdminhotaiController extends Base
             $this->error('参数有误');
         }
         $input=input('post.');
-        $date=['status'=>$input['status']];
+        $date=[
+            'status'=>$input['status'],
+            'distributor_id'=>$input['distributor_id']
+            ];
         $xuhao=model('Order')->save($date,['id'=>intval($id)]);
         if($xuhao){
             $this->success('更新成功',url('adminhotai/all_order'));

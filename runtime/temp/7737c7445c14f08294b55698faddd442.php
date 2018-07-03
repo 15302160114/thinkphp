@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\all_order.html";i:1530589930;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\all_order.html";i:1530604734;}*/ ?>
 
 <!DOCTYPE html>
 <html class=" ">
@@ -453,7 +453,7 @@
                         </li>
                         <li class=""> 
                             <a href="distributor.html">
-                                <i class="fa fa-th"></i>
+                                <i class="fa fa-columns"></i>
                                 <span class="title">配送员列表</span><span class="label label-orange nosubmenu">HOT</span>
                             </a>
                         </li>
@@ -564,6 +564,7 @@
                                                     <th>logo</th>
                                                     <th>商品分类</th>
                                                     <th>下单用户</th>
+                                                    <th>下单时间</th>
                                                     <th>价钱</th>
                                                     <th>数量</th>
                                                     <th>配送员</th>
@@ -578,12 +579,24 @@
                                                     <th><?php echo $num; ?></th>
                                                     <td><?php echo $vo['spname']; ?></td>
                                                     <td><img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" width="100px"></td>
-                                                    <td><?php echo getAuthorname($vo['category_id']); ?></td>
+                                                    <td><?php echo getUsername($vo['category_id']); ?></td>
                                                     <td><?php echo getAuthorname($vo['consumer_id']); ?></td>
+                                                    <td><?php echo $vo['create_time']; ?></td>
                                                     <td><?php echo $vo['count']; ?></td>
                                                     <td><?php echo $vo['sum']; ?></td>
-                                                    <td><?php echo getDisname($vo['distributor_id']); ?></td>
                                                     <form method="post" action="<?php echo url('adminhotai/update_o',['id'=>$vo['id']]); ?>">
+                                                    <td>
+                                                        <select data-am-selected="{searchBox: 1}" name="distributor_id">
+                                                        <eq name="vo.status" value="2">
+                                                        <option value="<?php echo $vo['distributor_id']; ?>"><?php echo getDisname($vo['distributor_id']); ?></option>
+                                                        <else/>
+                                                        <?php if(is_array($dis) || $dis instanceof \think\Collection || $dis instanceof \think\Paginator): $num = 0; $__LIST__ = $dis;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$do): $mod = ($num % 2 );++$num;?>
+                                                            <option value="<?php echo $do['id']; ?>"><?php echo $do['realname']; ?></option>
+                                                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                                                        </eq>
+                                                        
+                                                        </select>
+                                                    </td>
                                                     <td>
                                                         <select data-am-selected="{searchBox: 1}" name="status">
                                                             <?php echo getStatusname($vo['status']); ?>

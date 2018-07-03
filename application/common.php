@@ -50,3 +50,25 @@ function getStatusname($id){
 		return $a;
 	}
 }
+function getStatus($id){
+	if($id==1){
+		$a='未配送';
+    	return $a;
+	}
+	if($id==2){
+		$a='已配送';
+		return $a;
+	}
+	if($id==0){
+		$a='订单取消';
+		return $a;
+	}
+}
+function getDis($id){
+	if($id==0){
+		return '';
+	}else{
+		$yuan=Db::name('distributor')->where('id',$id)->find()['realname'];
+		return '配送员：'.$yuan;
+	}
+}

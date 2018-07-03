@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\order.html";i:1530071210;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\order.html";i:1530604119;}*/ ?>
 
 <!DOCTYPE html>
 <html class=" ">
@@ -11,7 +11,7 @@
         -->
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta charset="utf-8" />
-        <title>Admin : user</title>
+        <title>Admin : order</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta content="" name="description" />
         <meta content="" name="author" />
@@ -359,7 +359,7 @@
                             </a>
                             <ul class="dropdown-menu profile animated fadeIn">
                                 <li>
-                                    <a href="#settings">
+                                    <a href="zhanghao.html">
                                         <i class="fa fa-wrench"></i>
                                         Settings
                                     </a>
@@ -377,7 +377,7 @@
                                     </a>
                                 </li>
                                 <li class="last">
-                                    <a href="ui-login.html">
+                                    <a href="<?php echo url('adminhotai/logout'); ?>">
                                         <i class="fa fa-lock"></i>
                                         Logout
                                     </a>
@@ -407,7 +407,7 @@
                 <div class="page-sidebar-wrapper" id="main-menu-wrapper"> 
 
                     <!-- USER INFO - START -->
-                    <div class="profile-info row">
+                    <div class="profile-info row" style="margin:30px 0;">
 
                         <div class="profile-image col-md-4 col-sm-4 col-xs-4">
                             <a href="ui-profile.html">
@@ -448,6 +448,12 @@
                                 <span class="title">用户列表</span><span class="label label-orange nosubmenu">HOT</span>
                             </a>
                         </li>
+                        <li class=""> 
+                            <a href="distributor.html">
+                                <i class="fa fa-columns"></i>
+                                <span class="title">配送员列表</span><span class="label label-orange nosubmenu">HOT</span>
+                            </a>
+                        </li>
                         <li class="open"> 
                             <a href="javascript:;">
                                 <i class="fa fa-suitcase"></i>
@@ -465,203 +471,17 @@
                             </ul>
                         </li>
                         <li class=""> 
-                            <a href="javascript:;">
+                            <a href="fenlei.html">
                                 <i class="fa fa-sliders"></i>
-                                <span class="title">Forms</span>
-                                <span class="arrow "></span>
+                                <span class="title">商品分类</span>
                             </a>
-                            <ul class="sub-menu" >
-                                <li>
-                                    <a class="" href="form-elements.html">Form Elements</a>
-                                </li>
-                                <li>
-                                    <a class="" href="form-components.html">Form Components</a>
-                                </li>
-                                <li>
-                                    <a class="" href="form-wizard.html">Form Wizard</a>
-                                </li>
-                                <li>
-                                    <a class="" href="form-validation.html">Form Validations</a>
-                                </li>
-                                <li>
-                                    <a class="" href="form-fileupload.html">File Upload & Dropzone</a>
-                                </li>
-                                <li>
-                                    <a class="" href="form-editors.html">Editors</a>
-                                </li>
-                                <li>
-                                    <a class="" href="form-masks.html">Input Masks</a>
-                                </li>
-                            </ul>
                         </li>
                         <li class=""> 
-                            <a href="javascript:;">
-                                <i class="fa fa-gift"></i>
-                                <span class="title">Extra</span>
-                                <span class="arrow "></span><span class="label label-orange">NEW</span>
+                            <a href="commodity.html">
+                                <i class="fa fa-sliders"></i>
+                                <span class="title">添加商品</span>
                             </a>
-                            <ul class="sub-menu" >
-                                <li>
-                                    <a class="" href="ui-calendar.html">Calendar</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-pricing.html">Pricing tables</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-profile.html">Profile</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-register.html">Registration</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-timeline.html">Timeline</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-invoice.html">Invoice</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-members.html">Members</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-gallery.html">Gallery</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-search.html">Search</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-blogs.html">Blogs</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-imagecrop.html">Image cropper</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-tocify.html">Tocify</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-faq.html">FAQ</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-404.html">404</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-500.html">500</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-lockscreen.html">Lock Screen</a>
-                                </li>
-                            </ul>
                         </li>
-                        <li class=""> 
-                            <a href="javascript:;">
-                                <i class="fa fa-envelope"></i>
-                                <span class="title">Mailbox</span>
-                                <span class="arrow "></span><span class="label label-orange">4</span>
-                            </a>
-                            <ul class="sub-menu" >
-                                <li>
-                                    <a class="" href="mail-inbox.html">Inbox</a>
-                                </li>
-                                <li>
-                                    <a class="" href="mail-compose.html">Compose</a>
-                                </li>
-                                <li>
-                                    <a class="" href="mail-view.html">View</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class=""> 
-                            <a href="javascript:;">
-                                <i class="fa fa-bar-chart"></i>
-                                <span class="title">Charts</span>
-                                <span class="arrow "></span>
-                            </a>
-                            <ul class="sub-menu" >
-                                <li>
-                                    <a class="" href="charts-morris.html">Morris Charts</a>
-                                </li>
-                                <li>
-                                    <a class="" href="charts-chartjs.html">Chart JS</a>
-                                </li>
-                                <li>
-                                    <a class="" href="charts-flot.html">Flot Charts</a>
-                                </li>
-                                <li>
-                                    <a class="" href="charts-sparkline.html">Sparkline Charts</a>
-                                </li>
-                                <li>
-                                    <a class="" href="charts-easypiechart.html">PIE charts & Knobs</a>
-                                </li>
-                                <li>
-                                    <a class="" href="charts-rickshaw.html">Rickshaw Charts</a>
-                                </li>
-                            </ul>
-                        </li>
-                        
-                        <li class=""> 
-                            <a href="javascript:;">
-                                <i class="fa fa-columns"></i>
-                                <span class="title">Layouts</span>
-                                <span class="arrow "></span>
-                            </a>
-                            <ul class="sub-menu" >
-                                <li>
-                                    <a class="" href="layout-default.html">Default Layout</a>
-                                </li>
-                                <li>
-                                    <a class="" href="layout-collapsed.html">Collapsed Menu</a>
-                                </li>
-                                <li>
-                                    <a class="" href="layout-chat.html">Chat Open</a>
-                                </li>
-                                <li>
-                                    <a class="" href="layout-boxed.html">Boxed Layout</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class=""> 
-                            <a href="javascript:;">
-                                <i class="fa fa-map-marker"></i>
-                                <span class="title">Maps</span>
-                                <span class="arrow "></span>
-                            </a>
-                            <ul class="sub-menu" >
-                                <li>
-                                    <a class="" href="ui-vectormaps.html">Vector Maps</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-googlemaps.html">Google Maps</a>
-                                </li>
-                                <li>
-                                    <a class="" href="ui-googlemapfull.html">Advanced Google Maps</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class=""> <a href="javascript:;"> <i class="fa fa-folder-open"></i> <span class="title">Menu Levels</span> <span class="arrow "></span> </a>
-                            <ul class="sub-menu">
-                                <li > <a href="javascript:;"> <span class="title">Level 1.1</span> </a> </li>
-                                <li > <a href="javascript:;"> <span class="title">Level 1.2</span> <span class="arrow "></span> </a>
-                                    <ul class="sub-menu">
-                                        <li > <a href="javascript:;"> <span class="title">Level 2.1</span> </a></li>
-                                        <li > <a href="ujavascript:;"> <span class="title">Level 2.2</span> <span class="arrow "></span></a> 
-                                            <ul class="sub-menu">
-                                                <li > <a href="javascript:;"> <span class="title">Level 3.1</span> <span class="arrow "></span></a> 
-                                                    <ul class="sub-menu">
-                                                        <li > <a href="ujavascript:;"> <span class="title">Level 4.1</span> </a> </li>
-                                                        <li > <a href="ujavascript:;"> <span class="title">Level 4.2</span> </a> </li>
-                                                    </ul>
-                                                </li>
-                                                <li > <a href="ujavascript:;"> <span class="title">Level 3.2</span> </a> </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
                     </ul>
 
                 </div>
@@ -712,13 +532,26 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label class="form-label" for="formfield2">商品LOGO</label>
-                                                <span class="desc"></span>
-                                                <div class="controls">
-                                                    <input type="text" class="form-control" id="formfield2" name="logo" >
+                                            <div class="am-form-group">
+                                                <label for="user-weibo" class="am-u-sm-12 am-form-label  am-text-left">商品LOGO <span class="tpl-form-line-small-title">Images</span></label>
+
+                                                <div id="uploader-demo" class="am-u-sm-12 am-margin-top-xs">
+                                                    <div class="am-form-group am-form-file">
+                                                        <div id="fileList" class="tpl-form-file-img uploader-list">
+                                                            <div id="old" class="file-item thumbnail">
+                                                                <img src="/thinkphp/public/uploads/<?php echo $order['logo']; ?>" class="tpl-table-line-img" style="width:200px;">
+                                                                <div class="info" style="text-align:center;"><?php echo $order['logo']; ?></div>
+                                                            </div>
+                                                            <input type="text" style="display:none" name="logo" value="<?php echo $order['logo']; ?>">
+                                                        </div>
+                                                        
+                                                        <button id="filePicker" type="button" class="am-btn am-btn-danger am-btn-sm ">
+                                                        <i class="am-icon-cloud-upload"></i> 更改商品LOGO</button>
+                                                    </div>
+
                                                 </div>
                                             </div>
+
 
                                             <div class="form-group">
                                                 <label class="form-label" for="formfield1">商品数量</label>
@@ -741,9 +574,14 @@
                                                 <span class="desc"></span>
                                                 <div class="controls">
                                                     <select data-am-selected="{searchBox: 1}" name="distributor_id">
-                                                        <?php if(is_array($distributor) || $distributor instanceof \think\Collection || $distributor instanceof \think\Paginator): $num = 0; $__LIST__ = $distributor;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($num % 2 );++$num;?>
-                                                        <option value="<?php echo $vo['id']; ?>">{vo.realname}</option>
+                                                        <eq name="vo.status" value="2">
+                                                        <option value="<?php echo $order['distributor_id']; ?>"><?php echo getDisname($order['distributor_id']); ?></option>
+                                                        <else/>
+                                                        <?php if(is_array($distributor) || $distributor instanceof \think\Collection || $distributor instanceof \think\Paginator): $num = 0; $__LIST__ = $distributor;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$do): $mod = ($num % 2 );++$num;?>
+                                                            <option value="<?php echo $do['id']; ?>"><?php echo $do['realname']; ?></option>
                                                         <?php endforeach; endif; else: echo "" ;endif; ?>
+                                                        </eq>
+                                                        
                                                     </select>
                                                 </div>
                                             </div>
@@ -754,7 +592,7 @@
                                                 <label class="form-label" for="formfield1">用户</label>
                                                 <span class="desc"></span>
                                                 <div class="controls">
-                                                    <input type="text" value="<?php echo getAuthorname($order['author_id']); ?>" class="form-control" id="formfield1" name="author_id" >
+                                                    <input type="text" value="<?php echo getAuthorname($order['consumer_id']); ?>" class="form-control" id="formfield1" name="consumer_id" >
                                                 </div>
                                             </div>
 
@@ -792,7 +630,7 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="pull-right ">
                                                 <button type="submit" class="btn btn-success">Save</button>
-                                                <button type="button" class="btn">Cancel</button>
+                                                <a href="all_order.html"><button type="button" class="btn">Cancel</button></a>
                                             </div>
                                         </div>
 
@@ -1039,14 +877,7 @@
         <script src="/thinkphp/public/static/assets/js/chart-sparkline.js" type="text/javascript"></script>
         <!-- Sidebar Graph - END --> 
 
-
-
-
-
-
-
-
-
+        <script type="text/javascript" src="/thinkphp/public/static/webuploader/webuploader.js"></script>    <!-- 引用插件js -->
 
 
 
@@ -1073,6 +904,60 @@
         </div>
         <!-- modal end -->
     </body>
+<script type="text/javascript">
+           //var $list=$("#fileList");   //这几个初始化全局的百度文档上没说明，好蛋疼
+           var thumbnailWidth = 100;   //缩略图高度和宽度 （单位是像素），当宽高度是0~1的时候，是按照百分比计算，具体可以看api文档  
+           var thumbnailHeight = 100;  
+           var uploader = WebUploader.create({
+            // 选完文件后，是否自动上传。
+           auto: true,
+            // swf文件路径
+           swf: '/thinkphp/public/static/webuploader/uploader.swf', //加载swf文件，路径一定要对
+            // 文件接收服务端。
+            server: '<?php echo url("user/userhotai/upload"); ?>',
+            // 选择文件的按钮。可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            pick: '#filePicker',
+            // 只允许选择图片文件。
+            accept: {
+                title: 'Images',
+                extensions: 'gif,jpg,jpeg,bmp,png',
+                mimeTypes: 'image/'
+            }
+        });
+      //上传完成事件监听
+        
+        uploader.on( 'fileQueued', function(file) {
+            // var d = new Date();
+            // var curr_date = d.getDate();
+            // var curr_month = d.getMonth() + 1; 
+            // var curr_year = d.getFullYear();
+            // String(curr_month).length < 2 ? (curr_month = "0" + curr_month): curr_month;
+            // String(curr_date).length < 2 ? (curr_date = "0" + curr_date): curr_date;
+            // var yyyyMMdd = curr_year + "" + curr_month +""+ curr_date;
+            var $li = $(
+                    '<div id="old" class="file-item thumbnail">' +
+                        '<img>' +
+                        '<div class="info" style="text-align:center;">' + file.name + '</div>' +
+                    '</div>'+
+                    '<input type="text" style="display:none" name="logo" value="'+ file.name +'">'
+                    ),
+                $img = $li.find('img');
+            // $list为容器jQuery实例
+                $('#old').remove();
+                $("#fileList").append( $li );
+            // 创建缩略图
+            // 如果为非图片文件，可以不用调用此方法。
+            // thumbnailWidth x thumbnailHeight 为 100 x 100
+            uploader.makeThumb( file, function( error, src ) {
+                if ( error ) {
+                    $img.replaceWith('<span>不能预览</span>');
+                    return;
+                }
+                $img.attr( 'src', src );
+            }, thumbnailWidth, thumbnailHeight );
+        });
+</script>
 </html>
 
 

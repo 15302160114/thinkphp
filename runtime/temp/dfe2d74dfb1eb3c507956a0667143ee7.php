@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\index.html";i:1530589125;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:79:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\index.html";i:1530604782;}*/ ?>
 ﻿
 <!DOCTYPE html>
 <html class=" ">
@@ -11,13 +11,13 @@
         -->
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta charset="utf-8" />
-        <title>Admin : index</title>
+        <title>Admin : Index</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta content="" name="description" />
         <meta content="" name="author" />
 
         <link rel="shortcut icon" href="/thinkphp/public/static/assets/images/favicon.png" type="image/x-icon" />    <!-- Favicon -->
-        <link rel="apple-touch-icon-precomposed" href="/thinkphp/public/static/assets/images/apple-touch-icon-57-precomposed.png">  <!-- For iPhone -->
+        <link rel="apple-touch-icon-precomposed" href="/thinkphp/public/static/assets/images/apple-touch-icon-57-precomposed.png">   <!-- For iPhone -->
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/thinkphp/public/static/assets/images/apple-touch-icon-114-precomposed.png">    <!-- For iPhone 4 Retina display -->
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/thinkphp/public/static/assets/images/apple-touch-icon-72-precomposed.png">    <!-- For iPad -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/thinkphp/public/static/assets/images/apple-touch-icon-144-precomposed.png">    <!-- For iPad Retina display -->
@@ -35,16 +35,10 @@
         <!-- CORE CSS FRAMEWORK - END -->
 
         <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
-        <link href="/thinkphp/public/static/assets/plugins/morris-chart/css/morris.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="/thinkphp/public/static/assets/plugins/jquery-ui/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="/thinkphp/public/static/assets/plugins/rickshaw-chart/css/graph.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="/thinkphp/public/static/assets/plugins/rickshaw-chart/css/detail.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="/thinkphp/public/static/assets/plugins/rickshaw-chart/css/legend.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="/thinkphp/public/static/assets/plugins/rickshaw-chart/css/extensions.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="/thinkphp/public/static/assets/plugins/rickshaw-chart/css/rickshaw.min.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="/thinkphp/public/static/assets/plugins/rickshaw-chart/css/lines.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="/thinkphp/public/static/assets/plugins/jvectormap/jquery-jvectormap-2.0.1.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="/thinkphp/public/static/assets/plugins/icheck/skins/minimal/white.css" rel="stylesheet" type="text/css" media="screen"/>        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
+        <link href="/thinkphp/public/static/assets/plugins/datatables/css/jquery.dataTables.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="/thinkphp/public/static/assets/plugins/datatables/extensions/TableTools/css/dataTables.tableTools.min.css" rel="stylesheet" type="text/css" media="screen"/
+        ><link href="/thinkphp/public/static/assets/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="/thinkphp/public/static/assets/plugins/datatables/extensions/Responsive/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet" type="text/css" media="screen"/>        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
 
 
         <!-- CORE CSS TEMPLATE - START -->
@@ -448,7 +442,7 @@
                         <li class="open"> 
                             <a href="index.html">
                                 <i class="fa fa-dashboard"></i>
-                                <span class="title">首页</span>
+                                <span class="active title">首页</span>
                             </a>
                         </li>
                         <li class=""> 
@@ -474,7 +468,7 @@
                                     <a class="" href="all_order.html">所有订单</a>
                                 </li>
                                 <li>
-                                    <a class="" href="">订单详情</a>
+                                    <a class="" href="order.html">订单详情</a>
                                 </li>
                                 
                             </ul>
@@ -485,6 +479,7 @@
                                 <span class="title">商品分类</span>
                             </a>
                         </li>
+                        
                         <li class=""> 
                             <a href="commodity.html">
                                 <i class="fa fa-sliders"></i>
@@ -498,7 +493,32 @@
 
 
 
-                
+                <div class="project-info">
+
+                    <div class="block1">
+                        <div class="data">
+                            <span class='title'>New&nbsp;Orders</span>
+                            <span class='total'>2,345</span>
+                        </div>
+                        <div class="graph">
+                            <span class="sidebar_orders">...</span>
+                        </div>
+                    </div>
+
+                    <div class="block2">
+                        <div class="data">
+                            <span class='title'>Visitors</span>
+                            <span class='total'>345</span>
+                        </div>
+                        <div class="graph">
+                            <span class="sidebar_visitors">...</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
             </div>
             <!--  SIDEBAR - END -->
             <!-- START CONTENT -->
@@ -509,14 +529,239 @@
                         <div class="page-title">
 
                             <div class="pull-left">
-                                <h1 class="title">Dashboard</h1>                            </div>
+                                <h1 class="title">首页</h1>                            </div>
 
 
                         </div>
                     </div>
                     <div class="clearfix"></div>
 
+                    
+                                    
+                    <div class="col-lg-12">
+                        <section class="box ">
+                            <header class="panel_header">
+                                <h2 class="title pull-left">所有订单</h2>
+                                <div class="actions panel_actions pull-right">
+                                    <i class="box_toggle fa fa-chevron-down"></i>
+                                    <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
+                                    <i class="box_close fa fa-times"></i>
+                                </div>
+                            </header>
+                            <div class="content-body">    <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
 
+
+
+                                        <!-- ********************************************** -->
+
+
+                                        <table id="example" class="display table table-hover table-condensed" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>商品名称</th>
+                                                    <th>logo</th>
+                                                    <th>商品分类</th>
+                                                    <th>下单用户</th>
+                                                    <th>下单时间</th>
+                                                    <th>价钱</th>
+                                                    <th>数量</th>
+                                                    <th>配送员</th>
+                                                    <th>STATUS</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <?php if(is_array($order) || $order instanceof \think\Collection || $order instanceof \think\Paginator): $num = 0; $__LIST__ = $order;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($num % 2 );++$num;?>
+                                                <tr>
+                                                    <th><?php echo $num; ?></th>
+                                                    <td><?php echo $vo['spname']; ?></td>
+                                                    <td><img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" width="100px"></td>
+                                                    <td><?php echo getUsername($vo['category_id']); ?></td>
+                                                    <td><?php echo getAuthorname($vo['consumer_id']); ?></td>
+                                                    <td><?php echo date('y-m-d H:i:s',$vo['create_time']); ?></td>
+                                                    <td><?php echo $vo['count']; ?></td>
+                                                    <td><?php echo $vo['sum']; ?></td>
+                                                    <td><?php echo getDisname($vo['distributor_id']); ?></td>
+                                                    <td>
+                                                        <select data-am-selected="{searchBox: 1}" name="status">
+                                                            <?php echo getStatusname($vo['status']); ?>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                                            </tbody>
+                                        </table>
+                                        <!-- ********************************************** -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section></div>
+
+                    <div class="col-lg-12">
+                        <section class="box ">
+                            <header class="panel_header">
+                                <h2 class="title pull-left">商品列表</h2>
+                                <div class="actions panel_actions pull-right">
+                                    <i class="box_toggle fa fa-chevron-down"></i>
+                                    <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
+                                    <i class="box_close fa fa-times"></i>
+                                </div>
+                            </header>
+                            <div class="content-body">    <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <!-- ********************************************** -->
+
+                                        <table id="example" class="display table table-hover table-condensed" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Commodity Name</th>
+                                                    <th>Logo</th>
+                                                    <th>Category</th>
+                                                    <th>Description</th>
+                                                    <th>Create Time</th>
+                                                    <th>Operation</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php if(is_array($commodity) || $commodity instanceof \think\Collection || $commodity instanceof \think\Paginator): $num = 0; $__LIST__ = $commodity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($num % 2 );++$num;?>
+                                                <tr class="gradeX">
+                                                    <th scope="row"><?php echo $num; ?></th>
+                                                    <td class="am-text-middle"><?php echo $vo['spname']; ?></td>
+                                                    <td class="am-text-middle"><a href="<?php echo url('@index/index/single',['id'=>$vo['id']]); ?>" target="_blank"><img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" width='100px'></a></td>
+                                                    <td class="am-text-middle"><?php echo getUsername($vo['category_id']); ?></td>
+                                                    <td class="am-text-middle"><?php echo $vo['description']; ?></td>
+                                                    <td class="am-text-middle"><?php echo $vo['create_time']; ?></td>
+                                                    <td class="am-text-middle">
+                                                        <div class="tpl-table-black-operation">
+                                                            <a href="<?php echo url('adminhotai/com_delete',['id'=>$vo['id']]); ?>" class="tpl-table-black-operation-del">
+                                                                <i class="am-icon-trash"></i> 删除
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                                            </tbody>
+                                        </table>
+                                        <!-- ********************************************** -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section></div>
+
+                    <div class="col-lg-12">
+                        <section class="box ">
+                            <header class="panel_header">
+                                <h2 class="title pull-left">所有用户</h2>
+                                <div class="actions panel_actions pull-right">
+                                    <i class="box_toggle fa fa-chevron-down"></i>
+                                    <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
+                                    <i class="box_close fa fa-times"></i>
+                                </div>
+                            </header>
+                            <div class="content-body">    <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Username</th>
+                                                    <th>Realname</th>
+                                                    <th>Tel</th>
+                                                    <th>Email</th>
+                                                    <th>Address</th>
+                                                    <th>Create Time</th>
+                                                    <th>Operation</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php if(is_array($consumer) || $consumer instanceof \think\Collection || $consumer instanceof \think\Paginator): $num = 0; $__LIST__ = $consumer;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($num % 2 );++$num;?>
+                                                <tr>
+                                                    <th scope="row"><?php echo $num; ?></th>
+                                                    <td><?php echo $vo['username']; ?></td>
+                                                    <td><?php echo $vo['realname']; ?></td>
+                                                    <td><?php echo $vo['tel']; ?></td>
+                                                    <td><?php echo $vo['email']; ?></td>
+                                                    <td><?php echo $vo['address']; ?></td>
+                                                    <td><?php echo $vo['create_time']; ?></td>
+                                                    <td>
+                                                        <div class="tpl-table-black-operation">
+                                                            <a href="<?php echo url('adminhotai/consumeredit',['id'=>$vo['id']]); ?>">
+                                                                <i class="am-icon-pencil"></i> 编辑
+                                                            </a>
+                                                            <a href="<?php echo url('adminhotai/consumerdelete',['id'=>$vo['id']]); ?>" class="tpl-table-black-operation-del">
+                                                                <i class="am-icon-trash"></i> 删除
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section></div>
+
+                    <div class="col-lg-12">
+                        <section class="box ">
+                            <header class="panel_header">
+                                <h2 class="title pull-left">所有配送员</h2>
+                                <div class="actions panel_actions pull-right">
+                                    <i class="box_toggle fa fa-chevron-down"></i>
+                                    <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
+                                    <i class="box_close fa fa-times"></i>
+                                </div>
+                            </header>
+                            <div class="content-body">    <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Realname</th>
+                                                    <th>Tel</th>
+                                                    <th>Email</th>
+                                                    <th>Note</th>
+                                                    <th>Create Time</th>
+                                                    <th>Operation</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php if(is_array($dis) || $dis instanceof \think\Collection || $dis instanceof \think\Paginator): $num = 0; $__LIST__ = $dis;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($num % 2 );++$num;?>
+                                                <tr>
+                                                    <th scope="row"><?php echo $num; ?></th>
+                                                    <td><?php echo $vo['realname']; ?></td>
+                                                    <td><?php echo $vo['tel']; ?></td>
+                                                    <td><?php echo $vo['email']; ?></td>
+                                                    <td><?php echo $vo['note']; ?></td>
+                                                    <td><?php echo $vo['create_time']; ?></td>
+                                                    <td>
+                                                        <div class="tpl-table-black-operation">
+                                                            <a href="<?php echo url('adminhotai/dis_edit',['id'=>$vo['id']]); ?>">
+                                                                <i class="am-icon-pencil"></i> 编辑
+                                                            </a>
+                                                            <a href="<?php echo url('adminhotai/dis_delete',['id'=>$vo['id']]); ?>" class="tpl-table-black-operation-del">
+                                                                <i class="am-icon-trash"></i> 删除
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section></div>
 
                 </section>
             </section>
@@ -730,18 +975,10 @@
 
 
         <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
-        <script src="/thinkphp/public/static/assets/plugins/rickshaw-chart/vendor/d3.v3.js" type="text/javascript"></script> 
-        <script src="/thinkphp/public/static/assets/plugins/jquery-ui/smoothness/jquery-ui.min.js" type="text/javascript"></script> 
-        <script src="/thinkphp/public/static/assets/plugins/rickshaw-chart/js/Rickshaw.All.js"></script>
-        <script src="/thinkphp/public/static/assets/plugins/sparkline-chart/jquery.sparkline.min.js" type="text/javascript"></script>
-        <script src="/thinkphp/public/static/assets/plugins/easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
-        <script src="/thinkphp/public/static/assets/plugins/morris-chart/js/raphael-min.js" type="text/javascript"></script>
-        <script src="/thinkphp/public/static/assets/plugins/morris-chart/js/morris.min.js" type="text/javascript"></script>
-        <script src="/thinkphp/public/static/assets/plugins/jvectormap/jquery-jvectormap-2.0.1.min.js" type="text/javascript"></script>
-        <script src="/thinkphp/public/static/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
-        <script src="/thinkphp/public/static/assets/plugins/gauge/gauge.min.js" type="text/javascript"></script>
-        <script src="/thinkphp/public/static/assets/plugins/icheck/icheck.min.js" type="text/javascript"></script>
-        <script src="/thinkphp/public/static/assets/js/dashboard.js" type="text/javascript"></script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
+        <script src="/thinkphp/public/static/assets/plugins/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+        <script src="/thinkphp/public/static/assets/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js" type="text/javascript"></script>
+        <script src="/thinkphp/public/static/assets/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js" type="text/javascript"></script>
+        <script src="/thinkphp/public/static/assets/plugins/datatables/extensions/Responsive/bootstrap/3/dataTables.bootstrap.js" type="text/javascript"></script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
 
 
         <!-- CORE TEMPLATE JS - START --> 
@@ -787,13 +1024,8 @@
         </div>
         <!-- modal end -->
     </body>
+    
 </html>
 
 
 
-
-
-<script type="text/javascript">
-
-
-</script>

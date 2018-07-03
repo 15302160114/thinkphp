@@ -452,7 +452,7 @@
                         </li>
                         <li class=""> 
                             <a href="distributor.html">
-                                <i class="fa fa-th"></i>
+                                <i class="fa fa-columns"></i>
                                 <span class="title">配送员列表</span><span class="label label-orange nosubmenu">HOT</span>
                             </a>
                         </li>
@@ -563,6 +563,7 @@
                                                     <th>logo</th>
                                                     <th>商品分类</th>
                                                     <th>下单用户</th>
+                                                    <th>下单时间</th>
                                                     <th>价钱</th>
                                                     <th>数量</th>
                                                     <th>配送员</th>
@@ -577,12 +578,24 @@
                                                     <th>{$num}</th>
                                                     <td>{$vo.spname}</td>
                                                     <td><img src="/thinkphp/public/uploads/{$vo.logo}" width="100px"></td>
-                                                    <td>{:getAuthorname($vo.category_id)}</td>
+                                                    <td>{:getUsername($vo.category_id)}</td>
                                                     <td>{:getAuthorname($vo.consumer_id)}</td>
+                                                    <td>{$vo.create_time}</td>
                                                     <td>{$vo.count}</td>
                                                     <td>{$vo.sum}</td>
-                                                    <td>{:getDisname($vo.distributor_id)}</td>
                                                     <form method="post" action="{:url('adminhotai/update_o',['id'=>$vo.id])}">
+                                                    <td>
+                                                        <select data-am-selected="{searchBox: 1}" name="distributor_id">
+                                                        <eq name="vo.status" value="2">
+                                                        <option value="{$vo.distributor_id}">{:getDisname($vo.distributor_id)}</option>
+                                                        <else/>
+                                                        {volist name="dis" id="do" key="num"}
+                                                            <option value="{$do.id}">{$do.realname}</option>
+                                                        {/volist}
+                                                        </eq>
+                                                        
+                                                        </select>
+                                                    </td>
                                                     <td>
                                                         <select data-am-selected="{searchBox: 1}" name="status">
                                                             {:getStatusname($vo.status)}

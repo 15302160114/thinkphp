@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\order.html";i:1530587726;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\order.html";i:1530602358;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -119,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="rgt-bottom">
                 
             <div class="cart box_1">
-                <a href="checkout.html">
+                <a href="shopping.html">
                     <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="/thinkphp/public/static/images/bag.png" alt=""></h3>
                 </a>    
 
@@ -256,18 +256,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 <h1>My Shopping Order</h1>
 
 			 <?php if(is_array($orders) || $orders instanceof \think\Collection || $orders instanceof \think\Paginator): $i = 0; $__LIST__ = $orders;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-				<script>$(document).ready(function(c) {
-					$('.<?php echo $vo['id']; ?>').on('click', function(c){
-						$('.<?php echo $vo['count']; ?>_<?php echo $vo['sum']; ?>').fadeOut('slow', function(c){
-							$('.<?php echo $vo['count']; ?>_<?php echo $vo['sum']; ?>').remove();
-						});
-						});	  
-					});
-			   </script>
-			  
+				
 			 
 			 <div class="cart-header <?php echo $vo['count']; ?>_<?php echo $vo['sum']; ?>">
-				 <a href="<?php echo url('user/delete',['id'=>$vo['id']]); ?>"><div class="close1 <?php echo $vo['id']; ?>"> </div></a>
 				 <div class="cart-sec simpleCart_shelfItem">
 						<div class="cart-item cyc">
 							 <img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" class="img-responsive" alt=""/>
@@ -278,13 +269,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li>
 								<div class="pices" style="display:none;"> <?php echo $vo['count']; ?> </div>
 								<div class="num">数量：<?php echo $vo['sum']; ?></div>
-								<div class="totle" style="display:none;"><?php echo $vo['count']; ?></div></li>
+								<div class="totle" style="display:none;"><?php echo $vo['count']; ?></div>
+							</li>
 						</ul>
 						
-						
-							 <div class="delivery">
+						<span>状态：<?php echo getStatus($vo['status']); ?></span><br>
+						<span><?php echo getDis($vo['distributor_id']); ?></span>
+						<div class="delivery" style="margin-top:20px;">
 							 <p>Service Charges : <?php echo $vo['count']; ?></p>
 
+							
 							 <span>Delivered in <?php echo date('Y-m-d H:i:s',$vo['create_time']); ?></span>
 							 <div class="clearfix"></div>
 				        </div>	

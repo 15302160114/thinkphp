@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"C:\xampp\htdocs\thinkphp\public/../application/index\view\index\category.html";i:1530588892;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"C:\xampp\htdocs\thinkphp\public/../application/index\view\index\category.html";i:1530601262;}*/ ?>
 <html>
 <head>
 <title>Category</title>
@@ -57,17 +57,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="login" >
                         <div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
                             <div id="loginBox">                
-                                <form id="loginForm">
+                                <form id="loginForm" class="form-horizontal" method="post" name="form1" action="<?php echo url('@user/login/check'); ?>">
                                         <fieldset id="body">
                                             <fieldset>
-                                                  <label for="email">Email Address</label>
-                                                  <input type="text" name="email" id="email">
+                                                  <label for="email">User Name</label>
+                                                  <input type="text" name="username" id="email">
                                             </fieldset>
                                             <fieldset>
                                                     <label for="password">Password</label>
                                                     <input type="password" name="password" id="password">
                                              </fieldset>
-                                            <input type="submit" id="login" value="Sign in">
+                                            <div class="form-sub-w3">
+                                                <input type="text" placeholder="请输入验证码" class="form-control" name="captcha">
+                                            </div>
+                                            <img src="<?php echo captcha_src(); ?>" alt="captcha" onclick="javascript:this.src='<?php echo captcha_src(); ?>?tm='+Math.random();" style="cursor: pointer"/>
+                                            
+                                            <input type="submit" id="login" onclick="myFunction()" value="Sign in">
                                             <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
                                         </fieldset>
                                     <span><a href="#">Forgot your password?</a></span>
@@ -78,6 +83,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="reg">
                     <a href="<?php echo url('@user/login/register'); ?>">REGISTER</a>
+                </div>
+
+                <div class="create_btn" style="width:150px;">
+                    <a href="<?php echo url('@distributor/login/index'); ?>">配送员->LOGIN</a>
                 </div>
             
             <div class="clearfix"> </div>
