@@ -206,19 +206,18 @@ class UserController extends Base
         $order=Db::table('order')
                     ->where('status','3')
                     ->select();
+
         foreach ($order as $key=>$value) {
             $or=$order[$key];
-            $date=[
-                    'status'=>'1',
-                    'consumer_id'=>$id
-                ];
-
-            $xuhao=model('Order')->save($date,['id'=>intval($or['id'])]);
+          
+            $xuhao=model('Order')
+                    ->where('id',$or['id'])
+                    ->update(['status'=>'1','consumer_id'=>$id]);
         }
         if($xuhao){
-            $this->success('更新成功',url('user/order'));
+            $this->success('添加成功',url('user/order'));
         }else{
-            $this->error('更新失败');
+            $this->error('添加失败');
         }
     }
     public function delete()

@@ -36314,3 +36314,207 @@
 [ sql ] [ SQL ] SELECT * FROM `order` WHERE  `status` = 3 [ RunTime:0.002390s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.017547s ]
 [ sql ] [ SQL ] SELECT * FROM `category` ORDER BY `id`  desc [ RunTime:0.001638s ]
+---------------------------------------------------------------
+[ 2018-07-02T21:55:29+08:00 ] 0.0.0.0 GET /thinkphp/public/user/user/logout.html
+[ info ] localhost/thinkphp/public/user/user/logout.html [运行时间：0.182209s][吞吐率：5.49req/s] [内存消耗：1,842.84kb] [文件加载：48]
+[ info ] [ LANG ] D:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/user/user/shopping.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => '__guid=111872281.1001021412962947200.1527498141473.2146; PHPSESSID=2kj0ofugh3r0bii1bnv7svuo9b; monitor_count=114',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\user\controller\UserController->logout[ D:\xampp\htdocs\thinkphp\application\user\controller\UserController.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-02T21:55:29+08:00 ] 0.0.0.0 GET /thinkphp/public/index/index/index.html
+[ info ] localhost/thinkphp/public/index/index/index.html [运行时间：0.121456s][吞吐率：8.23req/s] [内存消耗：1,557.77kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/user/user/shopping.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => '__guid=111872281.1001021412962947200.1527498141473.2146; PHPSESSID=2kj0ofugh3r0bii1bnv7svuo9b; monitor_count=114',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\IndexController->index[ D:\xampp\htdocs\thinkphp\application\index\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\thinkphp\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-02T21:55:29+08:00 ] 0.0.0.0 GET /thinkphp/public/captcha.html
+[ info ] localhost/thinkphp/public/captcha.html [运行时间：0.416203s][吞吐率：2.40req/s] [内存消耗：1,538.05kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => '__guid=111872281.1001021412962947200.1527498141473.2146; PHPSESSID=2kj0ofugh3r0bii1bnv7svuo9b; monitor_count=114',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\xampp\htdocs\thinkphp\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-02T21:55:34+08:00 ] 0.0.0.0 GET /thinkphp/public/admin/adminhotai/logout.html
+[ info ] localhost/thinkphp/public/admin/adminhotai/logout.html [运行时间：0.139247s][吞吐率：7.18req/s] [内存消耗：1,883.90kb] [文件加载：47]
+[ info ] [ LANG ] D:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'adminhotai',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/admin/adminhotai/commodity.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => '__guid=111872281.1001021412962947200.1527498141473.2146; PHPSESSID=2kj0ofugh3r0bii1bnv7svuo9b; monitor_count=115',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\AdminhotaiController->logout[ D:\xampp\htdocs\thinkphp\application\admin\controller\AdminhotaiController.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-02T21:55:34+08:00 ] 0.0.0.0 GET /thinkphp/public/admin/login/index.html
+[ info ] localhost/thinkphp/public/admin/login/index.html [运行时间：0.152097s][吞吐率：6.57req/s] [内存消耗：1,525.66kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/admin/adminhotai/commodity.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => '__guid=111872281.1001021412962947200.1527498141473.2146; PHPSESSID=2kj0ofugh3r0bii1bnv7svuo9b; monitor_count=115',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\LoginController->index[ D:\xampp\htdocs\thinkphp\application\admin\controller\LoginController.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\thinkphp\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-02T21:55:34+08:00 ] 0.0.0.0 GET /thinkphp/public/captcha.html
+[ info ] localhost/thinkphp/public/captcha.html [运行时间：0.195805s][吞吐率：5.11req/s] [内存消耗：1,281.93kb] [文件加载：36]
+[ info ] [ LANG ] D:\xampp\htdocs\thinkphp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/thinkphp/public/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => '__guid=111872281.1001021412962947200.1527498141473.2146; PHPSESSID=2kj0ofugh3r0bii1bnv7svuo9b; monitor_count=115',
+)
+[ info ] [ PARAM ] array (
+  'id' => '',
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\xampp\htdocs\thinkphp\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File

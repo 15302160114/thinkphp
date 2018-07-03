@@ -1,7 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\xampp\htdocs\thinkphp\public/../application/user\view\user\category.html";i:1530617623;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\xampp\htdocs\thinkphp\public/../application/user\view\user\details.html";i:1530617623;}*/ ?>
+<!DOCTYPE HTML>
 <html>
 <head>
-<title>Category : user</title>
+<title>Details</title>
 <link href="/thinkphp/public/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
 <script type='text/javascript' src="/thinkphp/public/static/js/jquery-1.11.1.min.js"></script>
@@ -18,10 +19,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.useso.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
 <!-- start menu -->
 <link href="/thinkphp/public/static/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="/thinkphp/public/static/css/etalage.css">
 <script type="text/javascript" src="/thinkphp/public/static/js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<script src="/thinkphp/public/static/js/jquery.etalage.min.js"></script>
 <script src="/thinkphp/public/static/js/menu_jquery.js"></script>
-<script src="/thinkphp/public/static/js/simpleCart.min.js"> </script>
+<script>
+			jQuery(document).ready(function($){
+
+				$('#etalage').etalage({
+					thumb_image_width: 300,
+					thumb_image_height: 400,
+					source_image_width: 900,
+					source_image_height: 1200,
+					show_hint: true,
+					click_callback: function(image_anchor, instance_id){
+						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+					}
+				});
+
+			});
+		</script>
+
 </head>
 <body>
 <!-- header_top -->
@@ -55,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="rgt-bottom">
                 
             <div class="cart box_1">
-                <a href="<?php echo url('@user/user/shopping'); ?>">
+                <a href="shopping.html">
                     <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="/thinkphp/public/static/images/bag.png" alt=""></h3>
                 </a>    
 
@@ -83,8 +102,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
         <!-- start header menu -->
         <ul class="megamenu skyblue">
-            <li class="grid"><a class="color1" href="index.html">Home</a></li>
-            <li class="active grid"><a class="color2" href="#">Classification</a>
+            <li class="active grid"><a class="color1" href="index.html">Home</a></li>
+            <li class="grid"><a class="color2" href="#">Classification</a>
                 <div class="megapanel">
                     <div class="row">
                         <div class="col1">
@@ -169,8 +188,107 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- content -->
 <div class="container">
 <div class="women_main">
-	<!-- start sidebar -->
-	<div class="col-md-3 s-d">
+	<!-- start content -->
+			<div class="row single">
+				<div class="col-md-9 det">
+				  <div class="single_left">
+					<div class="grid images_3_of_2">
+						<ul id="etalage">
+							<li>
+								<a href="optionallink.html">
+									<img class="etalage_thumb_image" src="/thinkphp/public/static/images/d1.jpg" class="img-responsive" />
+									<img class="etalage_source_image" src="/thinkphp/public/static/images/d1.jpg" class="img-responsive" title="" />
+								</a>
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="/thinkphp/public/static/images/d2.jpg" class="img-responsive" />
+								<img class="etalage_source_image" src="/thinkphp/public/static/images/d2.jpg" class="img-responsive" title="" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="/thinkphp/public/static/images/d3.jpg" class="img-responsive"  />
+								<img class="etalage_source_image" src="/thinkphp/public/static/images/d3.jpg"class="img-responsive"  />
+							</li>
+						    <li>
+								<img class="etalage_thumb_image" src="/thinkphp/public/static/images/d4.jpg" class="img-responsive"  />
+								<img class="etalage_source_image" src="/thinkphp/public/static/images/d4.jpg"class="img-responsive"  />
+							</li>
+						</ul>
+						 <div class="clearfix"></div>		
+				  </div>
+				  <div class="desc1 span_3_of_2">
+					<h3>soluta nobis eleifend option</h3>
+					<span class="brand">Brand: <a href="#">Sed do eiusmod </a></span>
+					<br>
+					<span class="code">Product Code: Product 11</span>
+					<p>when an unknown printer took a galley of type and scrambled it to make</p>
+						<div class="price">
+							<span class="text">Price:</span>
+							<span class="price-new">$110.00</span><span class="price-old">$100.00</span> 
+							<span class="price-tax">Ex Tax: $90.00</span><br>
+							<span class="points"><small>Price in reward points: 400</small></span><br>
+						</div>
+					<div class="det_nav1">
+						<h4>Select a size :</h4>
+							<div class=" sky-form col col-4">
+								<ul>
+									<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>L</label></li>
+									<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>S</label></li>
+									<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>M</label></li>
+									<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>XL</label></li>
+								</ul>
+							</div>
+					</div>
+					<div class="btn_form">
+						<a href="checkout.html">buy</a>
+					</div>
+					<a href="#"><span>login to save in wishlist </span></a>
+					
+			   	 </div>
+          	    <div class="clearfix"></div>
+          	   </div>
+          	    <div class="single-bottom1">
+					<h6>Details</h6>
+					<p class="prod-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option</p>
+				</div>
+				<div class="single-bottom2">
+					<h6>Related Products</h6>
+						<div class="product">
+						   <div class="product-desc">
+								<div class="product-img">
+		                           <img src="/thinkphp/public/static/images/w8.jpg" class="img-responsive " alt=""/>
+		                       </div>
+		                       <div class="prod1-desc">
+		                           <h5><a class="product_link" href="#">Excepteur sint</a></h5>
+		                           <p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>									
+							   </div>
+							  <div class="clearfix"></div>
+					      </div>
+						  <div class="product_price">
+								<span class="price-access">$597.51</span>								
+								<button class="button1"><span>Add to cart</span></button>
+		                  </div>
+						 <div class="clearfix"></div>
+				     </div>
+				     <div class="product">
+						   <div class="product-desc">
+								<div class="product-img">
+		                           <img src="/thinkphp/public/static/images/w10.jpg" class="img-responsive " alt=""/>
+		                       </div>
+		                       <div class="prod1-desc">
+		                           <h5><a class="product_link" href="#">Excepteur sint</a></h5>
+		                           <p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>									
+							   </div>
+							   <div class="clearfix"></div>
+					      </div>
+						  <div class="product_price">
+								<span class="price-access">$597.51</span>								
+								<button class="button1"><span>Add to cart</span></button>
+		                  </div>
+						 <div class="clearfix"></div>
+				     </div>
+		   	  </div>
+	       </div>	
+	<div class="col-md-3">
 	  <div class="w_sidebar">
 		<div class="w_nav1">
 			<h4>All</h4>
@@ -274,159 +392,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</section>
 	</div>
    </div>
-	<!-- start content -->
-	<div class="col-md-9 w_content">
-		<div class="women">
-			<a href="#"><h4>Enthecwear - <span>4449 itemms</span> </h4></a>
-			<ul class="w_nav">
-						<li>Sort : </li>
-		     			<li><a class="active" href="#">popular</a></li> |
-		     			<li><a href="#">new </a></li> |
-		     			<li><a href="#">discount</a></li> |
-		     			<li><a href="#">price: Low High </a></li> 
-		     			<div class="clear"></div>	
-		     </ul>
-		     <div class="clearfix"></div>	
-		</div>
-		<!-- grids_of_4 -->
-		<div class="grids_of_4">
-			<?php if(is_array($commodity) || $commodity instanceof \think\Collection || $commodity instanceof \think\Paginator): $i = 0; $__LIST__ = $commodity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-		  	<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"><?php echo $vo['spname']; ?></a></h4>
-				     <p><?php echo $vo['description']; ?></p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY <?php echo $vo['count']; ?></h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="<?php echo url('user/add',['id'=>$vo['id']]); ?>">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<?php endforeach; endif; else: echo "" ;endif; ?>
-			
-			
-			<div class="clearfix"></div>
-		</div>
-		
-		
-		<div class="grids_of_4">
-		 <div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w5.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $109.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w6.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $95.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w7.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $68.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w8.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $74.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="grids_of_4">
-		  <div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w9.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $80.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w10.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $65.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w11.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $90.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w12.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $75.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<!-- end grids_of_4 -->
-		
-		
-	</div>
-	<div class="clearfix"></div>
-	
+		   <div class="clearfix"></div>		
+	  </div>
 	<!-- end content -->
 </div>
 </div>

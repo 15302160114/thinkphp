@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\xampp\htdocs\thinkphp\public/../application/user\view\user\shopping.html";i:1530539687;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\xampp\htdocs\thinkphp\public/../application/user\view\user\shopping.html";i:1530617623;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -20,18 +20,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- start menu -->
 <link href="/thinkphp/public/static/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="/thinkphp/public/static/js/megamenu.js"></script>
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <script src="/thinkphp/public/static/js/menu_jquery.js"></script>
 <script src="/thinkphp/public/static/js/simpleCart.min.js"> </script>
 </head>
 <script type="text/javascript">
-		$(function() {
-					
+
+		$(document).ready(function() {
+					$(".megamenu").megamenu();
 					adddel();
-						//全选
-					
-				})
+					totl();
+					to();
+				});
 				//合计
+			function totl() {
+				var sum = 0;
+				$(".totle").each(function() {
+					sum += parseFloat($(this).text());
+					$("#susum").text(sum);
+				});
+			}
+			// function to() {
+			// 	var myArray=new Array();
+
+			// 	$("#input").each(function() {
+			// 		var i=0;
+			// 		myArray[i]=parseFloat($(this).text());
+			// 		i++;
+			// 	});
+
+			// 	for(var i=0;i<myArray.length;i++){
+			// 	 document.write(myArray[i]);
+			// 	}
+			// }
 			
 			function adddel(){
 				//小计和加减
@@ -44,10 +64,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								$(this).prev().val(vall);
 								$multi = parseFloat(vall) * parseFloat($(this).parent().prev().text());
 								$(this).parent().next().text(Math.round($multi));
-								//totl();
-							})
+								totl();
+							});
 
-						})
+						});
 						//减
 					$(".reduc").each(function() {
 							$(this).click(function() {
@@ -60,10 +80,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								$(this).next().val(vall1);
 								$multi1 = parseFloat(vall1) * parseFloat($(this).parent().prev().text());
 								$(this).parent().next().text(Math.round($multi1));
-								//totl();
-							})
+								totl();
+							});
 
-						})
+						});
 			}
 
 </script>
@@ -99,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="rgt-bottom">
                 
             <div class="cart box_1">
-                <a href="checkout.html">
+                <a href="shopping.html">
                     <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="/thinkphp/public/static/images/bag.png" alt=""></h3>
                 </a>    
 
@@ -213,26 +233,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="container">
 	<div class="check">	 
 			 <div class="col-md-3 cart-total">
-			 <a class="continue" href="#">Continue to basket</a>
-			 <div class="price-details">
-				 <h3>Price Details</h3>
-				 <span>Total</span>
-				 <span class="total1">6200.00</span>
-				 <span>Discount</span>
-				 <span class="total1">---</span>
-				 <span>Delivery Charges</span>
-				 <span class="total1">150.00</span>
-				 <div class="clearfix"></div>				 
-			 </div>	
+			 <a class="continue" href="index.html">Continue to basket</a>
+
 			 <ul class="total_price">
 			   <li class="last_price"> <h4>TOTAL</h4></li>	
-			   <li class="last_price"><span>6350.00</span></li>
+			   <li class="last_price foot_tol"><span id="susum">0</span></li>
 			   <div class="clearfix"> </div>
 			 </ul>
 			
 			 
 			 <div class="clearfix"></div>
-			 <a class="order" href="#">Place Order</a>
+			 <form class="form-horizontal" method="post" name="form1" action="<?php echo url('user/order_add'); ?>">
+			 	<input type="hidden" id="jia" name="jia" value="">
+			 	<a class="order" href="<?php echo url('user/order_add'); ?>">Place Order</a>
+			 </form>
+			 
 			 <div class="total-item">
 				 <h3>OPTIONS</h3>
 				 <h4>COUPONS</h4>
@@ -243,7 +258,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 <div class="col-md-9 cart-items">
 			 <h1>My Shopping Bag</h1>
 
-			 <?php if(is_array($commoditys) || $commoditys instanceof \think\Collection || $commoditys instanceof \think\Paginator): $i = 0; $__LIST__ = $commoditys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+			 <?php if(is_array($orders) || $orders instanceof \think\Collection || $orders instanceof \think\Paginator): $i = 0; $__LIST__ = $orders;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
 				<script>$(document).ready(function(c) {
 					$('.<?php echo $vo['id']; ?>').on('click', function(c){
 						$('.<?php echo $vo['count']; ?>_<?php echo $vo['sum']; ?>').fadeOut('slow', function(c){
@@ -255,7 +270,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  
 			 
 			 <div class="cart-header <?php echo $vo['count']; ?>_<?php echo $vo['sum']; ?>">
-				 <div class="close1 <?php echo $vo['id']; ?>"> </div>
+				 <a href="<?php echo url('user/delete',['id'=>$vo['id']]); ?>"><div class="close1 <?php echo $vo['id']; ?>"> </div></a>
 				 <div class="cart-sec simpleCart_shelfItem">
 						<div class="cart-item cyc">
 							 <img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" class="img-responsive" alt=""/>
@@ -267,10 +282,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="pices" style="display:none;"> <?php echo $vo['count']; ?> </div>
 								<div class="num">数量：
 									<span class="reduc">&nbsp;-&nbsp;</span>
-									<input type="text" value="1" style="width:50px;" />
+									<input type="text" id="input" value="1" style="width:50px;" />
 									<span class="add">&nbsp;+</span>
 								</div>
-								<div class="totle" style="color:red;float:right;">￥ <?php echo $vo['count']; ?></div></li>
+								<div class="totle" style="display:none;"><?php echo $vo['count']; ?></div></li>
 						</ul>
 						
 						
