@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\shopping.html";i:1530602430;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\shopping.html";i:1530676069;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -39,19 +39,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					$("#susum").text(sum);
 				});
 			}
-			// function to() {
-			// 	var myArray=new Array();
+			function to() {
+				var myArray;
 
-			// 	$("#input").each(function() {
-			// 		var i=0;
-			// 		myArray[i]=parseFloat($(this).text());
-			// 		i++;
-			// 	});
+				$("#input").each(function() {
+					myArray=parseFloat($(this).val());
+					$("input#jia").attr("value",myArray);
+					//alert(String($(this).val()));
+				});
 
-			// 	for(var i=0;i<myArray.length;i++){
-			// 	 document.write(myArray[i]);
-			// 	}
-			// }
+				//alert(myArray);
+				//
+			}
 			
 			function adddel(){
 				//小计和加减
@@ -65,6 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								$multi = parseFloat(vall) * parseFloat($(this).parent().prev().text());
 								$(this).parent().next().text(Math.round($multi));
 								totl();
+								to();
 							});
 
 						});
@@ -81,6 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								$multi1 = parseFloat(vall1) * parseFloat($(this).parent().prev().text());
 								$(this).parent().next().text(Math.round($multi1));
 								totl();
+								to();
 							});
 
 						});
@@ -244,7 +245,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 
 			 <div class="clearfix"></div>
 			 <form class="form-horizontal" method="post" name="form1" action="<?php echo url('user/order_add'); ?>">
-			 	<input type="hidden" id="jia" name="jia" value="">
+			 	<input type="text" id="jia" name="jia" value="">
 			 	<a class="order" href="<?php echo url('user/order_add'); ?>">Place Order</a>
 			 </form>
 			 
