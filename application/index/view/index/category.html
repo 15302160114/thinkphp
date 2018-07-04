@@ -310,10 +310,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="grids_of_4">
 			{volist name="commodity" id="vo"}
 		  	<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="{:url('index/details',['id'=>$vo.id])}">
 			   	   	 <img src="/thinkphp/public/uploads/{$vo.logo}" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html">{$vo.spname}</a></h4>
+				    <h4><a href="{:url('index/details',['id'=>$vo.id])}">{$vo.spname}</a></h4>
 				     <p>{$vo.description}</p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    

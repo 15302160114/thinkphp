@@ -1,8 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\xampp\htdocs\thinkphp\public/../application/user\view\user\details.html";i:1530679401;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\xampp\htdocs\thinkphp\public/../application/index\view\index\details.html";i:1530679401;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>User : Details</title>
+<title>Details</title>
 <link href="/thinkphp/public/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
 <script type='text/javascript' src="/thinkphp/public/static/js/jquery-1.11.1.min.js"></script>
@@ -45,21 +45,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!-- header_top -->
 <div class="top_bg">
-	<div class="container">
-		<div class="header_top">
-			<div class="top_right">
-				<ul>
-					<li><a href="#">help</a></li>|
-					<li><a href="contact.html">Contact</a></li>|
-					<li><a href="#">Delivery information</a></li>
-				</ul>
-			</div>
-			<div class="top_left">
-				<h2><span></span> Call us : 032 2352 782</h2>
-			</div>
-				<div class="clearfix"> </div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="header_top">
+            <div class="top_right">
+                <ul>
+                    <li><a href="#">help</a></li>|
+                    <li><a href="contact.html">Contact</a></li>|
+                    <li><a href="<?php echo url('@admin/login/index'); ?>">Administrator Login</a></li>
+                </ul>
+            </div>
+            <div class="top_left">
+                <h2><span></span> Call us : 032 2352 782</h2>
+            </div>
+                <div class="clearfix"> </div>
+        </div>
+    </div>
 </div>
 <!-- header -->
 <div class="header_bg">
@@ -72,23 +72,46 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- start header_right -->
         <div class="header_right">
             <div class="rgt-bottom">
-                
-            <div class="cart box_1">
-                <a href="shopping.html">
-                    <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="/thinkphp/public/static/images/bag.png" alt=""></h3>
-                </a>    
+                <div class="log">
+                    <div class="login" >
+                        <div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
+                            <div id="loginBox">                
+                                <form id="loginForm" class="form-horizontal" method="post" name="form1" action="<?php echo url('@user/login/check'); ?>">
+                                        <fieldset id="body">
+                                            <fieldset>
+                                                  <label for="email">User Name</label>
+                                                  <input type="text" name="username" id="email">
+                                            </fieldset>
+                                            <fieldset>
+                                                    <label for="password">Password</label>
+                                                    <input type="password" name="password" id="password">
+                                             </fieldset>
+                                             <div class="form-sub-w3">
+                                                <label for="password">验证码</label>
+                                                <input type="text" placeholder="请输入验证码" class="form-control" name="captcha">
+                                            </div>
+                                            <img src="<?php echo captcha_src(); ?>" alt="captcha" onclick="javascript:this.src='<?php echo captcha_src(); ?>?tm='+Math.random();" style="cursor: pointer"/>
+                                            
+                                            <input type="submit" id="login" onclick="myFunction()" value="Sign in">
+                                            <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+                                        </fieldset>
+                                    <span><a href="#">Forgot your password?</a></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reg">
+                    <a href="<?php echo url('@user/login/register'); ?>">REGISTER</a>
+                </div>
 
-                <div class="clearfix"> </div>
-            </div>
+                <div class="create_btn" style="width:150px;">
+                    <a href="<?php echo url('@distributor/login/index'); ?>">配送员->LOGIN</a>
+                </div>
             
-            <div class="create_btn">
-                <a href="<?php echo url('user/logout'); ?>">sign out</a>
-            </div>
+            <div class="clearfix"> </div>
 
-            <div class="create" style="border:1px solid #000;text-align:right;display:inline-block;margin-left:30px;padding:8px 12px;">
-                <a href="#">欢迎你 , <?php if($user): ?><?php echo $user->username; endif; ?></a>
-            </div>
-            <div class="clearfix"></div>
+            
         </div>
         <div class="search">
             <form>
@@ -102,7 +125,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
         <!-- start header menu -->
         <ul class="megamenu skyblue">
-            <li class="active grid"><a class="color1" href="<?php echo url('@user/user/index'); ?>">Home</a></li>
+            <li class="active grid"><a class="color1" href="<?php echo url('index/index'); ?>">Home</a></li>
             <li class="grid"><a class="color2" href="#">Classification</a>
                 <div class="megapanel">
                     <div class="row">
@@ -111,7 +134,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -121,7 +144,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -131,7 +154,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -141,7 +164,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -151,7 +174,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -161,7 +184,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -177,9 +200,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     </div>
                 </li>
-                <li class="grid"><a class="color3" href="<?php echo url('@user/user/shopping'); ?>">Shopping Cart</a></li>
-                <li class="grid"><a class="color4" href="<?php echo url('@user/user/order'); ?>">Your Order</a></li>
-                <li class="grid"><a class="color5" href="<?php echo url('@user/user/settings'); ?>">Settings</a></li>
+                
             
          </ul> 
     </div>
@@ -235,8 +256,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 					</div> -->
 					<div class="btn_form">
-						<a href="<?php echo url('@user/user/add',['id'=>$commodity['id']]); ?>">buy</a>
+						<a href="#">buy</a>
 					</div>
+
+					<a href="#"><span>login to save in wishlist </span></a>
 
 					
 			   	 </div>

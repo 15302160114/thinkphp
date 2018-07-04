@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"D:\xampp\htdocs\thinkphp\public/../application/index\view\index\category.html";i:1530621553;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"D:\xampp\htdocs\thinkphp\public/../application/index\view\index\category.html";i:1530679742;}*/ ?>
 <html>
 <head>
 <title>Category</title>
@@ -311,10 +311,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="grids_of_4">
 			<?php if(is_array($commodity) || $commodity instanceof \think\Collection || $commodity instanceof \think\Paginator): $i = 0; $__LIST__ = $commodity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
 		  	<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
+				<div class="content_box"><a href="<?php echo url('index/details',['id'=>$vo['id']]); ?>">
 			   	   	 <img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" class="img-responsive" alt=""/>
 				   	  </a>
-				    <h4><a href="details.html"><?php echo $vo['spname']; ?></a></h4>
+				    <h4><a href="<?php echo url('index/details',['id'=>$vo['id']]); ?>"><?php echo $vo['spname']; ?></a></h4>
 				     <p><?php echo $vo['description']; ?></p>
 					 <div class="grid_1 simpleCart_shelfItem">
 				    

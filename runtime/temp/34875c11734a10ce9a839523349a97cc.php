@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\xampp\htdocs\thinkphp\public/../application/user\view\user\shopping.html";i:1530617623;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\xampp\htdocs\thinkphp\public/../application/user\view\user\shopping.html";i:1530679401;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -39,19 +39,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					$("#susum").text(sum);
 				});
 			}
-			// function to() {
-			// 	var myArray=new Array();
+			function to() {
+				var myArray=new array();
 
-			// 	$("#input").each(function() {
-			// 		var i=0;
-			// 		myArray[i]=parseFloat($(this).text());
-			// 		i++;
-			// 	});
+				$(".input").each(function() {
+					var i=0;
+					myArray[i]=parseFloat($(this).val());
+					i++;
+					alert(myArray[i]);
+				});
 
-			// 	for(var i=0;i<myArray.length;i++){
-			// 	 document.write(myArray[i]);
-			// 	}
-			// }
+				//alert(myArray);
+				// for(var j =0;j<myArray.length;j++){
+				// 	$("input#jia").attr("value",myArray[j]);
+				// }
+				
+			}
 			
 			function adddel(){
 				//小计和加减
@@ -65,6 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								$multi = parseFloat(vall) * parseFloat($(this).parent().prev().text());
 								$(this).parent().next().text(Math.round($multi));
 								totl();
+								to();
 							});
 
 						});
@@ -81,6 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								$multi1 = parseFloat(vall1) * parseFloat($(this).parent().prev().text());
 								$(this).parent().next().text(Math.round($multi1));
 								totl();
+								to();
 							});
 
 						});
@@ -244,7 +249,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 
 			 <div class="clearfix"></div>
 			 <form class="form-horizontal" method="post" name="form1" action="<?php echo url('user/order_add'); ?>">
-			 	<input type="hidden" id="jia" name="jia" value="">
+			 	<input type="text" id="jia" name="jia" value="">
 			 	<a class="order" href="<?php echo url('user/order_add'); ?>">Place Order</a>
 			 </form>
 			 
@@ -282,7 +287,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="pices" style="display:none;"> <?php echo $vo['count']; ?> </div>
 								<div class="num">数量：
 									<span class="reduc">&nbsp;-&nbsp;</span>
-									<input type="text" id="input" value="1" style="width:50px;" />
+									<input type="text" class="input" value="1" style="width:50px;" />
 									<span class="add">&nbsp;+</span>
 								</div>
 								<div class="totle" style="display:none;"><?php echo $vo['count']; ?></div></li>

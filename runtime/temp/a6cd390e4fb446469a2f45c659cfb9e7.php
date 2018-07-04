@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\xampp\htdocs\thinkphp\public/../application/index\view\index\index.html";i:1530621502;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\xampp\htdocs\thinkphp\public/../application/index\view\index\index.html";i:1530679401;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -198,7 +198,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h3>NEW ARRIVALS</h3>
                     <p><?php echo $vo['description']; ?></p>
                     <div class="crt-btn">
-                        <a href="details.html">TAKE A LOOK</a>
+                        <a href="<?php echo url('index/details',['id'=>$vo['id']]); ?>">TAKE A LOOK</a>
                     </div>
                 </div>
             </div>
