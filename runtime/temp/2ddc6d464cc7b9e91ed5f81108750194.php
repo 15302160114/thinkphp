@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"C:\xampp\htdocs\thinkphp\public/../application/index\view\index\index.html";i:1530601225;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"C:\xampp\htdocs\thinkphp\public/../application/index\view\index\index.html";i:1530667678;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -69,6 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <input type="password" name="password" id="password">
                                              </fieldset>
                                              <div class="form-sub-w3">
+                                                <label for="password">验证码</label>
                                                 <input type="text" placeholder="请输入验证码" class="form-control" name="captcha">
                                             </div>
                                             <img src="<?php echo captcha_src(); ?>" alt="captcha" onclick="javascript:this.src='<?php echo captcha_src(); ?>?tm='+Math.random();" style="cursor: pointer"/>
@@ -197,7 +198,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h3>NEW ARRIVALS</h3>
                     <p><?php echo $vo['description']; ?></p>
                     <div class="crt-btn">
-                        <a href="details.html">TAKE A LOOK</a>
+                        <a href="<?php echo url('index/details',['id'=>$vo['id']]); ?>">TAKE A LOOK</a>
                     </div>
                 </div>
             </div>

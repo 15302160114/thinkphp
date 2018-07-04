@@ -1,8 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\details.html";i:1530605435;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\details.html";i:1530667552;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Details</title>
+<title>User : Details</title>
 <link href="/thinkphp/public/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
 <script type='text/javascript' src="/thinkphp/public/static/js/jquery-1.11.1.min.js"></script>
@@ -102,7 +102,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
         <!-- start header menu -->
         <ul class="megamenu skyblue">
-            <li class="active grid"><a class="color1" href="index.html">Home</a></li>
+            <li class="active grid"><a class="color1" href="<?php echo url('@user/user/index'); ?>">Home</a></li>
             <li class="grid"><a class="color2" href="#">Classification</a>
                 <div class="megapanel">
                     <div class="row">
@@ -111,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -121,7 +121,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -131,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -141,7 +141,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -151,7 +151,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -161,7 +161,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="category.html?id=<?php echo $vo['id']; ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -177,9 +177,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     </div>
                 </li>
-                <li class="grid"><a class="color3" href="shopping.html">Shopping Cart</a></li>
-                <li class="grid"><a class="color4" href="order.html">Your Order</a></li>
-                <li class="grid"><a class="color5" href="settings.html">Settings</a></li>
+                <li class="grid"><a class="color3" href="<?php echo url('@user/user/shopping'); ?>">Shopping Cart</a></li>
+                <li class="grid"><a class="color4" href="<?php echo url('@user/user/order'); ?>">Your Order</a></li>
+                <li class="grid"><a class="color5" href="<?php echo url('@user/user/settings'); ?>">Settings</a></li>
             
          </ul> 
     </div>
@@ -196,38 +196,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul id="etalage">
 							<li>
 								<a href="optionallink.html">
-									<img class="etalage_thumb_image" src="/thinkphp/public/static/images/d1.jpg" class="img-responsive" />
-									<img class="etalage_source_image" src="/thinkphp/public/static/images/d1.jpg" class="img-responsive" title="" />
+									<img class="etalage_thumb_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>" class="img-responsive" />
+									<img class="etalage_source_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>" class="img-responsive" title="" />
 								</a>
 							</li>
 							<li>
-								<img class="etalage_thumb_image" src="/thinkphp/public/static/images/d2.jpg" class="img-responsive" />
-								<img class="etalage_source_image" src="/thinkphp/public/static/images/d2.jpg" class="img-responsive" title="" />
+								<img class="etalage_thumb_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>" class="img-responsive" />
+								<img class="etalage_source_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>" class="img-responsive" title="" />
 							</li>
 							<li>
-								<img class="etalage_thumb_image" src="/thinkphp/public/static/images/d3.jpg" class="img-responsive"  />
-								<img class="etalage_source_image" src="/thinkphp/public/static/images/d3.jpg"class="img-responsive"  />
+								<img class="etalage_thumb_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>" class="img-responsive"  />
+								<img class="etalage_source_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>"class="img-responsive"  />
 							</li>
 						    <li>
-								<img class="etalage_thumb_image" src="/thinkphp/public/static/images/d4.jpg" class="img-responsive"  />
-								<img class="etalage_source_image" src="/thinkphp/public/static/images/d4.jpg"class="img-responsive"  />
+								<img class="etalage_thumb_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>" class="img-responsive"  />
+								<img class="etalage_source_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>"class="img-responsive"  />
 							</li>
 						</ul>
 						 <div class="clearfix"></div>		
 				  </div>
-				  <div class="desc1 span_3_of_2">
-					<h3>soluta nobis eleifend option</h3>
-					<span class="brand">Brand: <a href="#">Sed do eiusmod </a></span>
-					<br>
-					<span class="code">Product Code: Product 11</span>
-					<p>when an unknown printer took a galley of type and scrambled it to make</p>
+				  <div class="desc1 span_3_of_2" style="padding-top:50px;">
+					<h3><?php echo $commodity['spname']; ?></h3>
+					
+					<p><?php echo $commodity['description']; ?></p>
 						<div class="price">
 							<span class="text">Price:</span>
-							<span class="price-new">$110.00</span><span class="price-old">$100.00</span> 
-							<span class="price-tax">Ex Tax: $90.00</span><br>
-							<span class="points"><small>Price in reward points: 400</small></span><br>
+							<span class="price-new">$ <?php echo $commodity['count']; ?></span><span class="price-old">$ <?php echo $commodity['count']; ?></span> 
 						</div>
-					<div class="det_nav1">
+					<!-- <div class="det_nav1">
 						<h4>Select a size :</h4>
 							<div class=" sky-form col col-4">
 								<ul>
@@ -237,56 +233,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>XL</label></li>
 								</ul>
 							</div>
-					</div>
+					</div> -->
 					<div class="btn_form">
-						<a href="checkout.html">buy</a>
+						<a href="<?php echo url('@user/user/add',['id'=>$commodity['id']]); ?>">buy</a>
 					</div>
-					<a href="#"><span>login to save in wishlist </span></a>
+
 					
 			   	 </div>
           	    <div class="clearfix"></div>
           	   </div>
           	    <div class="single-bottom1">
 					<h6>Details</h6>
-					<p class="prod-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option</p>
+					<p class="prod-desc"><?php echo html_entity_decode($commodity['content']); ?></p>
 				</div>
-				<div class="single-bottom2">
-					<h6>Related Products</h6>
-						<div class="product">
-						   <div class="product-desc">
-								<div class="product-img">
-		                           <img src="/thinkphp/public/static/images/w8.jpg" class="img-responsive " alt=""/>
-		                       </div>
-		                       <div class="prod1-desc">
-		                           <h5><a class="product_link" href="#">Excepteur sint</a></h5>
-		                           <p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>									
-							   </div>
-							  <div class="clearfix"></div>
-					      </div>
-						  <div class="product_price">
-								<span class="price-access">$597.51</span>								
-								<button class="button1"><span>Add to cart</span></button>
-		                  </div>
-						 <div class="clearfix"></div>
-				     </div>
-				     <div class="product">
-						   <div class="product-desc">
-								<div class="product-img">
-		                           <img src="/thinkphp/public/static/images/w10.jpg" class="img-responsive " alt=""/>
-		                       </div>
-		                       <div class="prod1-desc">
-		                           <h5><a class="product_link" href="#">Excepteur sint</a></h5>
-		                           <p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>									
-							   </div>
-							   <div class="clearfix"></div>
-					      </div>
-						  <div class="product_price">
-								<span class="price-access">$597.51</span>								
-								<button class="button1"><span>Add to cart</span></button>
-		                  </div>
-						 <div class="clearfix"></div>
-				     </div>
-		   	  </div>
+				
 	       </div>	
 	<div class="col-md-3">
 	  <div class="w_sidebar">
@@ -392,7 +352,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</section>
 	</div>
    </div>
-		   <div class="clearfix"></div>		
+		   
 	  </div>
 	<!-- end content -->
 </div>

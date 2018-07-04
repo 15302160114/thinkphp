@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:89:"C:\xampp\htdocs\thinkphp\public/../application/distributor\view\distributor\zhanghao.html";i:1530669684;}*/ ?>
 <!DOCTYPE html>
 <html class=" ">
     <head>
@@ -9,39 +10,36 @@
         -->
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta charset="utf-8" />
-        <title>Admin : Commodity</title>
+        <title>Distributor : 账号设置</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta content="" name="description" />
         <meta content="" name="author" />
 
-        <link rel="shortcut icon" href="__STATIC__/assets/images/favicon.png" type="image/x-icon" />    <!-- Favicon -->
-        <link rel="apple-touch-icon-precomposed" href="__STATIC__/assets/images/apple-touch-icon-57-precomposed.png">  <!-- For iPhone -->
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="__STATIC__/assets/images/apple-touch-icon-114-precomposed.png">    <!-- For iPhone 4 Retina display -->
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="__STATIC__/assets/images/apple-touch-icon-72-precomposed.png">    <!-- For iPad -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="__STATIC__/assets/images/apple-touch-icon-144-precomposed.png">    <!-- For iPad Retina display -->
+        <link rel="shortcut icon" href="/thinkphp/public/static/assets/images/favicon.png" type="image/x-icon" />    <!-- Favicon -->
+        <link rel="apple-touch-icon-precomposed" href="/thinkphp/public/static/assets/images/apple-touch-icon-57-precomposed.png">  <!-- For iPhone -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/thinkphp/public/static/assets/images/apple-touch-icon-114-precomposed.png">    <!-- For iPhone 4 Retina display -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/thinkphp/public/static/assets/images/apple-touch-icon-72-precomposed.png">    <!-- For iPad -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/thinkphp/public/static/assets/images/apple-touch-icon-144-precomposed.png">    <!-- For iPad Retina display -->
 
 
 
 
         <!-- CORE CSS FRAMEWORK - START -->
-        <link href="__STATIC__/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="__STATIC__/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="__STATIC__/assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
-        <link href="__STATIC__/assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
-        <link href="__STATIC__/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
-        <link href="__STATIC__/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="/thinkphp/public/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/css/animate.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css"/>
         <!-- CORE CSS FRAMEWORK - END -->
 
         <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
-        <link href="__STATIC__/assets/plugins/datatables/css/jquery.dataTables.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="__STATIC__/assets/plugins/datatables/extensions/TableTools/css/dataTables.tableTools.min.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="__STATIC__/assets/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link href="__STATIC__/assets/plugins/datatables/extensions/Responsive/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet" type="text/css" media="screen"/>        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
+        <link href="/thinkphp/public/static/assets/plugins/icheck/skins/all.css" rel="stylesheet" type="text/css" media="screen"/>        <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
 
 
         <!-- CORE CSS TEMPLATE - START -->
-        <link href="__STATIC__/assets/css/style.css" rel="stylesheet" type="text/css"/>
-        <link href="__STATIC__/assets/css/responsive.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="/thinkphp/public/static/assets/css/responsive.css" rel="stylesheet" type="text/css"/>
         <!-- CORE CSS TEMPLATE - END -->
 
     </head>
@@ -75,7 +73,7 @@
                                         <li class="unread status-available">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-1.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-1.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -92,7 +90,7 @@
                                         <li class=" status-away">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-2.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-2.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -109,7 +107,7 @@
                                         <li class=" status-busy">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-3.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-3.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -126,7 +124,7 @@
                                         <li class=" status-offline">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-4.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-4.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -143,7 +141,7 @@
                                         <li class=" status-offline">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-5.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-5.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -160,7 +158,7 @@
                                         <li class=" status-available">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-1.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-1.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -177,7 +175,7 @@
                                         <li class=" status-busy">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-2.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-2.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -194,7 +192,7 @@
                                         <li class=" status-away">
                                             <a href="javascript:;">
                                                 <div class="user-img">
-                                                    <img src="__STATIC__/data/profile/avatar-3.png" alt="user-image" class="img-circle img-inline">
+                                                    <img src="/thinkphp/public/static/data/profile/avatar-3.png" alt="user-image" class="img-circle img-inline">
                                                 </div>
                                                 <div>
                                                     <span class="name">
@@ -356,8 +354,8 @@
                     <ul class="info-menu right-links list-inline list-unstyled">
                         <li class="profile">
                             <a href="#" data-toggle="dropdown" class="toggle">
-                                <img src="/thinkphp/public/admin_uploads/{$admin.id}/{$admin.logo}" alt="user-image" class="img-circle img-inline">
-                                <span>{if condition="$user"}{$user->username}{/if} <i class="fa fa-angle-down"></i></span>
+                                <img src="/thinkphp/public/uploads/<?php echo $dis['logo']; ?>" alt="user-image" class="img-circle img-inline">
+                                <span><?php if($user): ?><?php echo $user->realname; endif; ?> <i class="fa fa-angle-down"></i></span>
                             </a>
                             <ul class="dropdown-menu profile animated fadeIn">
                                 <li>
@@ -379,7 +377,7 @@
                                     </a>
                                 </li>
                                 <li class="last">
-                                    <a href="{:url('adminhotai/logout')}">
+                                    <a href="<?php echo url('distributor/logout'); ?>">
                                         <i class="fa fa-lock"></i>
                                         Logout
                                     </a>
@@ -413,20 +411,20 @@
 
                         <div class="profile-image col-md-4 col-sm-4 col-xs-4">
                             <a href="ui-profile.html">
-                                <img src="/thinkphp/public/admin_uploads/{$admin.id}/{$admin.logo}" class="img-responsive img-circle">
+                                <img src="/thinkphp/public/uploads/<?php echo $dis['logo']; ?>" class="img-responsive img-circle">
                             </a>
                         </div>
 
                         <div class="profile-details col-md-8 col-sm-8 col-xs-8">
 
                             <h3>
-                                <a href="ui-profile.html">{if condition="$user"}{$user->username}{/if}</a>
+                                <a href="ui-profile.html"><?php if($user): ?><?php echo $user->realname; endif; ?></a>
 
                                 <!-- Available statuses: online, idle, busy, away and offline -->
                                 <span class="profile-status online"></span>
                             </h3>
 
-                            <p class="profile-title">Administrator</p>
+                            <p class="profile-title">Distributor</p>
 
                         </div>
 
@@ -445,48 +443,12 @@
                             </a>
                         </li>
                         <li class=""> 
-                            <a href="user.html">
+                            <a href="order.html">
                                 <i class="fa fa-th"></i>
-                                <span class="title">用户列表</span><span class="label label-orange nosubmenu">HOT</span>
-                            </a>
-                        </li>
-                        <li class=""> 
-                            <a href="distributor.html">
-                                <i class="fa fa-columns"></i>
-                                <span class="title">配送员列表</span><span class="label label-orange nosubmenu">HOT</span>
-                            </a>
-                        </li>
-                        <li class=""> 
-                            <a href="javascript:;">
-                                <i class="fa fa-suitcase"></i>
-                                <span class="title">订单</span>
-                                <span class="arrow "></span>
-                            </a>
-                            <ul class="sub-menu" >
-                                <li>
-                                    <a class="" href="all_order.html">所有订单</a>
-                                </li>
-                                <li>
-                                    <a class="" href="order.html">订单详情</a>
-                                </li>
-                                
-                            </ul>
-                        </li>
-                        <li class=""> 
-                            <a href="fenlei.html">
-                                <i class="fa fa-sliders"></i>
-                                <span class="title">商品分类</span>
-                            </a>
-                        </li>
-                        <li class="open"> 
-                            <a href="commodity.html">
-                                <i class="fa fa-sliders"></i>
-                                <span class="title">添加商品</span>
+                                <span class="title">我的送单</span><span class="label label-orange nosubmenu">HOT</span>
                             </a>
                         </li>
                         
-                    </ul>
-
                 </div>
                 <!-- MAIN MENU - END -->
 
@@ -498,140 +460,100 @@
 
                     <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                         <div class="page-title">
-
                             <div class="pull-left">
-                                <h1 class="title">商品</h1>                           
+                                <h1 class="title">账号设置</h1>                            
                             </div>
-
-
                         </div>
                     </div>
                     <div class="clearfix"></div>
 
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                         <section class="box ">
                             <header class="panel_header">
-                                <h2 class="title pull-left">商品添加</h2>
+                                <h2 class="title pull-left">账号信息</h2>
                                 <div class="actions panel_actions pull-right">
                                     <i class="box_toggle fa fa-chevron-down"></i>
                                     <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
                                     <i class="box_close fa fa-times"></i>
                                 </div>
                             </header>
-                            <div class="content-body">    <div class="row">
+                            <div class="content-body">
+                            <form class="form-horizontal" method="post" name="form1" action="<?php echo url('distributor/update'); ?>">
+                                <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="form-group">
+                                            <input type="hidden" name="id"placeholder="id" value="<?php echo $dis['id']; ?>">
+                                        </div>
 
-                                        <form class="am-form tpl-form-border-form" method="post" action="{:url('adminhotai/com_save')}">
+                                        <div class="am-form-group">
+                                            <label for="user-weibo" class="am-u-sm-12 am-form-label  am-text-left">LOGO <span class="tpl-form-line-small-title">Images</span></label>
 
-                                            <div class="am-form-group">
-                                                <label for="user-weibo" class="am-u-sm-12 am-form-label  am-text-left">封面图 <span class="tpl-form-line-small-title">Images</span></label>
-
-                                                <div id="uploader-demo" class="am-u-sm-12 am-margin-top-xs">
-                                                    <div class="am-form-group am-form-file">
-                                                        <div id="fileList" name="logo" class="uploader-list"></div>
-
-                                                        <button id="filePicker" type="button" class="am-btn am-btn-danger am-btn-sm ">添加封面图片</button>
+                                            <div id="uploader-demo" class="am-u-sm-12 am-margin-top-xs">
+                                                <div class="am-form-group am-form-file">
+                                                    <div id="fileList" class="tpl-form-file-img uploader-list">
+                                                        <div id="old" class="file-item thumbnail">
+                                                            <img src="/thinkphp/public/uploads/<?php echo $dis['logo']; ?>" class="tpl-table-line-img" width="200px">
+                                                            <div style="text-align: center;" class="info"><?php echo $dis['logo']; ?></div>
+                                                            <input type="text" style="display:none" name="logo" value="<?php echo $dis['logo']; ?>">
+                                                        </div>
                                                     </div>
-
+                                                    
+                                                    <button id="filePicker" type="button" class="am-btn am-btn-danger am-btn-sm ">更换logo</button>
                                                 </div>
+
                                             </div>
+                                        </div>
 
-                                            <div class="form-group" style="margin:20px 0;">
-                                                <label for="exampleInputName2">Commodity Name</label>
-                                                <input type="text" class="form-control" name="spname" id="exampleInputName2" placeholder="商品名称">
-                                            </div>
+                                        <div>Realname: </div>
+                                        <div class="input-group primary">
+                                            <span class="input-group-addon">                
+                                                <span class="arrow"></span>
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                            </span>
+                                            <input type="text" class="form-control" name="realname" value="<?php echo $dis['realname']; ?>">
+                                        </div>
 
-                                            <div class="am-form-group" style="margin:20px 0;">
-                                                <label for="exampleInputName2">Category</label>
-                                                <div class="am-u-sm-12  am-margin-top-xs">
-                                                    <select data-am-selected="{searchBox: 1}"  class="form-control" name="category_id">
-                                                      {volist name="categorys" id="vo"}
-                                                      <option value="{$vo.id}">{$vo.categoryname}</option>
-                                                      {/volist}
-                                                    </select>
-                                                </div>
-                                            </div>
+                                        <br>
+                                        
+                                        <div>Tel: </div>
+                                        <div class="input-group primary">
+                                            <span class="input-group-addon">     
+                                                <span class="arrow"></span>
+                                                <i class="fa fa-unlock-alt"></i>
+                                            </span>
+                                            <input type="text" class="form-control" name="tel" value="<?php echo $dis['tel']; ?>">
+                                        </div>
 
-                                            <div class="form-group" style="margin:20px 0;">
-                                                <label for="exampleInputName2">Count</label>
-                                                <input type="text" class="form-control" name="count" id="exampleInputName2" placeholder="商品价格">
-                                            </div>
+                                        <br>
+                                        <div>Email: </div>
+                                        <div class="input-group primary">
+                                            <span class="input-group-addon">     
+                                                <span class="arrow"></span>
+                                                <i class="fa fa-unlock-alt"></i>
+                                            </span>
+                                            <input type="email" class="form-control" name="email" value="<?php echo $dis['email']; ?>">
+                                        </div>
 
-                                            <div class="form-group" style="margin:20px 0;">
-                                                <label for="exampleInputEmail2">Description</label>
-                                                <input type="text" class="form-control" name="description" id="exampleInputEmail2" placeholder="商品简介">
-                                            </div>
-                                            <div class="form-group" style="margin:20px 0;">
-                                                <label for="exampleInputEmail2">Content</label>
-                                                <script id="container" name="content" type="text/plain" placeholder="商品详情">
+                                        <br>
+                                        <div>Password: </div>
+                                        <div class="input-group primary">
+                                            <span class="input-group-addon">     
+                                                <span class="arrow"></span>
+                                                <i class="fa fa-unlock-alt"></i>
+                                            </span>
+                                            <input type="password" class="form-control" name="password" value="<?php echo $dis['password']; ?>">
+                                        </div>
 
-                                                </script>
-                                            </div>
-                                            <button type="submit" class="btn btn-default">提交</button>
-
-                                        </form>
-
+                                        <br>
+                                    
+                                        <button type="submit" class="btn btn-default" style="margin-top:20px;background:rgb(35,186,179);color:#fff;">更新</button>
+                                      </div>
                                     </div>
                                 </div>
+                            </form>
                             </div>
                         </section>
                     </div>
-
-                    <div class="col-lg-12">
-                        <section class="box ">
-                            <header class="panel_header">
-                                <h2 class="title pull-left">商品列表</h2>
-                                <div class="actions panel_actions pull-right">
-                                    <i class="box_toggle fa fa-chevron-down"></i>
-                                    <i class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></i>
-                                    <i class="box_close fa fa-times"></i>
-                                </div>
-                            </header>
-                            <div class="content-body">    <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <!-- ********************************************** -->
-
-                                        <table id="example" class="display table table-hover table-condensed" cellspacing="0" width="100%">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Commodity Name</th>
-                                                    <th>Logo</th>
-                                                    <th>Category</th>
-                                                    <th>Description</th>
-                                                    <th>Create Time</th>
-                                                    <th>Operation</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {volist name="commodity" id="vo" key="num"}
-                                                <tr class="gradeX">
-                                                    <th scope="row">{$num}</th>
-                                                    <td class="am-text-middle">{$vo.spname}</td>
-                                                    <td class="am-text-middle"><a href="{:url('@index/index/details',['id'=>$vo.id])}" target="_blank"><img src="/thinkphp/public/uploads/{$vo.logo}" width='100px'></a></td>
-                                                    <td class="am-text-middle">{:getUsername($vo.category_id)}</td>
-                                                    <td class="am-text-middle">{$vo.description}</td>
-                                                    <td class="am-text-middle">{$vo.create_time}</td>
-                                                    <td class="am-text-middle">
-                                                        <div class="tpl-table-black-operation">
-                                                            <a href="{:url('adminhotai/com_delete',['id'=>$vo.id])}" class="tpl-table-black-operation-del">
-                                                                <i class="am-icon-trash"></i> 删除
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                {/volist}
-                                            </tbody>
-                                        </table>
-                                        <!-- ********************************************** -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </section></div>
-
-
-
                 </section>
             </section>
             <!-- END CONTENT -->
@@ -669,7 +591,7 @@
 
                         <li class="user-row" id='chat_user_1' data-user-id='1'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-1.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-1.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Clarine Vassar</a></h4>
@@ -681,7 +603,7 @@
                         </li>
                         <li class="user-row" id='chat_user_2' data-user-id='2'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-2.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-2.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Brooks Latshaw</a></h4>
@@ -693,7 +615,7 @@
                         </li>
                         <li class="user-row" id='chat_user_3' data-user-id='3'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-3.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-3.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Clementina Brodeur</a></h4>
@@ -712,7 +634,7 @@
 
                         <li class="user-row" id='chat_user_4' data-user-id='4'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-4.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-4.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Carri Busey</a></h4>
@@ -724,7 +646,7 @@
                         </li>
                         <li class="user-row" id='chat_user_5' data-user-id='5'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-5.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-5.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Melissa Dock</a></h4>
@@ -736,7 +658,7 @@
                         </li>
                         <li class="user-row" id='chat_user_6' data-user-id='6'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-1.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-1.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Verdell Rea</a></h4>
@@ -748,7 +670,7 @@
                         </li>
                         <li class="user-row" id='chat_user_7' data-user-id='7'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-2.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-2.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Linette Lheureux</a></h4>
@@ -760,7 +682,7 @@
                         </li>
                         <li class="user-row" id='chat_user_8' data-user-id='8'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-3.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-3.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Araceli Boatright</a></h4>
@@ -772,7 +694,7 @@
                         </li>
                         <li class="user-row" id='chat_user_9' data-user-id='9'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-4.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-4.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Clay Peskin</a></h4>
@@ -784,7 +706,7 @@
                         </li>
                         <li class="user-row" id='chat_user_10' data-user-id='10'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-5.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-5.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Loni Tindall</a></h4>
@@ -796,7 +718,7 @@
                         </li>
                         <li class="user-row" id='chat_user_11' data-user-id='11'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-1.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-1.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Tanisha Kimbro</a></h4>
@@ -808,7 +730,7 @@
                         </li>
                         <li class="user-row" id='chat_user_12' data-user-id='12'>
                             <div class="user-img">
-                                <a href="#"><img src="__STATIC__/data/profile/avatar-2.png" alt=""></a>
+                                <a href="#"><img src="/thinkphp/public/static/data/profile/avatar-2.png" alt=""></a>
                             </div>
                             <div class="user-info">
                                 <h4><a href="#">Jovita Tisdale</a></h4>
@@ -834,30 +756,27 @@
 
 
         <!-- CORE JS FRAMEWORK - START --> 
-        <script src="__STATIC__/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script> 
-        <script src="__STATIC__/assets/js/jquery.easing.min.js" type="text/javascript"></script> 
-        <script src="__STATIC__/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script> 
-        <script src="__STATIC__/assets/plugins/pace/pace.min.js" type="text/javascript"></script>  
-        <script src="__STATIC__/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js" type="text/javascript"></script> 
-        <script src="__STATIC__/assets/plugins/viewport/viewportchecker.js" type="text/javascript"></script>  
+        <script src="/thinkphp/public/static/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script> 
+        <script src="/thinkphp/public/static/assets/js/jquery.easing.min.js" type="text/javascript"></script> 
+        <script src="/thinkphp/public/static/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script> 
+        <script src="/thinkphp/public/static/assets/plugins/pace/pace.min.js" type="text/javascript"></script>  
+        <script src="/thinkphp/public/static/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js" type="text/javascript"></script> 
+        <script src="/thinkphp/public/static/assets/plugins/viewport/viewportchecker.js" type="text/javascript"></script>  
         <!-- CORE JS FRAMEWORK - END --> 
 
 
         <!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - START --> 
-        <script src="__STATIC__/assets/plugins/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
-        <script src="__STATIC__/assets/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js" type="text/javascript"></script>
-        <script src="__STATIC__/assets/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js" type="text/javascript"></script>
-        <script src="__STATIC__/assets/plugins/datatables/extensions/Responsive/bootstrap/3/dataTables.bootstrap.js" type="text/javascript"></script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
+        <script src="/thinkphp/public/static/assets/plugins/autosize/autosize.min.js" type="text/javascript"></script><script src="/thinkphp/public/static/assets/plugins/icheck/icheck.min.js" type="text/javascript"></script><!-- OTHER SCRIPTS INCLUDED ON THIS PAGE - END --> 
 
 
         <!-- CORE TEMPLATE JS - START --> 
-        <script src="__STATIC__/assets/js/scripts.js" type="text/javascript"></script> 
+        <script src="/thinkphp/public/static/assets/js/scripts.js" type="text/javascript"></script> 
         <!-- END CORE TEMPLATE JS - END --> 
 
         <!-- Sidebar Graph - START --> 
-        <script src="__STATIC__/assets/plugins/sparkline-chart/jquery.sparkline.min.js" type="text/javascript"></script>
-        <script src="__STATIC__/assets/js/chart-sparkline.js" type="text/javascript"></script>
-        <script type="text/javascript" src="__STATIC__/webuploader/webuploader.js"></script>
+        <script src="/thinkphp/public/static/assets/plugins/sparkline-chart/jquery.sparkline.min.js" type="text/javascript"></script>
+        <script src="/thinkphp/public/static/assets/js/chart-sparkline.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/thinkphp/public/static/webuploader/webuploader.js"></script>
         <!-- Sidebar Graph - END --> 
 
 
@@ -893,18 +812,9 @@
             </div>
         </div>
         <!-- modal end -->
-        <script type="text/javascript" src="__STATIC__/webuploader/webuploader.js"></script>    <!-- 引用插件js -->
-
-        <script type="text/javascript" src="__STATIC__/ueditor/ueditor.config.js"></script>
-        <!-- 编辑器源码文件 -->
-        <script type="text/javascript" src="__STATIC__/ueditor/ueditor.all.js"></script>
-        <!-- 实例化编辑器 -->
-        <script type="text/javascript">
-            var editor = UE.getEditor('container');
-        </script>
-
     </body>
-<script type="text/javascript">
+
+    <script type="text/javascript">
            //var $list=$("#fileList");   //这几个初始化全局的百度文档上没说明，好蛋疼
            var thumbnailWidth = 100;   //缩略图高度和宽度 （单位是像素），当宽高度是0~1的时候，是按照百分比计算，具体可以看api文档  
            var thumbnailHeight = 100;  
@@ -912,9 +822,9 @@
             // 选完文件后，是否自动上传。
            auto: true,
             // swf文件路径
-           swf: '__STATIC__/webuploader/uploader.swf', //加载swf文件，路径一定要对
+           swf: '/thinkphp/public/static/webuploader/uploader.swf', //加载swf文件，路径一定要对
             // 文件接收服务端。
-            server: '{:url("admin/adminhotai/com_upload")}',
+            server: '<?php echo url("distributor/distributor/upload"); ?>',
             // 选择文件的按钮。可选。
             // 内部根据当前运行是创建，可能是input元素，也可能是flash.
             pick: '#filePicker',
@@ -938,14 +848,14 @@
             var $li = $(
                     '<div id="old" class="file-item thumbnail">' +
                         '<img>' +
-                        '<div class="info">' + file.name + '</div>' +
+                        '<div style="text-align: center;" class="info">' + file.name + '</div>' +
                     '</div>'+
                     '<input type="text" style="display:none" name="logo" value="'+ file.name +'">'
                     ),
                 $img = $li.find('img');
             // $list为容器jQuery实例
-                $('#old').remove();
-                $("#fileList").append( $li );
+                    $('#old').remove();
+                   $("#fileList").append( $li );
             // 创建缩略图
             // 如果为非图片文件，可以不用调用此方法。
             // thumbnailWidth x thumbnailHeight 为 100 x 100
@@ -957,7 +867,7 @@
                 $img.attr( 'src', src );
             }, thumbnailWidth, thumbnailHeight );
         });
-</script>
+    </script>
 </html>
 
 

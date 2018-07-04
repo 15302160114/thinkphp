@@ -74,6 +74,7 @@ class UserController extends Base
 
         $orders=Db::table('order')
                     ->where('status','3')
+                    ->where('consumer_id',$aid)
                     ->select();
         $this->assign('orders',$orders);
 
@@ -93,8 +94,10 @@ class UserController extends Base
         $this->assign('consumer',$consumer);
 
         $orders=Db::table('order')
-                    ->where('status','1')
-                    ->whereOr('status','2')
+                    ->where(function ($query) {
+                        $query->where('status', 1)->whereor('status', 2);
+                    })
+                    ->where('consumer_id',$aid)
                     ->select();
         $this->assign('orders',$orders);
         
@@ -106,18 +109,23 @@ class UserController extends Base
     public function details()
     {
         $a=explode(',', session('me_user','','me'));
-        $id=substr($a[0],6);
+        $aid=substr($a[0],6);
+        if($aid==0||is_null($aid)){
+            $this->error('参数有误');
+        }
+        $consumer=model('Consumer')->get($aid);
+        $this->assign('consumer',$consumer);
+
+        $id=input('param.id');
         if($id==0||is_null($id)){
             $this->error('参数有误');
         }
-        $consumer=model('Consumer')->get($id);
-        $this->assign('consumer',$consumer);
+        $commodity=model('Commodity')->get($id);
+        $this->assign('commodity',$commodity);
 
         $categorys=model('Category')->getCategorys();
         $this->assign('categorys',$categorys);
 
-        $commodity=model('Commodity')->getCommoditys();
-        $this->assign('commodity',$commodity);
         return $this->fetch();
     }
 	public function update(){
@@ -164,6 +172,12 @@ class UserController extends Base
 	}
     public function add()
     {
+        $a=explode(',', session('me_user','','me'));
+        $aid=substr($a[0],6);
+        if($aid==0||is_null($aid)){
+            $this->error('参数有误');
+        }
+
         $id=input('param.id');
         if($id==0||is_null($id)){
             $this->error('参数有误');
@@ -178,6 +192,7 @@ class UserController extends Base
                 'spname'=>$com['spname'],
                 'description'=>$com['description'],
                 'category_id'=>$com['category_id'],
+                'consumer_id'=>$aid,
                 'logo'=>$com['logo'],
                 'content'=>$com['content'],
                 'count'=>$com['count'],
@@ -230,6 +245,19 @@ class UserController extends Base
         $order=model('Order')->get($id);
         if(!is_null($order->delete())){
             $this->success('删除成功','user/shopping');
+        }
+        $this->error('删除失败');
+    }
+    public function o_delete()
+    {
+        $id=input('param.id');
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+
+        $order=model('Order')->get($id);
+        if(!is_null($order->delete())){
+            $this->success('删除成功','user/order');
         }
         $this->error('删除失败');
     }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"C:\xampp\htdocs\thinkphp\public/../application/index\view\index\category.html";i:1530601262;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:77:"C:\xampp\htdocs\thinkphp\public/../application/index\view\index\category.html";i:1530664524;}*/ ?>
 <html>
 <head>
 <title>Category</title>
@@ -67,9 +67,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <label for="password">Password</label>
                                                     <input type="password" name="password" id="password">
                                              </fieldset>
-                                            <div class="form-sub-w3">
+                                            <fieldset>
+                                            	<label for="password">验证码</label>
                                                 <input type="text" placeholder="请输入验证码" class="form-control" name="captcha">
-                                            </div>
+                                            </fieldset>
                                             <img src="<?php echo captcha_src(); ?>" alt="captcha" onclick="javascript:this.src='<?php echo captcha_src(); ?>?tm='+Math.random();" style="cursor: pointer"/>
                                             
                                             <input type="submit" id="login" onclick="myFunction()" value="Sign in">

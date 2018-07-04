@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\order.html";i:1530602358;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\order.html";i:1530674315;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -263,6 +263,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="cart-item cyc">
 							 <img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" class="img-responsive" alt=""/>
 						</div>
+						
+						<a href="<?php echo url('user/o_delete',['id'=>$vo['id']]); ?>"><div style="border:1px solid #000;float:right;color:#fff;background: #000;padding:5px 10px;">取消订单</div></a>
+
 					   <div class="cart-item-info">
 						<h3><a href="#"><?php echo $vo['spname']; ?></a><span><?php echo $vo['description']; ?></span></h3>
 						<ul class="qty">

@@ -1,7 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"C:\xampp\htdocs\thinkphp\public/../application/user\view\user\category.html";i:1530665774;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"C:\xampp\htdocs\thinkphp\public/../application/index\view\index\details.html";i:1530667977;}*/ ?>
+<!DOCTYPE HTML>
 <html>
 <head>
-<title>Category : user</title>
+<title>Details</title>
 <link href="/thinkphp/public/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
 <script type='text/javascript' src="/thinkphp/public/static/js/jquery-1.11.1.min.js"></script>
@@ -18,29 +19,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.useso.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
 <!-- start menu -->
 <link href="/thinkphp/public/static/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="/thinkphp/public/static/css/etalage.css">
 <script type="text/javascript" src="/thinkphp/public/static/js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<script src="/thinkphp/public/static/js/jquery.etalage.min.js"></script>
 <script src="/thinkphp/public/static/js/menu_jquery.js"></script>
-<script src="/thinkphp/public/static/js/simpleCart.min.js"> </script>
+<script>
+			jQuery(document).ready(function($){
+
+				$('#etalage').etalage({
+					thumb_image_width: 300,
+					thumb_image_height: 400,
+					source_image_width: 900,
+					source_image_height: 1200,
+					show_hint: true,
+					click_callback: function(image_anchor, instance_id){
+						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+					}
+				});
+
+			});
+		</script>
+
 </head>
 <body>
 <!-- header_top -->
 <div class="top_bg">
-	<div class="container">
-		<div class="header_top">
-			<div class="top_right">
-				<ul>
-					<li><a href="#">help</a></li>|
-					<li><a href="contact.html">Contact</a></li>|
-					<li><a href="#">Delivery information</a></li>
-				</ul>
-			</div>
-			<div class="top_left">
-				<h2><span></span> Call us : 032 2352 782</h2>
-			</div>
-				<div class="clearfix"> </div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="header_top">
+            <div class="top_right">
+                <ul>
+                    <li><a href="#">help</a></li>|
+                    <li><a href="contact.html">Contact</a></li>|
+                    <li><a href="<?php echo url('@admin/login/index'); ?>">Administrator Login</a></li>
+                </ul>
+            </div>
+            <div class="top_left">
+                <h2><span></span> Call us : 032 2352 782</h2>
+            </div>
+                <div class="clearfix"> </div>
+        </div>
+    </div>
 </div>
 <!-- header -->
 <div class="header_bg">
@@ -53,23 +72,46 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- start header_right -->
         <div class="header_right">
             <div class="rgt-bottom">
-                
-            <div class="cart box_1">
-                <a href="<?php echo url('@user/user/shopping'); ?>">
-                    <h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="/thinkphp/public/static/images/bag.png" alt=""></h3>
-                </a>    
+                <div class="log">
+                    <div class="login" >
+                        <div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
+                            <div id="loginBox">                
+                                <form id="loginForm" class="form-horizontal" method="post" name="form1" action="<?php echo url('@user/login/check'); ?>">
+                                        <fieldset id="body">
+                                            <fieldset>
+                                                  <label for="email">User Name</label>
+                                                  <input type="text" name="username" id="email">
+                                            </fieldset>
+                                            <fieldset>
+                                                    <label for="password">Password</label>
+                                                    <input type="password" name="password" id="password">
+                                             </fieldset>
+                                             <div class="form-sub-w3">
+                                                <label for="password">验证码</label>
+                                                <input type="text" placeholder="请输入验证码" class="form-control" name="captcha">
+                                            </div>
+                                            <img src="<?php echo captcha_src(); ?>" alt="captcha" onclick="javascript:this.src='<?php echo captcha_src(); ?>?tm='+Math.random();" style="cursor: pointer"/>
+                                            
+                                            <input type="submit" id="login" onclick="myFunction()" value="Sign in">
+                                            <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+                                        </fieldset>
+                                    <span><a href="#">Forgot your password?</a></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reg">
+                    <a href="<?php echo url('@user/login/register'); ?>">REGISTER</a>
+                </div>
 
-                <div class="clearfix"> </div>
-            </div>
+                <div class="create_btn" style="width:150px;">
+                    <a href="<?php echo url('@distributor/login/index'); ?>">配送员->LOGIN</a>
+                </div>
             
-            <div class="create_btn">
-                <a href="<?php echo url('user/logout'); ?>">sign out</a>
-            </div>
+            <div class="clearfix"> </div>
 
-            <div class="create" style="border:1px solid #000;text-align:right;display:inline-block;margin-left:30px;padding:8px 12px;">
-                <a href="#">欢迎你 , <?php if($user): ?><?php echo $user->username; endif; ?></a>
-            </div>
-            <div class="clearfix"></div>
+            
         </div>
         <div class="search">
             <form>
@@ -83,8 +125,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
         <!-- start header menu -->
         <ul class="megamenu skyblue">
-            <li class="grid"><a class="color1" href="<?php echo url('@user/user/index'); ?>">Home</a></li>
-            <li class="active grid"><a class="color2" href="#">Classification</a>
+            <li class="active grid"><a class="color1" href="<?php echo url('index/index'); ?>">Home</a></li>
+            <li class="grid"><a class="color2" href="#">Classification</a>
                 <div class="megapanel">
                     <div class="row">
                         <div class="col1">
@@ -92,7 +134,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -102,7 +144,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -112,7 +154,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -122,7 +164,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -132,7 +174,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -142,7 +184,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <h4>品牌</h4>
                                 <ul>
                                     <?php if(is_array($categorys) || $categorys instanceof \think\Collection || $categorys instanceof \think\Paginator): $i = 0; $__LIST__ = $categorys;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                                        <li><a href="<?php echo url('@user/user/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
+                                        <li><a href="<?php echo url('index/category',['id'=>$vo['id']]); ?>"><?php echo $vo['categoryname']; ?></a></li>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>   
                             </div>                          
@@ -158,9 +200,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     </div>
                 </li>
-                <li class="grid"><a class="color3" href="<?php echo url('@user/user/shopping'); ?>">Shopping Cart</a></li>
-                <li class="grid"><a class="color4" href="<?php echo url('@user/user/order'); ?>">Your Order</a></li>
-                <li class="grid"><a class="color5" href="<?php echo url('@user/user/settings'); ?>">Settings</a></li>
+                
             
          </ul> 
     </div>
@@ -169,8 +209,69 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- content -->
 <div class="container">
 <div class="women_main">
-	<!-- start sidebar -->
-	<div class="col-md-3 s-d">
+	<!-- start content -->
+			<div class="row single">
+				<div class="col-md-9 det">
+				  <div class="single_left">
+					<div class="grid images_3_of_2">
+						<ul id="etalage">
+							<li>
+								<a href="optionallink.html">
+									<img class="etalage_thumb_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>" class="img-responsive" />
+									<img class="etalage_source_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>" class="img-responsive" title="" />
+								</a>
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>" class="img-responsive" />
+								<img class="etalage_source_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>" class="img-responsive" title="" />
+							</li>
+							<li>
+								<img class="etalage_thumb_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>" class="img-responsive"  />
+								<img class="etalage_source_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>"class="img-responsive"  />
+							</li>
+						    <li>
+								<img class="etalage_thumb_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>" class="img-responsive"  />
+								<img class="etalage_source_image" src="/thinkphp/public/uploads/<?php echo $commodity['logo']; ?>"class="img-responsive"  />
+							</li>
+						</ul>
+						 <div class="clearfix"></div>		
+				  </div>
+				  <div class="desc1 span_3_of_2" style="padding-top:50px;">
+					<h3><?php echo $commodity['spname']; ?></h3>
+					
+					<p><?php echo $commodity['description']; ?></p>
+						<div class="price">
+							<span class="text">Price:</span>
+							<span class="price-new">$ <?php echo $commodity['count']; ?></span><span class="price-old">$ <?php echo $commodity['count']; ?></span> 
+						</div>
+					<!-- <div class="det_nav1">
+						<h4>Select a size :</h4>
+							<div class=" sky-form col col-4">
+								<ul>
+									<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>L</label></li>
+									<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>S</label></li>
+									<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>M</label></li>
+									<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>XL</label></li>
+								</ul>
+							</div>
+					</div> -->
+					<div class="btn_form">
+						<a href="#">buy</a>
+					</div>
+
+					<a href="#"><span>login to save in wishlist </span></a>
+
+					
+			   	 </div>
+          	    <div class="clearfix"></div>
+          	   </div>
+          	    <div class="single-bottom1">
+					<h6>Details</h6>
+					<p class="prod-desc"><?php echo html_entity_decode($commodity['content']); ?></p>
+				</div>
+				
+	       </div>	
+	<div class="col-md-3">
 	  <div class="w_sidebar">
 		<div class="w_nav1">
 			<h4>All</h4>
@@ -274,159 +375,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</section>
 	</div>
    </div>
-	<!-- start content -->
-	<div class="col-md-9 w_content">
-		<div class="women">
-			<a href="#"><h4>Enthecwear - <span>4449 itemms</span> </h4></a>
-			<ul class="w_nav">
-						<li>Sort : </li>
-		     			<li><a class="active" href="#">popular</a></li> |
-		     			<li><a href="#">new </a></li> |
-		     			<li><a href="#">discount</a></li> |
-		     			<li><a href="#">price: Low High </a></li> 
-		     			<div class="clear"></div>	
-		     </ul>
-		     <div class="clearfix"></div>	
-		</div>
-		<!-- grids_of_4 -->
-		<div class="grids_of_4">
-			<?php if(is_array($commodity) || $commodity instanceof \think\Collection || $commodity instanceof \think\Paginator): $i = 0; $__LIST__ = $commodity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-		  	<div class="grid1_of_4">
-				<div class="content_box"><a href="<?php echo url('@user/user/details',['id'=>$vo['id']]); ?>">
-			   	   	 <img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="<?php echo url('@user/user/details',['id'=>$vo['id']]); ?>"><?php echo $vo['spname']; ?></a></h4>
-				     <p><?php echo $vo['description']; ?></p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY <?php echo $vo['count']; ?></h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="<?php echo url('user/add',['id'=>$vo['id']]); ?>">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<?php endforeach; endif; else: echo "" ;endif; ?>
-			
-			
-			<div class="clearfix"></div>
-		</div>
-		
-		
-		<div class="grids_of_4">
-		 <div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w5.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $109.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w6.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $95.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w7.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $68.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w8.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $74.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<div class="grids_of_4">
-		  <div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w9.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $80.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w10.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $65.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w11.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $90.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="grid1_of_4">
-				<div class="content_box"><a href="details.html">
-			   	   	 <img src="/thinkphp/public/static/images/w12.jpg" class="img-responsive" alt=""/>
-				   	  </a>
-				    <h4><a href="details.html"> Duis autem</a></h4>
-				     <p>It is a long established fact that</p>
-					 <div class="grid_1 simpleCart_shelfItem">
-				    
-					 <div class="item_add"><span class="item_price"><h6>ONLY $75.00</h6></span></div>
-					<div class="item_add"><span class="item_price"><a href="#">add to cart</a></span></div>
-					 </div>
-			   	</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-		<!-- end grids_of_4 -->
-		
-		
-	</div>
-	<div class="clearfix"></div>
-	
+		   
+	  </div>
 	<!-- end content -->
 </div>
 </div>

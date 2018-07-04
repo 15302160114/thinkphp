@@ -32,4 +32,18 @@ class IndexController extends Controller
 
         return $this->fetch('');
     }
+    public function details()
+    {
+        $id=input('param.id');
+        if($id==0||is_null($id)){
+            $this->error('参数有误');
+        }
+        $commodity=model('Commodity')->get($id);
+        $this->assign('commodity',$commodity);
+
+        $categorys=model('Category')->getCategorys();
+        $this->assign('categorys',$categorys);
+
+        return $this->fetch();
+    }
 }

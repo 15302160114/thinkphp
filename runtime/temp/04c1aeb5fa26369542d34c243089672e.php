@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\commodity.html";i:1530604743;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"C:\xampp\htdocs\thinkphp\public/../application/admin\view\adminhotai\commodity.html";i:1530668018;}*/ ?>
 <!DOCTYPE html>
 <html class=" ">
     <head>
@@ -609,7 +609,7 @@
                                                 <tr class="gradeX">
                                                     <th scope="row"><?php echo $num; ?></th>
                                                     <td class="am-text-middle"><?php echo $vo['spname']; ?></td>
-                                                    <td class="am-text-middle"><a href="<?php echo url('@index/index/single',['id'=>$vo['id']]); ?>" target="_blank"><img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" width='100px'></a></td>
+                                                    <td class="am-text-middle"><a href="<?php echo url('@index/index/details',['id'=>$vo['id']]); ?>" target="_blank"><img src="/thinkphp/public/uploads/<?php echo $vo['logo']; ?>" width='100px'></a></td>
                                                     <td class="am-text-middle"><?php echo getUsername($vo['category_id']); ?></td>
                                                     <td class="am-text-middle"><?php echo $vo['description']; ?></td>
                                                     <td class="am-text-middle"><?php echo $vo['create_time']; ?></td>

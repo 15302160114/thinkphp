@@ -4,7 +4,7 @@ use think\Model;
 class Commodity extends Model{
 	public function getCommodity(){
 		$data=[];
-		$order=['id'=>'desc','sex'=>'desc'];
+		$order=['id'=>'desc'];
 		return $this->where($data)
 				->order($order)
 				->paginate(3);
